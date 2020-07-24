@@ -11,24 +11,24 @@
           Edinburgh.
         </p>
         <p>
-          I build fast and maintainable business websites for the good
+          I build fast, responsive and maintainable business websites for the good
           folk of Scotland and beyond, as well as developing more complex web
           and mobile applications using <strong>HTML, CSS &amp; JavaScript</strong>.
         </p>
         <p>
-          You can view some of my previous projects and playthings on the
-          Portfolio page.
+          You can view some of my previous web development projects and web based playthings
+          on the Portfolio page.
         </p>
         <p>
-          Whether you have a new idea that needs to be realised on the web or would like to
-          update your existing website using modern web technologoes or you just
+          Whether you have a new idea that needs to be realised on the web, would like to
+          update your existing website using modern web technologies, or you just
           have an enquiry, please do get in touch.
         </p>
       </div>
     </section>
     <section class="feature">
       <div class="container">
-        <h2 class="highlight-overline">Some of my Website Development</h2>
+        <h2 class="highlight-overline">Recent Website Development Projects</h2>
         <div class="cards">
           <card v-for="project in $page.featured_projects.edges" :key="project.node.id"
                 :image="project.node.image">

@@ -19,7 +19,6 @@ function addStyleResource (rule) {
 module.exports = {
   siteName: 'Freelance Web Developer, Edinburgh',
   siteUrl: 'https://forbesg.github.io',
-  pathPrefix: '/Forbes-Gridsome',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -30,6 +29,12 @@ module.exports = {
     },
     {
       use: '@gridsome/plugin-sitemap'
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-106869268-1'
+      }
     }
   ],
   transformers: {

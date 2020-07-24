@@ -7,11 +7,11 @@
       </div>
       <nav :class="{ 'open': navOpen }" @click="toggleDisplayNav" class="main-nav">
         <g-link to="/" class="fixed">Home</g-link>
-        <g-link to="/about" class="fixed">About</g-link>
-        <g-link to="/portfolio" class="fixed">Portfolio</g-link>
+        <g-link to="/about/" class="fixed">About</g-link>
+        <g-link to="/portfolio/" class="fixed">Portfolio</g-link>
       </nav>
       <div class="action">
-        <g-link to="/contact" class="button">Hire Me</g-link>
+        <g-link to="/contact/" class="button">Hire Me</g-link>
         <div @click="toggleDisplayNav" class="hamburger">
           <span></span>
           <span></span>

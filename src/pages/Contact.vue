@@ -34,7 +34,7 @@
         </div>
         <div class="right">
           <div v-if="!formSuccess">
-            <form @submit.prevent="handleSubmitForm" ref="contact_form" action="https://getform.io/f/ce537464-4e11-4163-b480-35d3fd2b7305" method="post">
+            <form @submit.prevent="handleSubmitForm" ref="contact_form" action="https://getform.io/f/ce537464-4e11-4163-b480-35d3fd2b7305" method="post" enctype="json">
               <input type="hidden" id="captchaResponse" name="g-recaptcha-response">
               <div class="form-group">
                 <label for="name">Name: </label>
@@ -164,9 +164,6 @@ export default {
     > .left {
       flex: 1 1 300px;
       text-align: center;
-      @include tablet {
-        // flex: 0 0 300px;
-      }
       img {
         border-radius: 50%;
         height: 120px;

@@ -10,13 +10,13 @@
                 <g-link to="/">Home</g-link>
               </li>
               <li>
-                <g-link to="/about">About</g-link>
+                <g-link to="/about/">About</g-link>
               </li>
               <li>
-                <g-link to="/portfolio">Portfolio</g-link>
+                <g-link to="/portfolio/">Portfolio</g-link>
               </li>
               <li>
-                <g-link to="/contact">Contact</g-link>
+                <g-link to="/contact/">Contact</g-link>
               </li>
             </ul>
           </nav>

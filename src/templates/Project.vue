@@ -6,7 +6,7 @@
           <ol itemscope itemtype="https://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope
                 itemtype="https://schema.org/ListItem">
-              <g-link to="/" itemprop="item" :itemid="`${hostname}/`">
+              <g-link to="/" itemprop="item" :itemid="`${hostname}`">
                 <span itemprop="name">Home</span>
                 <meta itemprop="position" content="1">
               </g-link>
@@ -22,10 +22,13 @@
             </li>
             <li itemprop="itemListElement" itemscope
                 itemtype="https://schema.org/ListItem">
-              <g-link :to="`/portfolio/${this.$route.params.category}`"
+              <g-link :to="`/portfolio/${this.$route.params.category}/`"
                       itemprop="item"
-                      :itemId="`${hostname}/portfolio/${this.$route.params.category}`">
-                <span itemprop="name">{{ this.$route.params.category.split('-').join(' ') }}s</span>
+                      :itemId="`${hostname}/portfolio/${this.$route.params.category}/`">
+                <span itemprop="name">{{ this.$route.params.category.split('-').map(s => {
+                          return s.charAt(0).toUpperCase() + s.slice(1)
+                      }).join(' ') }}s
+                </span>
                 <meta itemprop="position" content="3">
               </g-link>
             </li>
@@ -41,7 +44,7 @@
             <img :src="$page.project.image" :alt="$page.project.title">
           </figure> -->
           <h1 class="highlight-overline">{{$page.project.title}}</h1>
-          <h3>{{$page.project.subhead}}</h3>
+          <h2>{{$page.project.subhead}}</h2>
           <div v-html="$page.project.content" class="markdown-content"></div>
         </main>
       </div>

@@ -5,7 +5,7 @@
         <ol itemscope itemtype="https://schema.org/BreadcrumbList">
           <li itemprop="itemListElement" itemscope
               itemtype="https://schema.org/ListItem">
-            <g-link to="/" itemprop="item" :itemid="`${hostname}/`">
+            <g-link to="/" itemprop="item" :itemid="`${hostname}`">
               <span itemprop="name">Home</span>
               <meta itemprop="position" content="1">
             </g-link>
