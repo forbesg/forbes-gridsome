@@ -40,9 +40,6 @@
           </ol>
         </div>
         <main>
-          <!-- <figure>
-            <img :src="$page.project.image" :alt="$page.project.title">
-          </figure> -->
           <h1 class="highlight-overline">{{$page.project.title}}</h1>
           <h2>{{$page.project.subhead}}</h2>
           <div v-html="$page.project.content" class="markdown-content"></div>
@@ -98,6 +95,7 @@ query ($id: ID!) {
     image
     features
     url
+    repo
     path
   }
 }

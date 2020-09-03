@@ -5,7 +5,7 @@ subhead: A Fast Static Business Website
 image: /images/projects/web/fish-landscapes.jpg
 url: https://www.fishlandscapes.co.uk
 layout: project.hbs
-features: [html, css, javascript, vue, nuxt js, flexbox, css grid, responsive design]
+features: [HTML5, SCSS, JavaScript, Vue JS, Nuxt JS, Flexbox, CSS Grid, Responsive design]
 category: website
 slug: fish-landscapes
 order: 1

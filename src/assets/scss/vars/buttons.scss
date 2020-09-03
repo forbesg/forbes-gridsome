@@ -6,8 +6,7 @@ a.button {
   position: relative;
   display: inline-block;
   background-color: $color-primary;
-  background: linear-gradient(90deg, rgba($color-primary, .9), $color-primary);
-  // border-radius: 8px;
+  background: linear-gradient(0deg, lighten($color-primary, 5%), $color-primary);
   border: none;
   border-radius: $border-radius;
   color: #fff;
@@ -27,7 +26,7 @@ a.button {
     transition: transform .1s ease-in-out;
   }
   &:hover, &:focus {
-    background-color: lighten($color-primary, 10%);
+    background-color: lighten($color-primary, 5%);
     background: linear-gradient(90deg, #1A8BB8, #1A8BB8);
     color: #fff;
     outline: none;
@@ -36,7 +35,7 @@ a.button {
     }
   }
   &.loading {
-    
+
   }
   &.small {
     font-size: 1rem;
