@@ -34,7 +34,7 @@ export default {
     }
     .left, .right {
       h1 {
-        font-size: 2rem;
+        // font-size: 2rem;
       }
       img {
         max-width: 100%;
