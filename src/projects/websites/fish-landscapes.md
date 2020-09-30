@@ -23,7 +23,7 @@ The site did not require any frequent updates and therefore was best suited to
 a lightweight static site rather. This meant that we were able to acheive fast
 loading as well as host the site for free on [Netlify](https://netlify.com/).
 
-The owner of the company was also the owner of Cobble Garden Market, who supply
+The owner of the company was also the owner of Granite Setts Direct, who supply
 granite setts and kerbs online, and they wanted the design to fit into that of
 their other company.
 

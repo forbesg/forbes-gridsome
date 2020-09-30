@@ -33,9 +33,6 @@ export default {
       height: 600px;
     }
     .left, .right {
-      h1 {
-        // font-size: 2rem;
-      }
       img {
         max-width: 100%;
       }
