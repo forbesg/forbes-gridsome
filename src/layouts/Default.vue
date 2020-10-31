@@ -13,7 +13,7 @@
   export default {
     components: { MainFooter, MainHeader },
     metaInfo: {
-      titleTemplate: '%s'
+      titleTemplate: '%s',
     },
     data () {
       return {

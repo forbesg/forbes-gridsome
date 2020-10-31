@@ -110,7 +110,7 @@ query {
 import Card from '@/components/Card'
 export default {
   metaInfo: {
-    title: 'Web Developer Portfolio',
+    title: 'Web Developer Portfolio - Freelance Web Developer Edinburgh',
     meta: [{
       key: 'description',
       name: 'description',

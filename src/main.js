@@ -24,6 +24,7 @@ export default function (Vue, { router, head, isClient }) {
   })
 
   head.link.push({
+    key: 'canonical',
     rel: 'canonical',
     href: hostname
   })
