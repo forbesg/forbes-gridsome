@@ -39,7 +39,7 @@
           </card>
         </div>
         <div>
-          <g-link to="/portfolio" class="button">View my portfolio</g-link>
+          <g-link to="/portfolio" class="button">View Portfolio</g-link>
         </div>
       </div>
     </section>
