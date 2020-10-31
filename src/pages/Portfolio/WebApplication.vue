@@ -65,7 +65,19 @@ import Card from '@/components/Card'
 export default {
   name: 'WebApplications',
   metaInfo: {
-    title: 'Web Application Projects - Portfolio'
+    title: 'Web Application - Portfolio',
+    meta: [{
+      key: 'description',
+      name: 'description',
+      content: 'A selection of Web Application projects, including headless e-commerce webites and online booking system applications'
+    }],
+    link: [
+      {
+        key: 'canonical',
+        rel: 'canonical',
+        href: `${process.env.GRIDSOME_HOSTNAME}/portfolio/web-application/`
+      }
+    ],
   },
   components: { Card },
   data () {

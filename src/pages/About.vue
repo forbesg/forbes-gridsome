@@ -68,13 +68,19 @@
 <script>
 export default {
   metaInfo: {
-    title: 'About Me',
+    title: 'About Me - Freelance Web Developer Edinburgh',
     meta: [{
       key: 'description',
       name: 'description',
       content: 'Information about Edinburgh freelance Web Developer Forbes Gray and his journey into Website Development'
-    }]
-
+    }],
+    link: [
+      {
+        key: 'canonical',
+        rel: 'canonical',
+        href: `${process.env.GRIDSOME_HOSTNAME}/about/`
+      }
+    ],
   }
 }
 </script>

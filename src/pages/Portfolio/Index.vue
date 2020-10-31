@@ -110,7 +110,19 @@ query {
 import Card from '@/components/Card'
 export default {
   metaInfo: {
-    title: 'Web Developer Portfolio'
+    title: 'Web Developer Portfolio',
+    meta: [{
+      key: 'description',
+      name: 'description',
+      content: 'A selection of recent website development projects, including, Websites, Web Applications and Apps'
+    }],
+    link: [
+      {
+        key: 'canonical',
+        rel: 'canonical',
+        href: `${process.env.GRIDSOME_HOSTNAME}/portfolio/`
+      }
+    ],
   },
   components: { Card },
   data () {

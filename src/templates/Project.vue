@@ -66,12 +66,19 @@
     name: 'Project',
     metaInfo () {
       return {
-        title: `${this.$page.project.title} - Portfolio`,
+        title: `${this.$page.project.title} - ${this.$page.project.category.split('-').map(w => w.charAt(0).toUpperCase().concat(w.slice(1))).join(' ')} - Portfolio`,
         meta: [
           {
             key: 'description',
             name: 'description',
             content: this.$page.project.description
+          }
+        ],
+        link: [
+          {
+            key: 'canonical',
+            rel: 'canonical',
+            href: `${this.hostname}${this.$page.project.path}`
           }
         ]
       }

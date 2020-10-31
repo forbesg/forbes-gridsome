@@ -67,7 +67,7 @@ import Hero from '@/components/Hero'
 import Skills from '@/components/Skills'
 export default {
   metaInfo: {
-    title: 'Forbes Gray'
+    title: 'Forbes Gray - Freelance Web Developer Edinburgh'
   },
   components: { Card, Hero, Skills }
 }

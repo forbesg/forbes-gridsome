@@ -4,6 +4,8 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import '~/assets/scss/styles.scss'
 
+const hostname = process.env.GRIDSOME_HOSTNAME
+
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
@@ -18,12 +20,12 @@ export default function (Vue, { router, head, isClient }) {
   head.meta.push({
     key: 'author',
     name: 'author',
-    content: 'Forbes Gray <fnbg75@gmail.com>' 
+    content: 'Forbes Gray <fnbg75@gmail.com>'
   })
 
   head.link.push({
     rel: 'canonical',
-    href: '/apple-touch-icon.png'
+    href: hostname
   })
 
   head.link.push({
@@ -61,7 +63,7 @@ export default function (Vue, { router, head, isClient }) {
     name: 'msapplication-TileColor',
     content: '#00aba9'
   })
-  
+
   head.meta.push({
     name: 'theme-color',
     content: '#083749'

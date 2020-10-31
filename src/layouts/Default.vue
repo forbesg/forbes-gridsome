@@ -12,6 +12,9 @@
   import MainFooter from '@/components/MainFooter'
   export default {
     components: { MainFooter, MainHeader },
+    metaInfo: {
+      titleTemplate: '%s'
+    },
     data () {
       return {
         scrolled: false
@@ -35,13 +38,13 @@
   }
 </script>
 
-<static-query>
+<!-- <static-query>
 query {
   metadata {
     siteName
   }
 }
-</static-query>
+</static-query> -->
 
 <style lang="scss">
   .layout {

@@ -82,12 +82,19 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Contact',
+    title: 'Contact - Freelance Web Developer Edinburgh',
     meta: [{
       key: 'description',
       name: 'description',
-      content: 'If you\'re looking for a web developer in Scotland you can find contact details here.'
+      content: 'If you\'re looking for a freelance web developer in Scotland please do get in touch. You can find contact details here.'
     }],
+    link: [
+      {
+        key: 'canonical',
+        rel: 'canonical',
+        href: `${process.env.GRIDSOME_HOSTNAME}/contact/`
+      }
+    ],
     script: [{
         src: 'https://www.google.com/recaptcha/api.js?render=6LfAtbQZAAAAALIFif4qLLmJc-Khmg4iKxMm6F6G',
         body: true
@@ -103,7 +110,8 @@ export default {
         error: '',
         loading: false
       },
-      formSuccess: false
+      formSuccess: false,
+      path: this.$route.fullPath
     }
   },
   methods: {

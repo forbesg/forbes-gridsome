@@ -65,7 +65,19 @@ import Card from '@/components/Card'
 export default {
   name: 'BlackberryApplications',
   metaInfo: {
-    title: 'Blackberry Projects - Portfolio'
+    title: 'Blackberry Projects - Portfolio',
+    meta: [{
+      key: 'description',
+      name: 'description',
+      content: 'A selection of my early Blackberry Applications, built using modern web technologies.'
+    }],
+    link: [
+      {
+        key: 'canonical',
+        rel: 'canonical',
+        href: `${process.env.GRIDSOME_HOSTNAME}/portfolio/blackberry/`
+      }
+    ],
   },
   components: { Card },
   data () {
