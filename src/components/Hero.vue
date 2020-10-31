@@ -2,7 +2,7 @@
   <div class="hero">
     <div class="container flex">
       <div class="left">
-        <h1>Freelance Web <br />Developer</h1>
+        <h1>Freelance Web <br />Developer | <span>Edinburgh</span></h1>
         <h2>Bringing Your Ideas to Life</h2>
         <h3 class="text-primary">HTML  ·  CSS  ·  JavaScript</h3>
         <g-link to="/portfolio" class="button">View My Work</g-link>
@@ -35,6 +35,12 @@ export default {
     .left, .right {
       img {
         max-width: 100%;
+      }
+    }
+    h1 {
+      > span {
+        color: rgba($color-primary, 0.4);
+        font-size: 0.8em;
       }
     }
   }
