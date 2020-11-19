@@ -40,7 +40,7 @@
         my introduction to databases and MySQL.
       </p>
       <p>
-        With on growth of JavaScript and NodeJS, web applications were becoming
+        With the growth of JavaScript and NodeJS, web applications were becoming
         evermore capable and I found my new test. JavaScript became my focus.
       </p>
       <p>
@@ -56,7 +56,15 @@
         using Angular for the front-end.
       </p>
       <p>
-        Some of my work is shown on my <g-link to="/portfolio">Portfolio Page</g-link>
+        My main focus has become building fast, SEO friendly server-side
+        rendered and static sites, using many of the modern JavaScript frameworks,
+        such as React, Vue, Gatsby and Nuxt JS. Using these tools along with
+        headless Databases, CMS's, and e-commerce services, I am able to quickly
+        create performant websites and web applications that search engines love.
+      </p>
+      <p>
+        Some of my website design and web application development work is shown
+        on my <g-link to="/portfolio">Portfolio Page</g-link>
       </p>
       <p>
         My journey continues...
