@@ -27,7 +27,7 @@
                       :itemId="`${hostname}/portfolio/${this.$route.params.category}/`">
                 <span itemprop="name">{{ this.$route.params.category.split('-').map(s => {
                           return s.charAt(0).toUpperCase() + s.slice(1)
-                      }).join(' ') }}s
+                      }).join(' ') }}
                 </span>
                 <meta itemprop="position" content="3">
               </g-link>

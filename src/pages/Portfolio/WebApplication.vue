@@ -21,7 +21,7 @@
           </li>
           <li itemprop="itemListElement" itemscope
               itemtype="https://schema.org/ListItem">
-            <span itemprop="name">Web Applications</span>
+            <span itemprop="name">Web Application</span>
             <meta itemprop="position" content="3">
           </li>
         </ol>
