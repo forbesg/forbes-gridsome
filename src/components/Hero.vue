@@ -11,13 +11,10 @@
   </div>
 </template>
 
-<script>
-export default {
-}
-</script>
-
 <style lang="scss" scoped>
 .hero {
+  // background: linear-gradient(90deg, rgba($color-primary, .05), rgba($color-primary, .2));
+  background: $color-light-blue-gradient;
   .flex {
     background-image: url(/hero-illustration-opaque.svg);
     background-repeat: no-repeat;
@@ -38,9 +35,31 @@ export default {
       }
     }
     h1 {
+      font-size: 1.8rem;
+      @include tablet {
+        font-size: 2.6rem;
+      }
       > span {
         color: rgba($color-primary, 0.4);
         font-size: 0.8em;
+      }
+    }
+    h2, h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+      @include tablet {
+        font-size: 1.6rem;
+      }
+    }
+    h3 {
+      font-size: 1rem;
+      margin-bottom: 2.6em;
+      word-spacing: 1rem;
+      @include tablet {
+        font-size: 1.2rem;
       }
     }
   }

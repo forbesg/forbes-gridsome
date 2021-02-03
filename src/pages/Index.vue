@@ -11,9 +11,15 @@
           Edinburgh.
         </p>
         <p>
-          I build fast, responsive and maintainable business websites for the good
+          I build fast, responsive, maintainable and SEO friendly business websites for the good
           folk of Scotland and beyond, as well as developing more complex web
           and mobile applications using <strong>HTML, CSS &amp; JavaScript</strong>.
+        </p>
+        <p>
+          I focus on website performance and my preferred approach to Website
+          Development is the JAM Stack architecture (JavaScript, API &amp; Markup)
+          which decouples technologies to offer superior website speed, security &amp;
+          flexibility than more traditional approaches to Website Development.
         </p>
         <p>
           You can view some of my previous web development projects and web based playthings
@@ -24,6 +30,7 @@
           update your existing website using modern web technologies, or you just
           have an enquiry, please do get in touch.
         </p>
+        <g-link to="/about" class="invert arrow">A Little More About Me</g-link>
       </div>
     </section>
     <section class="feature">

@@ -56,19 +56,26 @@
         using Angular for the front-end.
       </p>
       <p>
+        As these new JavaScript frameworks developed I was introduced to a number
+        of different approaches to complete a development project, but I always
+        found myself striving for faster, performant websites and applications.
+      </p>
+      <p>
         My main focus has become building fast, SEO friendly server-side
-        rendered and static sites, using many of the modern JavaScript frameworks,
-        such as React, Vue, Gatsby and Nuxt JS. Using these tools along with
-        headless Databases, CMS's, and e-commerce services, I am able to quickly
-        create performant websites and web applications that search engines love.
+        rendered and static websites, using many of the modern JavaScript frameworks,
+        such as React, Vue, Gatsby, Gridsome (this website) and Nuxt JS. Using a
+        JAM Stack architecture (JavaScript, API's &amp; Markup), headless
+        Databases, CMS's, and ecommerce services, I am able to quickly create
+        performant websites and web applications that search engines love.
       </p>
       <p>
         Some of my website design and web application development work is shown
-        on my <g-link to="/portfolio">Portfolio Page</g-link>
+        on my Portfolio Page
       </p>
       <p>
         My journey continues...
       </p>
+      <g-link to="/portfolio" class="arrow">View My Portfolio</g-link>
     </div>
   </Layout>
 </template>
