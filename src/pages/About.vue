@@ -4,20 +4,21 @@
       <h1 class="highlight-overline">My Journey to Web Development</h1>
       <p>
         My interest in Web Development started fairly late. I have a background
-        in sales spanning 10 years in the telecoms industry. As my skills grew
-        I started up my own company supplying telecoms to business.
+        in sales spanning 10 years in the telecoms industry. As my skills grew I
+        started up my own company supplying telecoms to business.
       </p>
       <p>
-        As part of any new start-up business, spending money was not something
-        I wanted to do too much of and yet I knew the importance of having an
+        As part of any new start-up business, spending money was not something I
+        wanted to do too much of and yet I knew the importance of having an
         online presence.
       </p>
       <p>
-        I decided to try and create my own website using "user friendly" free t
-        ools that were available at the time. My emails were being hosted by
+        I decided to try and create my own website using "user friendly" free
+        tools that were available at the time. My emails were being hosted by
         Google Apps so I started off with Google Sites as a simple solution.
         Although creating a presence online I was frustrated by the constraints
-        of building using a tool like Google Sites (and I wanted rounded corners).
+        of building using a tool like Google Sites (and I wanted rounded
+        corners).
       </p>
       <div class="image-container">
         <img src="/images/journey.jpg" alt="My journey to web development" />
@@ -36,8 +37,8 @@
       </p>
       <p>
         I began some other web projects using the evermore popular Content
-        Management Systems such as Joomla, Wordpress and MODX. With this came
-        my introduction to databases and MySQL.
+        Management Systems such as Joomla, Wordpress and MODX. With this came my
+        introduction to databases and MySQL.
       </p>
       <p>
         With the growth of JavaScript and NodeJS, web applications were becoming
@@ -45,8 +46,8 @@
       </p>
       <p>
         BlackBerry have always had a place in my heart so I used their platform
-        to hone my skills. Creating simple Webworks/Cordova applications gave
-        me small projects to to discover the capabilities and pitfalls of
+        to hone my skills. Creating simple Webworks/Cordova applications gave me
+        small projects to to discover the capabilities and pitfalls of
         JavaScript.
       </p>
       <p>
@@ -56,17 +57,19 @@
         using Angular for the front-end.
       </p>
       <p>
-        As these new JavaScript frameworks developed I was introduced to a number
-        of different approaches to complete a development project, but I always
-        found myself striving for faster, performant websites and applications.
+        As these new JavaScript frameworks developed I was introduced to a
+        number of different approaches to complete a development project, but I
+        always found myself striving for faster, performant websites and
+        applications.
       </p>
       <p>
         My main focus has become building fast, SEO friendly server-side
-        rendered and static websites, using many of the modern JavaScript frameworks,
-        such as React, Vue, Gatsby, Gridsome (this website) and Nuxt JS. Using a
-        JAM Stack architecture (JavaScript, API's &amp; Markup), headless
-        Databases, CMS's, and ecommerce services, I am able to quickly create
-        performant websites and web applications that search engines love.
+        rendered and static websites, using many of the modern JavaScript
+        frameworks, such as React, Vue, Gatsby, Gridsome (this website) and Nuxt
+        JS. Using a JAM Stack architecture (JavaScript, API's &amp; Markup),
+        headless Databases, CMS's, and ecommerce services, I am able to quickly
+        create performant websites and web applications that search engines
+        love.
       </p>
       <p>
         Some of my website design and web application development work is shown
@@ -83,27 +86,30 @@
 <script>
 export default {
   metaInfo: {
-    title: 'About Me - Freelance Web Developer Edinburgh',
-    meta: [{
-      key: 'description',
-      name: 'description',
-      content: 'Information about Edinburgh freelance Web Developer Forbes Gray and his journey into Website Development'
-    }],
-    link: [
+    title: "About Me - Freelance Web Developer Edinburgh",
+    meta: [
       {
-        key: 'canonical',
-        rel: 'canonical',
-        href: `${process.env.GRIDSOME_HOSTNAME}/about/`
+        key: "description",
+        name: "description",
+        content:
+          "Information about Edinburgh freelance Web Developer Forbes Gray and his journey into Website Development"
       }
     ],
+    link: [
+      {
+        key: "canonical",
+        rel: "canonical",
+        href: `${process.env.GRIDSOME_HOSTNAME}/about/`
+      }
+    ]
   }
-}
+};
 </script>
 
 <style lang="scss">
-  // img {
-  //   float: right;
-  //   margin-bottom: 1rem;
-  //   max-width: 100%;
-  // }
+// img {
+//   float: right;
+//   margin-bottom: 1rem;
+//   max-width: 100%;
+// }
 </style>
