@@ -4,7 +4,18 @@ description: An Online Booking System that allows customers to book last minute 
 subhead: Bespoke Online Booking System
 image: /images/projects/web-application/little-city-treat.jpg
 url: https://www.littlecitytreat.com
-features: [HTML5, SCSS, Vue JS, Nuxt JS, Firebase, Babel, Webpack, Progressive Web App]
+features:
+  [
+    HTML5,
+    SCSS,
+    Vue JS,
+    Nuxt JS,
+    Firebase,
+    Babel,
+    Webpack,
+    Progressive Web App,
+    Stripe,
+  ]
 category: web-application
 slug: little-city-treat
 order: 1
@@ -13,16 +24,17 @@ featured: true
 
 #### Booking System for Edinburgh Mobile Beauty Therapists
 
-I was asked to create a bespoke booking system for a provider of mobile beauty
-treatments in Edinburgh. The company allows self-employed Beauty Professionals
-to set their own availability and populate the booking system based upon those therapists.
+I was asked to create a bespoke booking system for a provider of [mobile hairdressing & beauty
+treatments in Edinburgh and Newcastle](https://www.littlecitytreat.com). The company
+allows self-employed Beauty Professionals to set their own availability whose
+availability then feeds into the online booking system for the customers to book.
 
 The project had three individual aspects; the client facing website with integrated
-booking system, an application for the Beauty Professionals to enable them to
+booking system and payment gateway, an application for the Beauty Professionals to
 manage their availability, calendar and earnings, and the administrator
 application to allow overall management of all aspects of the system.
 
-There are a lot of third party booking systems available however all of them were a
+There are a lot of third party online booking systems available however all of them were a
 little too rigid for our requirements and tend to feel as though they have been
 shoehorned into a site.
 
@@ -31,7 +43,8 @@ shoehorned into a site.
 It was important that the booking process be easy to use, fast and secure. After
 much consultation the process was finalised allowing customers to select their desired
 treatments and choose by either date or therapist before confirming the booking and
-completing payment.
+completing payment. Payment is made directly to the Service Provider through Stripe,
+and an application fee is taken for the booking.
 
 There is also an e-commerce aspect of the site, initially to sell Gift Cards to be used in the
 booking system, but can easily be expanded to sell additional products if required.
@@ -41,6 +54,9 @@ logic is handled using serverless functions meaning that costs were kept low and
 the other required applications could be seemlessly integrated into the system.
 
 Progressive Web App implementation means that users can get an native app experience
-including notifications.
+when using the booking system including notifications.
 
-Little City Treat Edinburgh is launching at the beginning of 2020.
+Little City Treat Edinburgh launched in Edinburgh at the start of 2020 and has
+now expanded to Newcastle.
+
+You can view the Mobile Beauty

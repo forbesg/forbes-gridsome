@@ -14,13 +14,13 @@ featured: true
 
 #### Server-side Rendered Headless E-Commerce Application
 
-I was approached by Granite Setts Direct Ltd to develop an e-commerce website for
-them to sell granite setts online in the UK.
+I was approached by Granite Setts Direct Ltd to develop an e-commerce website to
+sell [granite setts in the UK](https://www.granitesettsdirect.co.uk).
 
 On review of their competitors websites, we felt that there was a real opportunity
 to make the online buying process faster and more enjoyable for the customer. Traditional
 e-commerce platforms felt slow and cumbersome to navigate so the aim was to create a
-fast and straight forward user experience.
+fast and straight forward and uncluttered user experience.
 
 After our initial discussions with the client we agreed that we would use Vue to create
 the UI and the [Nuxt JS](https://nuxtjs.org/) framework to take advantage of server-side rendering. In order to

@@ -14,7 +14,10 @@
           I build fast, responsive, maintainable and SEO friendly business
           websites for the good folk of Scotland and beyond, as well as
           developing more complex web and mobile applications using
-          <strong>HTML, CSS &amp; JavaScript</strong>.
+          <strong
+            >HTML, CSS &amp; Modern JavaScript Frameworks such as Vue JS and
+            React</strong
+          >.
         </p>
         <p>
           I focus on website performance and my preferred approach to Website
