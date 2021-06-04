@@ -84,7 +84,8 @@ import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 export default {
   metaInfo: {
-    title: "Freelance Web Developer Edinburgh | Websites and Web Applications"
+    title:
+      "Freelance Web Developer Edinburgh | Website and Web Application Development"
   },
   components: { Card, Hero, Skills }
 };

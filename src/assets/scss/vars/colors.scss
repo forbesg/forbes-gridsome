@@ -1,7 +1,11 @@
-$color-primary: #147BA4;
+$color-primary: #147ba4;
 $color-dark-primary: #083749;
 $color-red: #9a4b4b;
 
 $color-secondary: rgb(79, 148, 175);
 
-$color-light-blue-gradient: linear-gradient(90deg, rgba($color-primary, .01), rgba($color-primary, .1));
+$color-light-blue-gradient: linear-gradient(
+  90deg,
+  rgba($color-primary, 0.05),
+  rgba($color-primary, 0.2)
+);

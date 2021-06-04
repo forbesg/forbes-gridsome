@@ -68,8 +68,15 @@
         frameworks, such as React, Vue, Gatsby, Gridsome (this website) and Nuxt
         JS. Using a JAM Stack architecture (JavaScript, API's &amp; Markup),
         headless Databases, CMS's, and ecommerce services, I am able to quickly
-        create performant websites and web applications that search engines
-        love.
+        create performant and secure websites and web applications that search
+        engines love.
+      </p>
+      <p>
+        I have become increasingly focused on website speed and since the
+        introduction of Google's
+        <a href="https://web.dev/vitals/">Core Web Vitals</a> as a metric used
+        in their organic search results, the JAM Stack architecture has found
+        its place at modern Web Development.
       </p>
       <p>
         Some of my website design and web application development work is shown

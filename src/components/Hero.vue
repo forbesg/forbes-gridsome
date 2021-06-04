@@ -4,7 +4,7 @@
       <div class="left">
         <h1>Freelance Web <br />Developer | <span>Edinburgh</span></h1>
         <h2>Bringing Your Ideas to Life</h2>
-        <h3 class="text-primary">HTML  ·  CSS  ·  JavaScript</h3>
+        <h3 class="text-primary">HTML · CSS · JavaScript</h3>
         <g-link to="/portfolio" class="button">View My Work</g-link>
       </div>
     </div>
@@ -13,7 +13,6 @@
 
 <style lang="scss" scoped>
 .hero {
-  // background: linear-gradient(90deg, rgba($color-primary, .05), rgba($color-primary, .2));
   background: $color-light-blue-gradient;
   .flex {
     background-image: url(/hero-illustration-opaque.svg);
@@ -22,14 +21,16 @@
     background-size: 80%;
     justify-content: space-between;
     align-items: center;
-    height: 400px;
+    height: 500px;
+    // min-height: calc(100vh - 5.25rem);
     @include tablet {
       background-image: url(/hero-illustration.svg);
       background-position: center right;
       background-size: 600px 600px;
       height: 600px;
     }
-    .left, .right {
+    .left,
+    .right {
       img {
         max-width: 100%;
       }
@@ -44,7 +45,8 @@
         font-size: 0.8em;
       }
     }
-    h2, h3 {
+    h2,
+    h3 {
       margin-top: 0;
       margin-bottom: 1rem;
     }
