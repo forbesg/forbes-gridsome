@@ -36,9 +36,15 @@
       }
     }
     h1 {
-      font-size: 1.8rem;
+      font-size: 2.2rem;
       @include tablet {
         font-size: 2.6rem;
+      }
+      @include laptop {
+        font-size: 3.6rem;
+      }
+      @include desktop {
+        font-size: 4rem;
       }
       > span {
         color: rgba($color-primary, 0.4);
@@ -55,6 +61,9 @@
       @include tablet {
         font-size: 1.6rem;
       }
+      @include laptop {
+        font-size: 2.4rem;
+      }
     }
     h3 {
       font-size: 1rem;
@@ -62,6 +71,9 @@
       word-spacing: 1rem;
       @include tablet {
         font-size: 1.2rem;
+      }
+      @include laptop {
+        font-size: 1.6rem;
       }
     }
   }

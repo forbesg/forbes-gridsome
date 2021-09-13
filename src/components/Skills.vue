@@ -87,7 +87,7 @@
 
 <style lang="scss" scoped>
 .skills {
-  background: $color-light-blue-gradient;
+  background-color: #fff;
   > .container {
     display: flex;
     justify-content: space-around;
