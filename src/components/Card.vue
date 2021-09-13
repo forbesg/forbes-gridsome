@@ -1,12 +1,12 @@
 <template lang="html">
   <div class="card">
     <figure v-if="image">
-      <g-image
+      <img
         ref="lazy-image"
         :src="image"
+        :alt="imageAlt"
         width="530"
         height="299"
-        :alt="imageAlt"
       />
     </figure>
     <slot />
@@ -58,13 +58,6 @@ export default {
       position: relative;
       display: block;
       max-width: 100%;
-      // filter: grayscale(.6);
-      // transition: filter .5s;
-    }
-    &:hover {
-      img {
-        // filter: grayscale(0);
-      }
     }
   }
 

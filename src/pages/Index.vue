@@ -5,7 +5,7 @@
     <section class="feature dark">
       <div class="container">
         <h2 class="highlight-overline">An Introduction</h2>
-        <h4>Freelance Web Developer | Eye Fof detail | Sense of humour</h4>
+        <h3>Freelance Web Developer | Eye Fof detail | Sense of humour</h3>
         <p>
           I am a freelance Website Developer in Edinburgh with over
           {{ new Date().getFullYear() - 2014 }} years of web development
@@ -49,7 +49,7 @@
             :image="project.node.image"
             :imageAlt="project.node.imageAlt"
           >
-            <h4>{{ project.node.title }}</h4>
+            <h3>{{ project.node.title }}</h3>
             <div class="tags">
               <div v-for="tag in project.node.features" :key="tag" class="tag">
                 {{ tag }}
