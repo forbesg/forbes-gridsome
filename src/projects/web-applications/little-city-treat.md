@@ -59,4 +59,4 @@ when using the booking system including notifications.
 Little City Treat Edinburgh launched in Edinburgh at the start of 2020 and has
 now expanded to Newcastle.
 
-You can view the Mobile Beauty
+You can view the site and booking system at the following links - [Little City Treat Beauty Website](https://www.littlecitytreat.com) and [Beauty Booking System](https://book.littlecitytreat.com)

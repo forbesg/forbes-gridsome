@@ -7,8 +7,9 @@
         <h2 class="highlight-overline">An Introduction</h2>
         <h4>Freelance Web Developer | Eye Fof detail | Sense of humour</h4>
         <p>
-          I am a freelance Website Developer from beautiful and, sometimes
-          sunny, Edinburgh.
+          I am a freelance Website Developer in Edinburgh with over
+          {{ new Date().getFullYear() - 2014 }} years of web development
+          experience.
         </p>
         <p>
           I build fast, responsive, maintainable and SEO friendly business

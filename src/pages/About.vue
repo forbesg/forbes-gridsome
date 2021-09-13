@@ -3,6 +3,11 @@
     <div class="container">
       <h1 class="highlight-overline">My Journey to Web Development</h1>
       <p>
+        My name if Forbes Gray, a freelance website developer with over 7 years
+        experience building websites and web applications for a variety of
+        business' and industries, across Edinburgh and further afield.
+      </p>
+      <p>
         My interest in Web Development started fairly late. I have a background
         in sales spanning 10 years in the telecoms industry. As my skills grew I
         started up my own company supplying telecoms to business.
@@ -75,15 +80,17 @@
         I have become increasingly focused on website speed and since the
         introduction of Google's
         <a href="https://web.dev/vitals/">Core Web Vitals</a> as a metric used
-        in their organic search results, the JAM Stack architecture has found
-        its place at modern Web Development.
+        in their organic search results rankings, the JAM Stack architecture has
+        found its place at the forefront of modern Web Development.
       </p>
       <p>
-        Some of my website design and web application development work is shown
-        on my Portfolio Page
+        As an early adopter of new web technologies I am always looking at
+        embracing new tools a technologies to improve a websites performance and
+        the users experience.
       </p>
       <p>
-        My journey continues...
+        Some of my website design and web application development work can be
+        found on my Portfolio Page.
       </p>
       <g-link to="/portfolio" class="arrow">View My Portfolio</g-link>
     </div>
