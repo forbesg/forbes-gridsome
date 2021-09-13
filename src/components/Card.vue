@@ -1,7 +1,13 @@
 <template lang="html">
   <div class="card">
     <figure v-if="image">
-      <g-image ref="lazy-image" :src="image" alt="Granite Setts Direct Ltd Website" />
+      <g-image
+        ref="lazy-image"
+        :src="image"
+        width="530"
+        height="299"
+        :alt="imageAlt"
+      />
     </figure>
     <slot />
   </div>
@@ -13,37 +19,41 @@ export default {
     image: {
       type: String,
       required: false
+    },
+    imageAlt: {
+      type: String,
+      required: false
     }
   },
-  mounted () {
-    const targetImage = this.$refs['lazy-image']
-    const card = document.querySelector('.card')
+  mounted() {
+    const targetImage = this.$refs["lazy-image"];
+    const card = document.querySelector(".card");
     const options = {
-      rootMargin: '-500px 0 200px 0'
-    }
+      rootMargin: "-500px 0 200px 0"
+    };
     const observer = new IntersectionObserver((entries, options) => {
-      entries.forEach((ent) => {
+      entries.forEach(ent => {
         if (ent.isIntersecting) {
-          ent.target.src = this.image
-          observer.unobserve(ent.target)
+          ent.target.src = this.image;
+          observer.unobserve(ent.target);
         }
-      })
-    })
-    observer.observe(targetImage)
+      });
+    });
+    observer.observe(targetImage);
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
 .card {
   margin-bottom: 80px;
   .description {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
   figure {
     position: relative;
     margin: 0;
-    transition: background-color .5s;
+    transition: background-color 0.5s;
     img {
       position: relative;
       display: block;

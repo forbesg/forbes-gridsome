@@ -3,6 +3,7 @@ title: Euro 2016 Wallchart
 description: A side web application project - Web Wallchart for the 2016 European Chamionships
 subhead: Angular JS Wallchart 2016 European Chamionships
 image: /images/projects/web-application/euro-2016-wallchart.jpg
+imageAlt: Euro 2016 Wallchart - Web Application
 url: https://forbesg.github.io/Euro-2016-WallChart
 repo: https://github.com/forbesg/Euro-2016-WallChart
 category: web-application

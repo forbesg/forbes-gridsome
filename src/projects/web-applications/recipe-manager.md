@@ -3,6 +3,7 @@ title: Recipe Manager - React
 description: Recipe Manager V2 - A re-write of my original Recipe Manager Application that is written in React with a Firebase backend.
 subhead: Manage Your Recipes with React and Firebase
 image: /images/projects/web-application/recipe-manager.jpg
+imageAlt: My Recipe Manager - Recipe Web Application
 url: https://my-recipe-manager.firebaseapp.com/
 repo: https://github.com/forbesg/my-recipe-manager
 category: web-application

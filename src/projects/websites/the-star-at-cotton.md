@@ -2,9 +2,21 @@
 title: The Star At Cotton
 description: A Website designed and developed for The Star at Cotton, a Traditional Country Pub in the Staffordshire Moorlands
 image: /images/projects/web/the-star-at-cotton.jpg
+imageAlt: The Star At Cotton - Country Pub Website
 url: https://www.thestaratcotton.co.uk
 layout: project.hbs
-features: [html, css, scss, php, Twig, GRAV CMS, javascript, bootstrap, responsive design]
+features:
+  [
+    html,
+    css,
+    scss,
+    php,
+    Twig,
+    GRAV CMS,
+    javascript,
+    bootstrap,
+    responsive design,
+  ]
 category: website
 slug: the-star-at-cotton
 order: 4

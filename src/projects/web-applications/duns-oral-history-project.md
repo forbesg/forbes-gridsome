@@ -3,6 +3,7 @@ title: Duns Oral History Project
 description: A web application for the management and presentation of audio recordings taken from interviews with the local residents of Duns in the Scottish Borders.
 subhead: Oral History Web Application
 image: /images/projects/web-application/duns-oral-history-project.jpg
+imageAlt: Duns Oral History Project
 url: https://dunsoralhistoryproject.co.uk
 features: [HTML5, SCSS, Vue JS, Nuxt JS, Firebase, Babel, Webpack, PWA]
 category: web-application

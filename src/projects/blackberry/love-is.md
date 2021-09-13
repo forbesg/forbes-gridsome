@@ -3,6 +3,7 @@ title: Love Is
 description: Love Calculator - A simple BlackBarry 10 WebWorks Application
 subhead: The Love Calculator
 image: /images/projects/blackberry/love-is.jpg
+imageAlt: The Love Calculator - Blackberry Application
 url: https://appworld.blackberry.com/webstore/content/43684889/
 category: blackberry
 features: [html5, css3, javascript, bbui.js, blackberry webworks]

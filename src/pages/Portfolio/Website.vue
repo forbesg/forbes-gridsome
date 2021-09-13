@@ -3,41 +3,54 @@
     <div class="container">
       <div class="breadcrumbs">
         <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-          <li itemprop="itemListElement" itemscope
-              itemtype="https://schema.org/ListItem">
+          <li
+            itemprop="itemListElement"
+            itemscope
+            itemtype="https://schema.org/ListItem"
+          >
             <g-link to="/" itemprop="item" :itemid="`${hostname}`">
               <span itemprop="name">Home</span>
-              <meta itemprop="position" content="1">
+              <meta itemprop="position" content="1" />
             </g-link>
           </li>
-          <li itemprop="itemListElement" itemscope
-              itemtype="https://schema.org/ListItem">
-            <g-link to="/portfolio/"
-                    itemprop="item"
-                    :itemid="`${hostname}/portfolio/`">
+          <li
+            itemprop="itemListElement"
+            itemscope
+            itemtype="https://schema.org/ListItem"
+          >
+            <g-link
+              to="/portfolio/"
+              itemprop="item"
+              :itemid="`${hostname}/portfolio/`"
+            >
               <span itemprop="name">Portfolio</span>
-              <meta itemprop="position" content="2">
+              <meta itemprop="position" content="2" />
             </g-link>
           </li>
-          <li itemprop="itemListElement" itemscope
-              itemtype="https://schema.org/ListItem">
+          <li
+            itemprop="itemListElement"
+            itemscope
+            itemtype="https://schema.org/ListItem"
+          >
             <span itemprop="name">Websites</span>
-            <meta itemprop="position" content="3">
+            <meta itemprop="position" content="3" />
           </li>
         </ol>
       </div>
       <h1 class="highlight-overline">Website Projects</h1>
       <h2>Websites</h2>
       <div class="cards">
-        <card v-for="item in $page.website_projects.edges"
-              :key="item.id"
-              :image="item.node.image">
-            <h3>{{ item.node.title }}</h3>
-            <p class="description">{{ item.node.description }}</p>
-            <g-link :to="item.node.path" class="button small">View</g-link>
+        <card
+          v-for="item in $page.website_projects.edges"
+          :key="item.id"
+          :image="item.node.image"
+          :imageAlt="item.node.imageAlt"
+        >
+          <h3>{{ item.node.title }}</h3>
+          <p class="description">{{ item.node.description }}</p>
+          <g-link :to="item.node.path" class="button small">View</g-link>
         </card>
       </div>
-
     </div>
   </Layout>
 </template>
@@ -51,6 +64,7 @@ query {
         title
         description
         image
+        imageAlt
         path
         order
       }
@@ -59,31 +73,33 @@ query {
 }
 </page-query>
 
-
 <script>
-import Card from '@/components/Card'
+import Card from "@/components/Card";
 export default {
-  name: 'Website',
+  name: "Website",
   metaInfo: {
-    title: 'Website Projects - Portfolio',
-    meta: [{
-      key: 'description',
-      name: 'description',
-      content: 'A selection of fast, responsive website projects, including static sites, content management systems and PWA\'s'
-    }],
-    link: [
+    title: "Website Projects - Portfolio",
+    meta: [
       {
-        key: 'canonical',
-        rel: 'canonical',
-        href: `${process.env.GRIDSOME_HOSTNAME}/portfolio/website/`
+        key: "description",
+        name: "description",
+        content:
+          "A selection of fast, responsive website projects, including static sites, content management systems and PWA's"
       }
     ],
+    link: [
+      {
+        key: "canonical",
+        rel: "canonical",
+        href: `${process.env.GRIDSOME_HOSTNAME}/portfolio/website/`
+      }
+    ]
   },
   components: { Card },
-  data () {
+  data() {
     return {
       hostname: process.env.GRIDSOME_HOSTNAME
-    }
+    };
   }
-}
+};
 </script>

@@ -47,6 +47,7 @@
             v-for="project in $page.featured_projects.edges"
             :key="project.node.id"
             :image="project.node.image"
+            :imageAlt="project.node.imageAlt"
           >
             <h4>{{ project.node.title }}</h4>
             <div class="tags">
@@ -72,6 +73,7 @@ query {
         id
         title
         image
+        imageAlt
         features
       }
     }

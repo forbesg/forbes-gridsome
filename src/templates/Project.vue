@@ -71,7 +71,7 @@
       </div>
       <aside class="">
         <div class="">
-          <img :src="$page.project.image" :alt="$page.project.title" />
+          <img :src="$page.project.image" :alt="$page.project.imageAlt" />
           <h4>Technologies Used</h4>
           <ul>
             <li v-for="(tech, index) in $page.project.features" :key="index">
@@ -145,6 +145,7 @@ query ($id: ID!) {
     subhead
     content
     image
+    imageAlt
     features
     url
     repo

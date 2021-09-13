@@ -3,9 +3,10 @@ title: Granite Setts Direct
 description: An E-Commerce web application designed and developed for Granite Setts Direct Ltd using a headless e-commerce API
 subhead: E-Commerce Web Application
 image: /images/projects/web-application/granite-setts-direct.jpg
+imageAlt: Granite Setts Direct - Headless Ecommerce Website
 url: https://www.granitesettsdirect.co.uk
 layout: project.hbs
-features: [HTML5, SCSS, Vue JS, Nuxt JS, Moltin, Babel, Webpack]
+features: [HTML5, SCSS, Vue JS, Nuxt JS, Moltin, Babel, Webpack, Ecommerce]
 category: web-application
 slug: granite-setts-direct
 order: 2

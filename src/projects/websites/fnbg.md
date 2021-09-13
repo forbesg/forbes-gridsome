@@ -2,9 +2,23 @@
 title: FNBG Ltd
 description: A static website designed and developed for FNBG Business Cost Consultants in Edinburgh.
 image: /images/projects/web/fnbg.jpg
+imageAlt: FNBG Ltd - Telecoms Business Website
 url: https://fnbg.co.uk
 layout: project.hbs
-features: [html, css, php, javascript, bootstrap, responsive design, ajax, scss, flexbox, metalsmith, progressive web app]
+features:
+  [
+    html,
+    css,
+    php,
+    javascript,
+    bootstrap,
+    responsive design,
+    ajax,
+    scss,
+    flexbox,
+    metalsmith,
+    progressive web app,
+  ]
 category: website
 slug: fnbg
 order: 2
@@ -21,10 +35,10 @@ the service will know, has severe limitations. The frustrations grew as the site
 although functional, was far from easy on the eye. In addition to this, at a time
 when mobile and tablet browser use were on the rise, the site was a calamity.
 
-I started to learn *HTML* and *CSS* and proceeded to create my first static site.
+I started to learn _HTML_ and _CSS_ and proceeded to create my first static site.
 
-Over the last couple of years I have implemented *Twitter Bootstrap*, some *PHP*
-includes for ease of management / maintenance, as well as a little *AJAX* for
+Over the last couple of years I have implemented _Twitter Bootstrap_, some _PHP_
+includes for ease of management / maintenance, as well as a little _AJAX_ for
 requesting additional content while keeping the initial page size low and
 requesting content from my (shamefully out-of-date) Blogger Site.
 

@@ -3,6 +3,7 @@ title: Little City Treat
 description: An Online Booking System that allows customers to book last minute spa and salon treatments to be delivered to their home, office or hotel.
 subhead: Bespoke Online Booking System
 image: /images/projects/web-application/little-city-treat.jpg
+imageAlt: Little City Treat - Booking System Web Application
 url: https://www.littlecitytreat.com
 features:
   [
@@ -10,11 +11,13 @@ features:
     SCSS,
     Vue JS,
     Nuxt JS,
+    DatoCMS,
     Firebase,
     Babel,
     Webpack,
     Progressive Web App,
     Stripe,
+    ECommerce,
   ]
 category: web-application
 slug: little-city-treat
