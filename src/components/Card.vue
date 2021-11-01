@@ -46,9 +46,8 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  margin-bottom: 80px;
   .description {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
   figure {
     position: relative;

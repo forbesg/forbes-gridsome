@@ -67,6 +67,10 @@
           <h1 class="highlight-overline">{{ $page.project.title }}</h1>
           <h2>{{ $page.project.subhead }}</h2>
           <div v-html="$page.project.content" class="markdown-content"></div>
+          <Carousel
+            v-if="$page.project.carousel && $page.project.carousel.length"
+            :images="$page.project.carousel"
+          ></Carousel>
         </main>
       </div>
       <aside class="">
@@ -99,6 +103,7 @@
 </template>
 
 <script>
+import Carousel from "@/components/Carousel";
 export default {
   name: "Project",
   metaInfo() {
@@ -111,7 +116,7 @@ export default {
             .toUpperCase()
             .concat(w.slice(1))
         )
-        .join(" ")} - Portfolio`,
+        .join(" ")} - Forbes Gray`,
       meta: [
         {
           key: "description",
@@ -132,7 +137,8 @@ export default {
     return {
       hostname: process.env.GRIDSOME_HOSTNAME
     };
-  }
+  },
+  components: { Carousel }
 };
 </script>
 
@@ -147,6 +153,10 @@ query ($id: ID!) {
     image
     imageAlt
     features
+    carousel {
+      src
+      alt
+    }
     url
     repo
     path
@@ -158,9 +168,22 @@ query ($id: ID!) {
 .project {
   display: flex;
   flex-wrap: wrap;
+  @include laptop {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "main main aside"
+      "main main aside";
+  }
   > div {
     flex: 1 1 400px;
+    max-width: 100%;
     margin-bottom: 50px;
+    @include laptop {
+      grid-area: main;
+    }
     h1 {
       margin-bottom: 1rem;
     }
@@ -190,6 +213,8 @@ query ($id: ID!) {
       margin-bottom: 50px;
     }
   }
+  main {
+  }
   aside {
     flex: 1 1 300px;
     text-align: right;
@@ -197,6 +222,9 @@ query ($id: ID!) {
       flex: 0 0 300px;
       margin-left: 20px;
       padding-top: 20px;
+    }
+    @include laptop {
+      grid-area: aside;
     }
     > div {
       @include tablet {

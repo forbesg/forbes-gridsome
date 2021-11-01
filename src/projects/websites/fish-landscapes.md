@@ -19,14 +19,14 @@ features:
   ]
 category: website
 slug: fish-landscapes
-order: 1
+order: 2
 fullImage:
   src: /images/projects/web/fish-landscapes-pagespeed-test.jpg
   alt: Fish Landscapes Website pagespeed test results
-featured: true
+featured: false
 ---
 
-Fish Landscapes is a landscaping design and construction company in Cumbria. They
+Fish Landscapes is a [landscaping design and construction company in Cumbria](https://www.fishlandscapes.co.uk/). They
 required a simple site to give them there first presence on the web, and show off
 some of their previous work.
 

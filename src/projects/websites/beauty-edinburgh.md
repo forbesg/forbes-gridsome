@@ -6,11 +6,20 @@ imageAlt: Beauty Edinburgh - Beauty Salon PHP Website
 url: https://www.beautyedinburgh.co.uk
 layout: project.hbs
 features:
-  [html, css, php, javascript, bootstrap, online booking, responsive design]
+  [
+    HTML,
+    CSS,
+    Tailwind,
+    PHP,
+    JavaScript,
+    Bootstrap,
+    Online Booking,
+    Responsive Design,
+  ]
 category: website
 slug: beauty-edinburgh
 featured: false
-order: 3
+order: 4
 ---
 
 The Beauty Edinburgh Website is a something that has evolved over time.

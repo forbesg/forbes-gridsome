@@ -19,7 +19,7 @@ features:
   ]
 category: website
 slug: the-star-at-cotton
-order: 4
+order: 5
 ---
 
 I was asked to develop a new website for an old tradional country pub in the Staffordshire Moorlands.

@@ -3,7 +3,7 @@
     <div class="container">
       <h1 class="highlight-overline">My Journey to Web Development</h1>
       <p>
-        My name if Forbes Gray, a freelance website developer with over 7 years
+        My name is Forbes Gray, a freelance website developer with over 7 years
         experience building websites and web applications for a variety of
         business' and industries, across Edinburgh and further afield.
       </p>

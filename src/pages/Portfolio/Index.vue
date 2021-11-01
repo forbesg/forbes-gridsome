@@ -26,45 +26,57 @@
       <h1 class="highlight-overline">Portfolio</h1>
 
       <h2>Web Applications</h2>
-      <div class="cards">
-        <card
-          v-for="item in $page.webapp_projects.edges"
-          :key="item.id"
-          :image="item.node.image"
-          :imageAlt="item.node.imageAlt"
+      <div class="cards-container">
+        <div class="cards">
+          <card
+            v-for="item in $page.webapp_projects.edges"
+            :key="item.id"
+            :image="item.node.image"
+            :imageAlt="item.node.imageAlt"
+          >
+            <h3>{{ item.node.title }}</h3>
+            <p class="description">{{ item.node.description }}</p>
+            <g-link :to="item.node.path" class="button small">View</g-link>
+          </card>
+        </div>
+        <g-link to="/portfolio/web-application/" class="arrow"
+          >View more Web Application Projects</g-link
         >
-          <h3>{{ item.node.title }}</h3>
-          <p class="description">{{ item.node.description }}</p>
-          <g-link :to="item.node.path" class="button small">View</g-link>
-        </card>
       </div>
 
       <h2>Websites</h2>
-      <div class="cards">
-        <card
-          v-for="item in $page.website_projects.edges"
-          :key="item.id"
-          :image="item.node.image"
-          :imageAlt="item.node.imageAlt"
+      <div class="cards-container">
+        <div class="cards">
+          <card
+            v-for="item in $page.website_projects.edges"
+            :key="item.id"
+            :image="item.node.image"
+            :imageAlt="item.node.imageAlt"
+          >
+            <h3>{{ item.node.title }}</h3>
+            <p class="description">{{ item.node.description }}</p>
+            <g-link :to="item.node.path" class="button small">View</g-link>
+          </card>
+        </div>
+        <g-link to="/portfolio/website/" class="arrow"
+          >View more Website Projects</g-link
         >
-          <h3>{{ item.node.title }}</h3>
-          <p class="description">{{ item.node.description }}</p>
-          <g-link :to="item.node.path" class="button small">View</g-link>
-        </card>
       </div>
 
       <h2>Blackberry Apps</h2>
-      <div class="cards">
-        <card
-          v-for="item in $page.blackberry_projects.edges"
-          :key="item.id"
-          :image="item.node.image"
-          :imageAlt="item.node.imageAlt"
-        >
-          <h3>{{ item.node.title }}</h3>
-          <p class="description">{{ item.node.description }}</p>
-          <g-link :to="item.node.path" class="button small">View</g-link>
-        </card>
+      <div class="cards-container">
+        <div class="cards">
+          <card
+            v-for="item in $page.blackberry_projects.edges"
+            :key="item.id"
+            :image="item.node.image"
+            :imageAlt="item.node.imageAlt"
+          >
+            <h3>{{ item.node.title }}</h3>
+            <p class="description">{{ item.node.description }}</p>
+            <g-link :to="item.node.path" class="button small">View</g-link>
+          </card>
+        </div>
       </div>
     </div>
   </Layout>
@@ -72,7 +84,7 @@
 
 <page-query>
 query {
-  webapp_projects: allProject (filter: { category: { eq: "web-application" } }, sortBy: "order", order: ASC) {
+  webapp_projects: allProject (filter: { category: { eq: "web-application" } }, limit: 4, sortBy: "order", order: ASC) {
     edges {
       node {
         id
@@ -88,7 +100,7 @@ query {
       }
     }
   }
-  website_projects: allProject (filter: { category: { eq: "website" } }, sortBy: "order", order: ASC) {
+  website_projects: allProject (filter: { category: { eq: "website" } }, limit: 4, sortBy: "order", order: ASC) {
     edges {
       node {
         id
@@ -104,7 +116,7 @@ query {
       }
     }
   }
-  blackberry_projects: allProject (filter: { category: { eq: "blackberry" } }, sortBy: "order", order: ASC) {
+  blackberry_projects: allProject (filter: { category: { eq: "blackberry" } }, limit: 4, sortBy: "order", order: ASC) {
     edges {
       node {
         id
