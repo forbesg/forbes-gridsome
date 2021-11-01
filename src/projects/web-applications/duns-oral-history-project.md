@@ -8,7 +8,7 @@ url: https://dunsoralhistoryproject.co.uk
 features: [HTML5, SCSS, Vue JS, Nuxt JS, Firebase, Babel, Webpack, PWA]
 category: web-application
 slug: duns-oral-history-project
-order: 3
+order: 4
 ---
 
 The Duns Oral History web application was written in order to manage and present audio recordings

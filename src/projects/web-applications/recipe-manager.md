@@ -10,7 +10,7 @@ category: web-application
 slug: recipe-manager
 layout: project.hbs
 features: [HTML5, CSS3, React JS, NodeJS, Firebase]
-order: 4
+order: 5
 ---
 
 My Recipe Manager is a re-written version of my previous MEAN Recipe Manager.

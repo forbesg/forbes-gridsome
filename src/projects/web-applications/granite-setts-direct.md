@@ -9,7 +9,7 @@ layout: project.hbs
 features: [HTML5, SCSS, Vue JS, Nuxt JS, Moltin, Babel, Webpack, Ecommerce]
 category: web-application
 slug: granite-setts-direct
-order: 2
+order: 3
 featured: true
 ---
 

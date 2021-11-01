@@ -8,7 +8,7 @@ url: https://forbesg.github.io/world-cup-wall-chart/
 repo: https://github.com/forbesg/world-cup-wall-chart
 category: web-application
 features: [HTML5, CSS3, JavaScript, Twitter Bootstrap, AJAX]
-order: 7
+order: 8
 ---
 
 The World Cup Wallchart was created 'just' in time for the 2014 World Cup in Brazil.
