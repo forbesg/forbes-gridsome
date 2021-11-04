@@ -3,8 +3,8 @@
     <div class="container flex">
       <div class="left">
         <h1>Freelance Web <br />Developer | <span>Edinburgh</span></h1>
-        <h2>Bringing Your Ideas to Life</h2>
-        <h3 class="text-primary">HTML · CSS · JavaScript</h3>
+        <h2>Fast, Responsive & SEO-Friendly Websites</h2>
+        <h3 class="text-primary">Static · CMS · E-Commerce</h3>
         <g-link to="/portfolio" class="button">View My Work</g-link>
       </div>
     </div>
@@ -62,7 +62,7 @@
         font-size: 1.6rem;
       }
       @include laptop {
-        font-size: 2.4rem;
+        font-size: 2rem;
       }
     }
     h3 {

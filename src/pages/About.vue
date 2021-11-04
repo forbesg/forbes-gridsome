@@ -2,6 +2,7 @@
   <Layout>
     <div class="container">
       <h1 class="highlight-overline">My Journey to Web Development</h1>
+      <h2>In The Beginning</h2>
       <p>
         My name is Forbes Gray, a freelance website developer with over 7 years
         experience building websites and web applications for a variety of
@@ -45,6 +46,7 @@
         Management Systems such as Joomla, Wordpress and MODX. With this came my
         introduction to databases and MySQL.
       </p>
+      <h2>Discovering NodeJS</h2>
       <p>
         With the growth of JavaScript and NodeJS, web applications were becoming
         evermore capable and I found my new test. JavaScript became my focus.
@@ -67,6 +69,7 @@
         always found myself striving for faster, performant websites and
         applications.
       </p>
+      <h2>JAM Stack Website Development</h2>
       <p>
         My main focus has become building fast, SEO friendly server-side
         rendered and static websites, using many of the modern JavaScript
@@ -89,8 +92,9 @@
         the users experience.
       </p>
       <p>
-        Some of my website design and web application development work can be
-        found on my Portfolio Page.
+        Some of my website design and
+        <g-link to="/">web application development</g-link> work can be found on
+        my Portfolio Page.
       </p>
       <g-link to="/portfolio" class="arrow">View My Portfolio</g-link>
     </div>

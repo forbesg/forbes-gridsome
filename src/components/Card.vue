@@ -61,7 +61,9 @@ export default {
       object-fit: cover;
     }
   }
-
+  a.button {
+    margin-top: 1.25rem;
+  }
   .tags {
     display: flex;
     flex-wrap: wrap;
