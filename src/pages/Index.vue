@@ -42,7 +42,7 @@
     <section class="feature">
       <div class="container">
         <h2 class="highlight-overline">Recent Website Development Projects</h2>
-        <div class="cards">
+        <div class="cards" style="margin-top: 3rem;">
           <card
             v-for="project in $page.featured_projects.edges"
             :key="project.node.id"
@@ -58,8 +58,26 @@
           </card>
         </div>
         <div>
-          <g-link to="/portfolio" class="button">View Portfolio</g-link>
+          <g-link to="/portfolio" class="arrow">View My Portfolio</g-link>
         </div>
+      </div>
+    </section>
+    <get-in-touch></get-in-touch>
+    <section class="feature">
+      <div class="container">
+        <h2 class="highlight-overline">
+          Digital Marketing & Web Design Agencies
+        </h2>
+        <p>
+          If you are an agency looking for an extra pair of hands to get your
+          clients project over the line, I welcome freelance website development
+          enquiries of all types.
+        </p>
+        <p>
+          Feel free to send me a message to arrange a conversation about your
+          requirements.
+        </p>
+        <g-link to="/contact" class="arrow">Send me a message</g-link>
       </div>
     </section>
   </Layout>
@@ -83,6 +101,7 @@ query {
 
 <script>
 import Card from "@/components/Card";
+import GetInTouch from "@/components/GetInTouch";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 export default {
@@ -90,7 +109,7 @@ export default {
     title:
       "Freelance Web Developer Edinburgh | Website and Web Application Development"
   },
-  components: { Card, Hero, Skills }
+  components: { Card, GetInTouch, Hero, Skills }
 };
 </script>
 

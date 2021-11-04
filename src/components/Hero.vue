@@ -38,38 +38,36 @@
     }
     h1 {
       font-size: 2.2rem;
+      margin: 0 0 2rem 0;
       @include tablet {
         font-size: 2.6rem;
       }
       @include laptop {
         font-size: 3.6rem;
       }
-      @include desktop {
-        // font-size: 4rem;
-      }
       > span {
         color: rgba($color-primary, 0.4);
-        font-size: 0.8em;
+        font-size: 0.75em;
       }
     }
     h2,
     h3 {
       margin-top: 0;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
     h2 {
       font-size: 1.2rem;
       @include tablet {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
       }
       @include laptop {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
     }
     h3 {
       font-size: 1rem;
-      margin-bottom: 2.6em;
-      word-spacing: 1rem;
+      margin-bottom: 3rem;
+      word-spacing: 0.5rem;
       @include tablet {
         font-size: 1.2rem;
       }

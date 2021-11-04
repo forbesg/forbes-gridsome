@@ -24,67 +24,81 @@
         </ol>
       </div>
       <h1 class="highlight-overline">Portfolio</h1>
-
-      <h2>Web Applications</h2>
-      <div class="cards-container">
-        <div class="cards">
-          <card
-            v-for="item in $page.webapp_projects.edges"
-            :key="item.id"
-            :image="item.node.image"
-            :imageAlt="item.node.imageAlt"
-          >
-            <h3>{{ item.node.title }}</h3>
-            <p class="description">{{ item.node.description }}</p>
-            <g-link :to="item.node.path" class="button small">View</g-link>
-          </card>
-        </div>
-        <g-link to="/portfolio/web-application/" class="arrow"
-          >View more Web Application Projects</g-link
-        >
-      </div>
-
-      <h2>Websites</h2>
-      <div class="cards-container">
-        <div class="cards">
-          <card
-            v-for="item in $page.website_projects.edges"
-            :key="item.id"
-            :image="item.node.image"
-            :imageAlt="item.node.imageAlt"
-          >
-            <h3>{{ item.node.title }}</h3>
-            <p class="description">{{ item.node.description }}</p>
-            <g-link :to="item.node.path" class="button small">View</g-link>
-          </card>
-        </div>
-        <g-link to="/portfolio/website/" class="arrow"
-          >View more Website Projects</g-link
-        >
-      </div>
-
-      <h2>Blackberry Apps</h2>
-      <div class="cards-container">
-        <div class="cards">
-          <card
-            v-for="item in $page.blackberry_projects.edges"
-            :key="item.id"
-            :image="item.node.image"
-            :imageAlt="item.node.imageAlt"
-          >
-            <h3>{{ item.node.title }}</h3>
-            <p class="description">{{ item.node.description }}</p>
-            <g-link :to="item.node.path" class="button small">View</g-link>
-          </card>
-        </div>
-      </div>
+      <p>
+        A small selection of recent projects, from simple static website,
+        web-based mobile applications and web applications.
+      </p>
     </div>
+    <section class="feature no-top-padding">
+      <div class="container">
+        <h2>Web Applications</h2>
+        <div class="cards-container">
+          <div class="cards">
+            <card
+              v-for="item in $page.webapp_projects.edges"
+              :key="item.id"
+              :image="item.node.image"
+              :imageAlt="item.node.imageAlt"
+            >
+              <h3>{{ item.node.title }}</h3>
+              <p class="description">{{ item.node.description }}</p>
+              <g-link :to="item.node.path" class="button small">View</g-link>
+            </card>
+          </div>
+          <g-link to="/portfolio/web-application/" class="arrow"
+            >View more Web Application Projects</g-link
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="feature dark">
+      <div class="container">
+        <h2>Websites</h2>
+        <div class="cards-container">
+          <div class="cards">
+            <card
+              v-for="item in $page.website_projects.edges"
+              :key="item.id"
+              :image="item.node.image"
+              :imageAlt="item.node.imageAlt"
+            >
+              <h3>{{ item.node.title }}</h3>
+              <p class="description">{{ item.node.description }}</p>
+              <g-link :to="item.node.path" class="button small">View</g-link>
+            </card>
+          </div>
+          <g-link to="/portfolio/website/" class="arrow"
+            >View more Website Projects</g-link
+          >
+        </div>
+      </div>
+    </section>
+    <section class="feature">
+      <div class="container">
+        <h2>Blackberry Apps</h2>
+        <div class="cards-container">
+          <div class="cards">
+            <card
+              v-for="item in $page.blackberry_projects.edges"
+              :key="item.id"
+              :image="item.node.image"
+              :imageAlt="item.node.imageAlt"
+            >
+              <h3>{{ item.node.title }}</h3>
+              <p class="description">{{ item.node.description }}</p>
+              <g-link :to="item.node.path" class="button small">View</g-link>
+            </card>
+          </div>
+        </div>
+      </div>
+    </section>
   </Layout>
 </template>
 
 <page-query>
 query {
-  webapp_projects: allProject (filter: { category: { eq: "web-application" } }, limit: 4, sortBy: "order", order: ASC) {
+  webapp_projects: allProject (filter: { category: { eq: "web-application" } }, limit: 3, sortBy: "order", order: ASC) {
     edges {
       node {
         id
@@ -100,7 +114,7 @@ query {
       }
     }
   }
-  website_projects: allProject (filter: { category: { eq: "website" } }, limit: 4, sortBy: "order", order: ASC) {
+  website_projects: allProject (filter: { category: { eq: "website" } }, limit: 3, sortBy: "order", order: ASC) {
     edges {
       node {
         id
@@ -116,7 +130,7 @@ query {
       }
     }
   }
-  blackberry_projects: allProject (filter: { category: { eq: "blackberry" } }, limit: 4, sortBy: "order", order: ASC) {
+  blackberry_projects: allProject (filter: { category: { eq: "blackberry" } }, limit: 3, sortBy: "order", order: ASC) {
     edges {
       node {
         id
@@ -164,3 +178,13 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+section {
+  h2 {
+    margin-bottom: 3rem;
+  }
+  .cards-container {
+    margin-bottom: 0;
+  }
+}
+</style>

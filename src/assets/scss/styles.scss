@@ -85,9 +85,15 @@ body {
     background-color: #fff;
     padding: 100px 0;
     overflow: hidden;
+    &.no-top-padding {
+      padding-top: 0;
+    }
     &.dark {
       background-color: $color-dark-primary;
       color: #fff;
+      .container {
+        position: relative;
+      }
       h1,
       h2,
       h3,
@@ -123,6 +129,26 @@ body {
         opacity: 0.5;
         transform: translate(100px, 100px);
       }
+
+      .card {
+        background-color: rgba(#fff, 0.15);
+        border-radius: 0.5rem;
+        padding: 0.75rem;
+        overflow: hidden;
+        img {
+          border-radius: 0.25rem;
+        }
+        &--content {
+          //color: initial;
+          padding: 0.75rem;
+          h2,
+          h3,
+          h4 {
+            // color: initial;
+            // margin-top: 0;
+          }
+        }
+      }
     }
   }
 
@@ -144,7 +170,7 @@ body {
     @supports (display: grid) {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      grid-gap: 3rem;
+      grid-gap: 2rem;
       margin: 0;
       > * {
         margin: 0 0 50px 0;

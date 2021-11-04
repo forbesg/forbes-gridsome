@@ -9,7 +9,9 @@
         height="299"
       />
     </figure>
-    <slot />
+    <div class="card--content">
+      <slot />
+    </div>
   </div>
 </template>
 
