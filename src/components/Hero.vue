@@ -13,7 +13,8 @@
 
 <style lang="scss" scoped>
 .hero {
-  background: $color-light-blue-gradient;
+  // background: $color-light-blue-gradient;
+  background: white;
   .flex {
     background-image: url(/hero-illustration-opaque.svg);
     background-repeat: no-repeat;
@@ -44,7 +45,7 @@
         font-size: 3.6rem;
       }
       @include desktop {
-        font-size: 4rem;
+        // font-size: 4rem;
       }
       > span {
         color: rgba($color-primary, 0.4);

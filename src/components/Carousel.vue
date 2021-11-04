@@ -125,9 +125,9 @@ export default {
       background: $color-primary;
       border-radius: 0.25rem;
       cursor: pointer;
-      height: 1rem;
-      width: 1rem;
-      padding: 0.25rem;
+      height: 0.75rem;
+      width: 0.75rem;
+      padding: 0.15rem;
       &--inner {
         display: block;
         height: 100%;
