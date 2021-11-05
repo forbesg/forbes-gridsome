@@ -77,27 +77,56 @@ query {
 import Card from "@/components/Card";
 export default {
   name: "BlackberryApplications",
-  metaInfo: {
-    title: "Blackberry Projects - Portfolio",
-    meta: [
-      {
-        key: "description",
-        name: "description",
-        content:
-          "A selection of my early Blackberry Applications, built using modern web technologies."
-      }
-    ],
-    link: [
-      {
-        key: "canonical",
-        rel: "canonical",
-        href: `${process.env.GRIDSOME_HOSTNAME}/portfolio/blackberry/`
-      }
-    ]
-  },
   components: { Card },
+  metaInfo() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content: this.description
+        },
+        {
+          key: "og:title",
+          property: "og:title",
+          content: this.title
+        },
+        {
+          key: "og:description",
+          property: "og:description",
+          content: this.description
+        },
+        {
+          key: "og:url",
+          property: "og:url",
+          content: `${process.env.GRIDSOME_HOSTNAME}/portfolio/blackberry/`
+        },
+        {
+          key: "twitter:title",
+          name: "twitter:title",
+          content: this.title
+        },
+        {
+          key: "twitter:description",
+          name: "twitter:description",
+          content: this.description
+        }
+      ],
+      link: [
+        {
+          key: "canonical",
+          rel: "canonical",
+          href: `${process.env.GRIDSOME_HOSTNAME}/portfolio/blackberry/`
+        }
+      ]
+    };
+  },
   data() {
     return {
+      title: "Blackberry Projects - Portfolio",
+      description:
+        "A selection of my early Blackberry Applications, built using modern web technologies.",
       hostname: process.env.GRIDSOME_HOSTNAME
     };
   }

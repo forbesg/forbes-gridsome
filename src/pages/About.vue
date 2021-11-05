@@ -103,23 +103,56 @@
 
 <script>
 export default {
-  metaInfo: {
-    title: "About Me - Freelance Web Developer Edinburgh",
-    meta: [
-      {
-        key: "description",
-        name: "description",
-        content:
-          "Information about Edinburgh freelance Web Developer Forbes Gray and his journey into Website Development"
-      }
-    ],
-    link: [
-      {
-        key: "canonical",
-        rel: "canonical",
-        href: `${process.env.GRIDSOME_HOSTNAME}/about/`
-      }
-    ]
+  data() {
+    return {
+      title: "About Me - Freelance Web Developer Edinburgh",
+      description:
+        "Information about Edinburgh freelance Web Developer Forbes Gray and his journey into Website Development"
+    };
+  },
+  metaInfo() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content: this.description
+        },
+        {
+          key: "og:title",
+          property: "og:title",
+          content: this.title
+        },
+        {
+          key: "og:description",
+          property: "og:description",
+          content: this.description
+        },
+        {
+          key: "og:url",
+          property: "og:url",
+          content: `${process.env.GRIDSOME_HOSTNAME}/about/`
+        },
+        {
+          key: "twitter:title",
+          name: "twitter:title",
+          content: this.title
+        },
+        {
+          key: "twitter:description",
+          name: "twitter:description",
+          content: this.description
+        }
+      ],
+      link: [
+        {
+          key: "canonical",
+          rel: "canonical",
+          href: `${process.env.GRIDSOME_HOSTNAME}/about/`
+        }
+      ]
+    };
   }
 };
 </script>

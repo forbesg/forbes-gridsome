@@ -15,7 +15,105 @@ export default function(Vue, { router, head, isClient }) {
     key: "description",
     name: "description",
     content:
-      "Forbes Gray is a Freelance Web Developer in Edinburgh, specialising in fast, responsive, SEO friendly websites and web applications using modern web technologies"
+      "Forbes Gray is a Freelance Web Developer in Edinburgh, specialising in fast, responsive, SEO friendly websites and web applications using modern web technologies."
+  });
+
+  head.meta.push({
+    key: "og:description",
+    property: "og:description",
+    content:
+      "Forbes Gray is a Freelance Web Developer in Edinburgh, specialising in fast, responsive, SEO friendly websites and web applications using modern web technologies."
+  });
+
+  head.meta.push({
+    key: "og:image",
+    property: "og:image",
+    content: `${hostname}/forbes-gray-web-developer.jpg`
+  });
+
+  head.meta.push({
+    key: "og:image:width",
+    property: "og:image:width",
+    content: "1200"
+  });
+
+  head.meta.push({
+    key: "og:image:height",
+    property: "og:image:height",
+    content: "630"
+  });
+
+  head.meta.push({
+    key: "og:image:alt",
+    property: "og:image:alt",
+    content: "Forbes Gray, Website Developer Edinburgh"
+  });
+
+  head.meta.push({
+    key: "og:title",
+    property: "og:title",
+    content: "Freelance Web Developer Edinburgh | Websites and Web Applications"
+  });
+
+  head.meta.push({
+    key: "og:url",
+    property: "og:url",
+    content: `${hostname}/`
+  });
+
+  head.meta.push({
+    key: "og:site_name",
+    property: "og:site_name",
+    content: "Forbes Gray | Website Developer Edinburgh"
+  });
+
+  head.meta.push({
+    key: "og:type",
+    property: "og:type",
+    content: "website"
+  });
+
+  head.meta.push({
+    key: "og:locale",
+    property: "og:locale",
+    content: "en_GB"
+  });
+
+  head.meta.push({
+    key: "twitter:card",
+    name: "twitter:card",
+    content: "summary_large_image"
+  });
+
+  head.meta.push({
+    key: "twitter:title",
+    name: "twitter:title",
+    content: "Freelance Web Developer Edinburgh | Websites and Web Applications"
+  });
+
+  head.meta.push({
+    key: "twitter:description",
+    name: "twitter:description",
+    content:
+      "Forbes Gray is a Freelance Web Developer in Edinburgh, specialising in fast, responsive, SEO friendly websites and web applications using modern web technologies."
+  });
+
+  head.meta.push({
+    key: "twitter:image",
+    name: "twitter:image",
+    content: `${hostname}/forbes-gray-web-developer.jpg`
+  });
+
+  head.meta.push({
+    key: "twitter:site",
+    name: "twitter:site",
+    content: "@4beez"
+  });
+
+  head.meta.push({
+    key: "twitter:creator",
+    name: "twitter:creator",
+    content: "@4beez"
   });
 
   head.meta.push({

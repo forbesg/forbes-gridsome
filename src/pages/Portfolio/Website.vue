@@ -77,27 +77,56 @@ query {
 import Card from "@/components/Card";
 export default {
   name: "Website",
-  metaInfo: {
-    title: "Website Projects - Portfolio",
-    meta: [
-      {
-        key: "description",
-        name: "description",
-        content:
-          "A selection of fast, responsive website projects, including static sites, content management systems and PWA's"
-      }
-    ],
-    link: [
-      {
-        key: "canonical",
-        rel: "canonical",
-        href: `${process.env.GRIDSOME_HOSTNAME}/portfolio/website/`
-      }
-    ]
-  },
   components: { Card },
+  metaInfo() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content: this.description
+        },
+        {
+          key: "og:title",
+          property: "og:title",
+          content: this.title
+        },
+        {
+          key: "og:description",
+          property: "og:description",
+          content: this.description
+        },
+        {
+          key: "og:url",
+          property: "og:url",
+          content: `${process.env.GRIDSOME_HOSTNAME}/portfolio/website/`
+        },
+        {
+          key: "twitter:title",
+          name: "twitter:title",
+          content: this.title
+        },
+        {
+          key: "twitter:description",
+          name: "twitter:description",
+          content: this.description
+        }
+      ],
+      link: [
+        {
+          key: "canonical",
+          rel: "canonical",
+          href: `${process.env.GRIDSOME_HOSTNAME}/portfolio/website/`
+        }
+      ]
+    };
+  },
   data() {
     return {
+      title: "Website Projects - Portfolio - Forbes Gray",
+      description:
+        "A selection of fast, responsive website projects, including static sites, content management systems and PWA's",
       hostname: process.env.GRIDSOME_HOSTNAME
     };
   }

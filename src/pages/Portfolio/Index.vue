@@ -152,27 +152,74 @@ query {
 <script>
 import Card from "@/components/Card";
 export default {
-  metaInfo: {
-    title: "Web Developer Portfolio - Freelance Web Developer Edinburgh",
-    meta: [
-      {
-        key: "description",
-        name: "description",
-        content:
-          "A selection of recent website development projects, including, Websites, Web Applications and Apps"
-      }
-    ],
-    link: [
-      {
-        key: "canonical",
-        rel: "canonical",
-        href: `${process.env.GRIDSOME_HOSTNAME}/portfolio/`
-      }
-    ]
-  },
+  // metaInfo: {
+  //   title: "Web Developer Portfolio - Freelance Web Developer Edinburgh",
+  //   meta: [
+  //     {
+  //       key: "description",
+  //       name: "description",
+  //       content:
+  //         "A selection of recent website development projects, including, Websites, Web Applications and Apps"
+  //     }
+  //   ],
+  //   link: [
+  //     {
+  //       key: "canonical",
+  //       rel: "canonical",
+  //       href: `${process.env.GRIDSOME_HOSTNAME}/portfolio/`
+  //     }
+  //   ]
+  // },
   components: { Card },
+  metaInfo() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content: this.description
+        },
+        {
+          key: "og:title",
+          property: "og:title",
+          content: this.title
+        },
+        {
+          key: "og:description",
+          property: "og:description",
+          content: this.description
+        },
+        {
+          key: "og:url",
+          property: "og:url",
+          content: `${process.env.GRIDSOME_HOSTNAME}/portfolio/`
+        },
+        {
+          key: "twitter:title",
+          name: "twitter:title",
+          content: this.title
+        },
+        {
+          key: "twitter:description",
+          name: "twitter:description",
+          content: this.description
+        }
+      ],
+      link: [
+        {
+          key: "canonical",
+          rel: "canonical",
+          href: `${process.env.GRIDSOME_HOSTNAME}/portfolio/`
+        }
+      ]
+    };
+  },
   data() {
     return {
+      title: "Web Developer Portfolio - Freelance Web Developer Edinburgh",
+      description:
+        "A selection of recent website development projects, including, Websites, Web Applications and Apps",
       hostname: process.env.GRIDSOME_HOSTNAME
     };
   }

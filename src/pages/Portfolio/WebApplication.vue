@@ -77,27 +77,56 @@ query {
 import Card from "@/components/Card";
 export default {
   name: "WebApplications",
-  metaInfo: {
-    title: "Web Application - Portfolio",
-    meta: [
-      {
-        key: "description",
-        name: "description",
-        content:
-          "A selection of Web Application projects, including headless e-commerce webites and online booking system applications"
-      }
-    ],
-    link: [
-      {
-        key: "canonical",
-        rel: "canonical",
-        href: `${process.env.GRIDSOME_HOSTNAME}/portfolio/web-application/`
-      }
-    ]
-  },
   components: { Card },
+  metaInfo() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content: this.description
+        },
+        {
+          key: "og:title",
+          property: "og:title",
+          content: this.title
+        },
+        {
+          key: "og:description",
+          property: "og:description",
+          content: this.description
+        },
+        {
+          key: "og:url",
+          property: "og:url",
+          content: `${process.env.GRIDSOME_HOSTNAME}/portfolio/web-application/`
+        },
+        {
+          key: "twitter:title",
+          name: "twitter:title",
+          content: this.title
+        },
+        {
+          key: "twitter:description",
+          name: "twitter:description",
+          content: this.description
+        }
+      ],
+      link: [
+        {
+          key: "canonical",
+          rel: "canonical",
+          href: `${process.env.GRIDSOME_HOSTNAME}/portfolio/web-application/`
+        }
+      ]
+    };
+  },
   data() {
     return {
+      title: "Web Applications - Portfolio - Forbes Gray",
+      description:
+        "A selection of Web Application projects, including headless e-commerce webites and online booking system applications.",
       hostname: process.env.GRIDSOME_HOSTNAME
     };
   }

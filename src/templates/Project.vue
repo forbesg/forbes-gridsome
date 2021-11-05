@@ -103,20 +103,56 @@ import Carousel from "@/components/Carousel";
 export default {
   name: "Project",
   metaInfo() {
+    const title = `${this.$page.project.title} - ${this.$page.project.category
+      .split("-")
+      .map(w =>
+        w
+          .charAt(0)
+          .toUpperCase()
+          .concat(w.slice(1))
+      )
+      .join(" ")} - Forbes Gray`;
     return {
-      title: `${this.$page.project.title} - ${this.$page.project.category
-        .split("-")
-        .map(w =>
-          w
-            .charAt(0)
-            .toUpperCase()
-            .concat(w.slice(1))
-        )
-        .join(" ")} - Forbes Gray`,
+      title,
       meta: [
         {
           key: "description",
           name: "description",
+          content: this.$page.project.description
+        },
+        {
+          key: "og:title",
+          property: "og:title",
+          content: title
+        },
+        {
+          key: "og:description",
+          property: "og:description",
+          content: this.$page.project.description
+        },
+        {
+          key: "og:url",
+          property: "og:url",
+          content: `${this.hostname}${this.$page.project.path}`
+        },
+        {
+          key: "og:image",
+          property: "og:image",
+          content: `${this.hostname}${this.$page.project.image}`
+        },
+        {
+          key: "og:image:alt",
+          property: "og:image:alt",
+          content: `${this.hostname}${this.$page.project.imageAlt}`
+        },
+        {
+          key: "twitter:title",
+          name: "twitter:title",
+          content: title
+        },
+        {
+          key: "twitter:description",
+          name: "twitter:description",
           content: this.$page.project.description
         }
       ],
