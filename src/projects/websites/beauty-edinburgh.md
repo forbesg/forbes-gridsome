@@ -1,6 +1,7 @@
 ---
 title: Beauty Edinburgh
-description: A PHP website designed and developed for Edinburgh Beauty Salon Debbie Clare Skin Beauty and Wellbeing
+description: A static beauty website with headless CMS designed and developed for Edinburgh Beauty Salon Debbie Clare Skin Beauty and Wellbeing
+subhead: A static beauty website with headless CMS
 image: /images/projects/web/BeautyEdinburgh.jpg
 imageAlt: Beauty Edinburgh - Beauty Salon PHP Website
 url: https://www.beautyedinburgh.co.uk
@@ -10,9 +11,9 @@ features:
     HTML,
     CSS,
     Tailwind,
-    PHP,
     JavaScript,
-    Bootstrap,
+    DatoCMS,
+    Netlify,
     Online Booking,
     Responsive Design,
   ]
@@ -44,7 +45,12 @@ lack of _DRY_ in my workflow. The site was loosely transferred to _PHP_ and I wa
 able include common parts of the site (head, header &amp; footer) to simplify
 the process of making any further changes.
 
-The fourth, and current, version of the site introduced _Bootstrap_ and immediately
+The fourth, version of the site introduced _Bootstrap_ and immediately
 I found a lot of my headaches went away. The ability to work responsively out of
 the box was a big plus and although there was a fair bit of work 'tweaking' it,
 the end result was much more resilient.
+
+The site evolved yet again and was re-written using a JAMStack architecture. The
+website is now a static site hooked up to DatoCMS and automatically re-built as
+and when required meaning the site does not require a a great deal of resources
+and can be run and hosted for free.

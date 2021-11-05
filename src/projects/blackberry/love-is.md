@@ -1,6 +1,6 @@
 ---
 title: Love Is
-description: Love Calculator - A simple BlackBarry 10 WebWorks Application
+description: Love Calculator - A simple and fun BlackBerry 10 WebWorks App written in JavaScript
 subhead: The Love Calculator
 image: /images/projects/blackberry/love-is.jpg
 imageAlt: The Love Calculator - Blackberry Application

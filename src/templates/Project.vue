@@ -82,13 +82,9 @@
               {{ tech }}
             </li>
           </ul>
-          <a
-            v-if="$page.project.url"
-            :href="$page.project.url"
-            target="_blank"
-            rel="noopener"
-            >{{ $page.project.title }}</a
-          >
+          <a v-if="$page.project.url" :href="$page.project.url">{{
+            $page.project.title
+          }}</a>
           <a
             v-if="$page.project.repo"
             :href="$page.project.repo"

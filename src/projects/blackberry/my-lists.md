@@ -1,6 +1,6 @@
 ---
 title: My Lists
-description: My Lists - A simple BlackBerry 10 List Application
+description: My Lists - A simple BlackBerry 10 List Application written in JavaScript
 subhead: Simple Lists on BlackBerry 10
 image: /images/projects/blackberry/my-lists.jpg
 imageAlt: My Lists - BlackBerry Application

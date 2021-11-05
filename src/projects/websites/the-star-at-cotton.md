@@ -1,9 +1,9 @@
 ---
 title: The Star At Cotton
 description: A Website designed and developed for The Star at Cotton, a Traditional Country Pub in the Staffordshire Moorlands
+subhead: A GRAV CMS based Country Pub Website
 image: /images/projects/web/the-star-at-cotton.jpg
 imageAlt: The Star At Cotton - Country Pub Website
-url: https://www.thestaratcotton.co.uk
 layout: project.hbs
 features:
   [

@@ -15,7 +15,7 @@ export default function(Vue, { router, head, isClient }) {
     key: "description",
     name: "description",
     content:
-      "Forbes Gray is a Freelance Web Developer in Edinburgh, specialising in fast, responsive, SEO friendly websites and web applications"
+      "Forbes Gray is a Freelance Web Developer in Edinburgh, specialising in fast, responsive, SEO friendly websites and web applications using modern web technologies"
   });
 
   head.meta.push({
@@ -69,5 +69,10 @@ export default function(Vue, { router, head, isClient }) {
   head.meta.push({
     name: "theme-color",
     content: "#083749"
+  });
+
+  head.meta.push({
+    name: "robots",
+    content: "all"
   });
 }

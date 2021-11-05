@@ -1,6 +1,7 @@
 ---
 title: FNBG Ltd
 description: A static website designed and developed for FNBG Business Cost Consultants in Edinburgh.
+subhead: A Fast Static Business Website
 image: /images/projects/web/fnbg.jpg
 imageAlt: FNBG Ltd - Telecoms Business Website
 url: https://fnbg.co.uk

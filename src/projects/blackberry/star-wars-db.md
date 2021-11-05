@@ -1,6 +1,6 @@
 ---
 title: Star Wars DB
-description: Star Wars DB App built for BlackBerry 10 OS
+description: Star Wars DB BlacBerry Webworks Application built using JavaScript for BlackBerry 10 OS
 subhead: BlackBerry 10 Database for Star Wars
 image: /images/projects/blackberry/star-wars-db.jpg
 imageAlt: Star Wars Database - BlackBerry Application
