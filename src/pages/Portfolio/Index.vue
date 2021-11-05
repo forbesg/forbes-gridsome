@@ -68,7 +68,7 @@
               <g-link :to="item.node.path" class="button small">View</g-link>
             </card>
           </div>
-          <g-link to="/portfolio/website/" class="arrow"
+          <g-link to="/portfolio/website/" class="arrow invert"
             >View more Website Projects</g-link
           >
         </div>
