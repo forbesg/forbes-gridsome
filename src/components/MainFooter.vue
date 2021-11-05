@@ -121,6 +121,7 @@ footer {
   h4 {
     color: #fff;
     font-size: 1.2em;
+    margin-bottom: 2rem;
   }
   .container {
     display: flex;

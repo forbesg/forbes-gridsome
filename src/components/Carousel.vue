@@ -127,7 +127,7 @@ export default {
       cursor: pointer;
       height: 0.75rem;
       width: 0.75rem;
-      padding: 0.15rem;
+      padding: 0.25rem;
       &--inner {
         display: block;
         height: 100%;

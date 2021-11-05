@@ -21,7 +21,7 @@
           >.
         </p>
         <p>
-          I focus on website performance and my preferred approach to Website
+          With a focus on website performance, my preferred approach to Website
           Development is the JAM Stack architecture (JavaScript, API &amp;
           Markup) which decouples technologies to offer superior website speed,
           security &amp; flexibility than more traditional approaches to Website
