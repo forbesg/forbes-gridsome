@@ -5,7 +5,7 @@
         <h1>Freelance Web <br />Developer | <span>Edinburgh</span></h1>
         <h2>Fast, Responsive & SEO-Friendly Websites</h2>
         <h3 class="text-primary">Static · CMS · E-Commerce</h3>
-        <g-link to="/portfolio" class="button">View My Work</g-link>
+        <g-link to="/portfolio/" class="button">View My Work</g-link>
       </div>
     </div>
   </div>
@@ -22,13 +22,12 @@
     background-size: 80%;
     justify-content: space-between;
     align-items: center;
-    height: 500px;
-    // min-height: calc(100vh - 5.25rem);
+    min-height: 500px;
     @include tablet {
       background-image: url(/hero-illustration.svg);
       background-position: center right;
       background-size: 600px 600px;
-      height: 600px;
+      min-height: 600px;
     }
     .left,
     .right {

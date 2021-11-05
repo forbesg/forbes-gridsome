@@ -36,7 +36,9 @@
           would like to update your existing website using modern web
           technologies, or you just have an enquiry, please do get in touch.
         </p>
-        <g-link to="/about" class="invert arrow">A Little More About Me</g-link>
+        <g-link to="/about/" class="invert arrow"
+          >A Little More About Me</g-link
+        >
       </div>
     </section>
     <section class="feature">
@@ -58,7 +60,7 @@
           </card>
         </div>
         <div>
-          <g-link to="/portfolio" class="arrow">View My Portfolio</g-link>
+          <g-link to="/portfolio/" class="arrow">View My Portfolio</g-link>
         </div>
       </div>
     </section>
@@ -77,7 +79,7 @@
           Feel free to send me a message to arrange a conversation about your
           requirements.
         </p>
-        <g-link to="/contact" class="arrow">Send me a message</g-link>
+        <g-link to="/contact/" class="arrow">Send me a message</g-link>
       </div>
     </section>
   </Layout>

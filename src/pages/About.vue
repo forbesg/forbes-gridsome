@@ -96,7 +96,7 @@
         <g-link to="/">web application development</g-link> work can be found on
         my Portfolio Page.
       </p>
-      <g-link to="/portfolio" class="arrow">View My Portfolio</g-link>
+      <g-link to="/portfolio/" class="arrow">View My Portfolio</g-link>
     </div>
   </Layout>
 </template>

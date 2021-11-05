@@ -12,7 +12,7 @@
         Whatever your budget, I will use modern web techologies to help you to
         give your project legs.
       </p>
-      <g-link to="/contact" class="arrow invert">Get In Touch</g-link>
+      <g-link to="/contact/" class="arrow invert">Get In Touch</g-link>
     </div>
   </section>
 </template>
