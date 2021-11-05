@@ -143,7 +143,7 @@ export default {
         {
           key: "og:image:alt",
           property: "og:image:alt",
-          content: `${this.hostname}${this.$page.project.imageAlt}`
+          content: `${this.$page.project.imageAlt}`
         },
         {
           key: "twitter:title",
@@ -154,6 +154,11 @@ export default {
           key: "twitter:description",
           name: "twitter:description",
           content: this.$page.project.description
+        },
+        {
+          key: "twitter:image",
+          name: "twitter:image",
+          content: `${this.hostname}${this.$page.project.image}`
         }
       ],
       link: [
