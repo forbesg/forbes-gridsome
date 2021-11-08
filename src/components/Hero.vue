@@ -3,7 +3,7 @@
     <div class="container flex">
       <div class="left">
         <h1>Freelance Web <br />Developer | <span>Edinburgh</span></h1>
-        <h2>Fast, Responsive & SEO-Friendly Websites</h2>
+        <h2>Bespoke, Fast, Responsive & SEO-Friendly Websites</h2>
         <h3 class="text-primary">Static · CMS · E-Commerce</h3>
         <g-link to="/portfolio/" class="button">View My Work</g-link>
       </div>
@@ -22,7 +22,7 @@
     background-size: 80%;
     justify-content: space-between;
     align-items: center;
-    min-height: 500px;
+    min-height: 400px;
     @include tablet {
       background-image: url(/hero-illustration.svg);
       background-position: center right;
@@ -65,6 +65,8 @@
     }
     h3 {
       font-size: 1rem;
+      font-family: "Catamaran", sans-serif;
+      font-weight: normal;
       margin-bottom: 3rem;
       word-spacing: 0.5rem;
       @include tablet {

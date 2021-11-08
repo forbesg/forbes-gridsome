@@ -334,7 +334,7 @@ export default {
 .left,
 .right {
   flex: 1 1 320px;
-  padding: 20px;
+  padding: 20px 0;
 }
 .success-message {
   padding: 100px 20px;

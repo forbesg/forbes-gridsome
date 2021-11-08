@@ -45,6 +45,14 @@ body {
         }
       }
     }
+    &.external-link {
+      position: relative;
+      svg {
+        display: inline-block;
+        width: 1.05em;
+        height: 1.05em;
+      }
+    }
   }
 
   h1,
@@ -104,7 +112,7 @@ body {
       .tag {
         background-color: #fff;
         color: $color-primary;
-        font-weight: bolder;
+        font-weight: bold;
       }
       &:before {
         position: absolute;
@@ -133,6 +141,7 @@ body {
 
       .card {
         background-color: rgba(#fff, 0.15);
+        backdrop-filter: blur(15px);
         border-radius: 0.5rem;
         padding: 0.75rem;
         overflow: hidden;
@@ -243,6 +252,7 @@ body {
       color: $color-dark-primary;
       font-size: 0.9rem;
       font-weight: bold;
+      line-height: 1.5;
       padding: 5px 10px 0 0;
       > .required {
         color: $color-red;
@@ -253,14 +263,16 @@ body {
     input[type="email"],
     input[type="tel"],
     textarea {
+      background-color: rgba($color-dark-primary, 0.025);
       border: 1px solid rgba($color-dark-primary, 0.1);
       border-radius: $border-radius;
       font-family: inherit;
       font-size: 16px;
       padding: 10px;
-      transition: border-color 0.5s ease-in;
+      transition: border-color 0.25s ease-in;
+      max-width: 100%;
       &:focus {
-        border-color: rgba($color-primary, 0.3);
+        border-color: rgba($color-primary, 0.7);
         outline: none;
       }
       &.highlight {

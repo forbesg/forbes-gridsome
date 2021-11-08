@@ -74,7 +74,7 @@
         </main>
       </div>
       <aside class="">
-        <div class="">
+        <div class="aside--sticky-wrapper">
           <img :src="$page.project.image" :alt="$page.project.imageAlt" />
           <h4>Technologies Used</h4>
           <ul>
@@ -82,16 +82,40 @@
               {{ tech }}
             </li>
           </ul>
-          <a v-if="$page.project.url" :href="$page.project.url">{{
-            $page.project.title
-          }}</a>
+          <a
+            v-if="$page.project.url"
+            :href="$page.project.url"
+            class="external-link"
+            >{{ $page.project.title }}
+            <svg
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 100 100"
+              xml:space="preserve"
+            >
+              <path
+                d="M90 15v24c0 1.65-1.35 3-3 3h-4c-1.65 0-3-1.35-3-3v-9.93L52.657 56.414c-1.167 1.166-3.076 1.167-4.243 0l-2.828-2.828c-1.167-1.167-1.167-3.076 0-4.242L72.93 22H63c-1.65 0-3-1.35-3-3v-4c0-1.65 1.35-3 3-3h24c1.65 0 3 1.35 3 3zm-8 61V44H72v30H28V30h30V20H26c-4.411 0-8 3.589-8 8v48c0 4.411 3.589 8 8 8h48c4.411 0 8-3.589 8-8z"
+              />
+            </svg>
+          </a>
           <a
             v-if="$page.project.repo"
             :href="$page.project.repo"
             target="_blank"
             rel="noopener"
-            >View Git Repo</a
-          >
+            class="external-link"
+            >View Git Repo
+            <svg
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 100 100"
+              xml:space="preserve"
+            >
+              <path
+                d="M90 15v24c0 1.65-1.35 3-3 3h-4c-1.65 0-3-1.35-3-3v-9.93L52.657 56.414c-1.167 1.166-3.076 1.167-4.243 0l-2.828-2.828c-1.167-1.167-1.167-3.076 0-4.242L72.93 22H63c-1.65 0-3-1.35-3-3v-4c0-1.65 1.35-3 3-3h24c1.65 0 3 1.35 3 3zm-8 61V44H72v30H28V30h30V20H26c-4.411 0-8 3.589-8 8v48c0 4.411 3.589 8 8 8h48c4.411 0 8-3.589 8-8z"
+              />
+            </svg>
+          </a>
         </div>
       </aside>
     </div>
@@ -259,21 +283,42 @@ query ($id: ID!) {
       flex: 0 0 300px;
       margin-left: 20px;
       padding-top: 20px;
+      padding-bottom: 20px;
     }
     @include laptop {
       grid-area: aside;
     }
-    > div {
+    .aside--sticky-wrapper {
       @include tablet {
         position: sticky;
-        top: 120px;
+        top: 124px;
+        // background-color: rgba($color-primary, 1);
+        // background-image: linear-gradient(
+        //   180deg,
+        //   rgba($color-primary, 0.5),
+        //   rgba($color-dark-primary, 0.5)
+        // );
+        // border-radius: 0.5rem;
+        // color: #fff;
+        // padding: 1rem;
+        // h4 {
+        //   color: #fff;
+        // }
+        // a {
+        //   color: lighten($color-primary, 20%);
+        //   &:hover {
+        //     color: lighten($color-primary, 40%);
+        //   }
+        // }
       }
       img {
         max-width: 100%;
+        border-radius: 0.25rem;
       }
       ul {
         list-style: none;
         li {
+          font-size: 0.9rem;
           font-style: oblique;
         }
       }
