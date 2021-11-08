@@ -144,7 +144,7 @@ export default {
         padding: 7px 20px;
       }
       &.logo {
-        flex: 1;
+        flex: 1 1 10rem;
         img {
           height: 20px;
           width: 20px;
@@ -152,7 +152,8 @@ export default {
         }
         a {
           color: $color-dark-primary;
-          font-weight: bold;
+          font-size: 1em;
+          // font-weight: bold;
         }
       }
       &.action {
