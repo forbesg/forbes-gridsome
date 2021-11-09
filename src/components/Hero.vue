@@ -4,7 +4,7 @@
       <div class="left">
         <h1>Freelance Web <br />Developer | <span>Edinburgh</span></h1>
         <h2>Bespoke, Fast, Responsive & SEO-Friendly Websites</h2>
-        <h3 class="text-primary">Static · CMS · E-Commerce</h3>
+        <h3 class="text-primary">JAMStack · CMS · E-Commerce</h3>
         <g-link to="/portfolio/" class="button">View My Work</g-link>
       </div>
     </div>
@@ -66,7 +66,7 @@
     h3 {
       font-size: 1rem;
       font-family: "Catamaran", sans-serif;
-      font-weight: normal;
+      // font-weight: normal;
       margin-bottom: 3rem;
       word-spacing: 0.5rem;
       @include tablet {

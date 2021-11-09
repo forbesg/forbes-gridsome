@@ -4,36 +4,42 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-const path = require('path')
+const path = require("path");
 
-function addStyleResource (rule) {
-  rule.use('style-resource')
-    .loader('style-resources-loader')
+function addStyleResource(rule) {
+  rule
+    .use("style-resource")
+    .loader("style-resources-loader")
     .options({
-      patterns: [
-        path.resolve(__dirname, './src/assets/scss/vars/*.scss'),
-      ],
-    })
+      patterns: [path.resolve(__dirname, "./src/assets/scss/vars/*.scss")]
+    });
 }
 
 module.exports = {
-  siteName: 'Freelance Web Developer, Edinburgh',
-  siteUrl: 'https://forbesg.github.io',
+  siteName: "Freelance Web Developer, Edinburgh",
+  siteUrl: "https://forbesg.github.io",
   plugins: [
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'src/projects/**/*.md',
-        typeName: 'Project'
+        path: "src/projects/**/*.md",
+        typeName: "Project"
       }
     },
     {
-      use: '@gridsome/plugin-sitemap'
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "src/articles/*.md",
+        typeName: "Article"
+      }
     },
     {
-      use: '@gridsome/plugin-google-analytics',
+      use: "@gridsome/plugin-sitemap"
+    },
+    {
+      use: "@gridsome/plugin-google-analytics",
       options: {
-        id: 'UA-106869268-1'
+        id: "UA-106869268-1"
       }
     }
   ],
@@ -45,21 +51,26 @@ module.exports = {
   templates: {
     Project: [
       {
-        path: '/portfolio/:category/:title'
+        path: "/portfolio/:category/:title"
+      }
+    ],
+    Article: [
+      {
+        path: "/blog/:title"
       }
     ]
   },
-  chainWebpack (config) {
+  chainWebpack(config) {
     // Load variables for all vue-files
-    const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
+    const types = ["vue-modules", "vue", "normal-modules", "normal"];
 
     types.forEach(type => {
-      addStyleResource(config.module.rule('sass').oneOf(type))
-    })
+      addStyleResource(config.module.rule("sass").oneOf(type));
+    });
 
     // or if you use scss
     types.forEach(type => {
-      addStyleResource(config.module.rule('scss').oneOf(type))
-    })
-	}
-}
+      addStyleResource(config.module.rule("scss").oneOf(type));
+    });
+  }
+};

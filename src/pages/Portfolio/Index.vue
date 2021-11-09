@@ -25,8 +25,8 @@
       </div>
       <h1 class="highlight-overline">Portfolio</h1>
       <p>
-        A small selection of recent projects, from simple static website,
-        web-based mobile applications and web applications.
+        A small selection of recent projects, from simple static brochure
+        websites, to web-based mobile applications and web applications.
       </p>
     </div>
     <section class="feature no-top-padding">
@@ -152,24 +152,6 @@ query {
 <script>
 import Card from "@/components/Card";
 export default {
-  // metaInfo: {
-  //   title: "Web Developer Portfolio - Freelance Web Developer Edinburgh",
-  //   meta: [
-  //     {
-  //       key: "description",
-  //       name: "description",
-  //       content:
-  //         "A selection of recent website development projects, including, Websites, Web Applications and Apps"
-  //     }
-  //   ],
-  //   link: [
-  //     {
-  //       key: "canonical",
-  //       rel: "canonical",
-  //       href: `${process.env.GRIDSOME_HOSTNAME}/portfolio/`
-  //     }
-  //   ]
-  // },
   components: { Card },
   metaInfo() {
     return {

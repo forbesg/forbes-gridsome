@@ -44,7 +44,7 @@
     <section class="feature">
       <div class="container">
         <h2 class="highlight-overline">Recent Website Development Projects</h2>
-        <div class="cards" style="margin-top: 3rem;">
+        <div class="cards x2" style="margin-top: 3rem;">
           <card
             v-for="project in $page.featured_projects.edges"
             :key="project.node.id"

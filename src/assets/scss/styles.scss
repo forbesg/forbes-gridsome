@@ -191,6 +191,16 @@ body {
       @include laptop {
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       }
+      // Increased grid column width to achieve two column
+      &.x2 {
+        @include tablet {
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 4rem;
+        }
+        @include laptop {
+          // grid-template-columns: repeat(auto-fill, minmax(351px, 1fr));
+        }
+      }
     }
   }
 

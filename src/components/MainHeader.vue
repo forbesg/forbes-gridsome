@@ -13,6 +13,7 @@
         <g-link to="/" class="fixed">Home</g-link>
         <g-link to="/about/" class="fixed">About</g-link>
         <g-link to="/portfolio/" class="fixed">Portfolio</g-link>
+        <g-link to="/blog/" class="fixed">Blog</g-link>
       </nav>
       <div class="action">
         <g-link to="/contact/" class="button">Hire Me</g-link>
@@ -159,6 +160,12 @@ export default {
       &.action {
         display: flex;
         align-items: center;
+        .button {
+          font-size: 0.7rem;
+          @include tablet {
+            font-size: 0.85rem;
+          }
+        }
         .hamburger {
           position: relative;
           display: inline-block;
@@ -173,6 +180,9 @@ export default {
           @include tablet {
             display: none;
           }
+        }
+        @include tablet {
+          margin-left: 1rem;
         }
       }
     }

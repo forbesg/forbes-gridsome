@@ -1,6 +1,6 @@
 ---
 title: Little City Treat
-description: An Online Booking System that allows customers to book last minute spa and salon treatments to be delivered to their home, office or hotel.
+description: A Bespoke Online Booking System that allows customers to book last minute spa and salon treatments to be delivered to their home, office or hotel.
 subhead: Bespoke Online Booking System
 image: /images/projects/web-application/little-city-treat.jpg
 imageAlt: Little City Treat - Booking System Web Application
