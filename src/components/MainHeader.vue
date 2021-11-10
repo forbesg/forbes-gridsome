@@ -56,6 +56,7 @@ export default {
   &.shadow {
     background-color: rgba(#fff, 0.9);
     box-shadow: 0 0 1px rgba($color-dark-primary, 0.5);
+    backdrop-filter: blur(3px);
     @include tablet {
       backdrop-filter: blur(3px);
     }

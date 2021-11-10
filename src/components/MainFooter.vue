@@ -1,6 +1,19 @@
 <template lang="html">
-  <footer class="main-footer">
-    <div>
+  <footer :class="[{ 'footer-margin': $route.path !== '/' }]">
+    <div class="get-in-touch-callout">
+      <div class="container">
+        <g-link
+          v-if="$route.path === '/contact/' || $route.path.match('/blog/')"
+          to="/portfolio"
+          class="arrow"
+          >View some of my recent projects</g-link
+        >
+        <g-link v-else to="/contact" class="arrow"
+          >Get In Touch To Discuss Your Project Today</g-link
+        >
+      </div>
+    </div>
+    <div class="main-footer">
       <div class="container">
         <div class="left">
           <h2>Navigation</h2>
@@ -115,7 +128,32 @@ footer {
   background-color: $color-dark-primary;
   color: #fff;
   font-size: 0.8rem;
-  padding-top: 30px;
+  /* Add a top margin to all pages excluding the homepage */
+  &.footer-margin {
+    margin-top: 3rem;
+  }
+  .get-in-touch-callout {
+    background-color: $color-primary;
+    text-align: center;
+    .container {
+      padding: 0.5rem 20px;
+      a {
+        color: #fff;
+        font-size: 0.7rem;
+        margin: 0 auto;
+        text-transform: uppercase;
+        @include tablet {
+          font-size: 0.9rem;
+        }
+      }
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+  .main-footer {
+    padding-top: 3rem;
+  }
   h2,
   h3,
   h4 {
@@ -127,7 +165,6 @@ footer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    // text-align: center;
     > * {
       flex: 1 1 300px;
       margin-bottom: 2rem;
