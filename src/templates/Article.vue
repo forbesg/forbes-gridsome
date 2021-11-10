@@ -48,6 +48,12 @@
         <main>
           <!-- <h1 class="highlight-overline">{{ $page.article.title }}</h1>
           <h2>{{ $page.article.subhead }}</h2> -->
+          <div class="credits">
+            <div v-if="$page.article.author" class="">
+              {{ $page.article.author }} ·
+              {{ articleDate }}
+            </div>
+          </div>
           <div v-html="$page.article.content" class="markdown-content"></div>
           <Carousel
             v-if="$page.article.carousel && $page.article.carousel.length"
@@ -63,6 +69,7 @@
 import Carousel from "@/components/Carousel";
 export default {
   name: "Article",
+  components: { Carousel },
   metaInfo() {
     const title = `${this.$page.article.title} | Forbes Gray | Edinburgh`;
     return {
@@ -128,7 +135,19 @@ export default {
       hostname: process.env.GRIDSOME_HOSTNAME
     };
   },
-  components: { Carousel }
+  computed: {
+    articleDate() {
+      console.log(this.$page.article.date);
+      const articleDate = new Date(Date.parse(this.$page.article.date));
+      console.log(articleDate);
+      return articleDate.toLocaleDateString("en-GB", {
+        month: "long",
+        year: "numeric",
+        day: "numeric",
+        weekday: "long"
+      });
+    }
+  }
 };
 </script>
 
@@ -143,6 +162,8 @@ query ($id: ID!) {
     image
     imageAlt
     path
+    author
+    date
   }
 }
 </page-query>
@@ -195,6 +216,11 @@ query ($id: ID!) {
   }
   .breadcrumbs {
     margin-top: 0;
+  }
+  .credits {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: $color-dark-primary;
   }
   .markdown-content {
     p + h2,

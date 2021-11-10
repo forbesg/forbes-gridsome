@@ -10,7 +10,12 @@
       />
     </figure>
     <div class="card--content">
-      <slot />
+      <div class="card--content--body">
+        <slot />
+      </div>
+      <footer v-if="link" class="card--content-footer">
+        <g-link :to="link.path" :class="link.class">{{ link.text }}</g-link>
+      </footer>
     </div>
   </div>
 </template>
@@ -24,6 +29,10 @@ export default {
     },
     imageAlt: {
       type: String,
+      required: false
+    },
+    link: {
+      type: Object,
       required: false
     }
   },
@@ -50,14 +59,25 @@ export default {
 .card {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
   &--content {
-    //color: initial;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: min-content;
     padding: 0.75rem;
     h2,
     h3,
     h4 {
       // color: initial;
       // margin-top: 0;
+    }
+    &--body {
+      flex: 1;
+    }
+    &--footer {
+      flex: 0;
     }
   }
   .description {

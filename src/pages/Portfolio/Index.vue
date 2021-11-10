@@ -39,10 +39,15 @@
               :key="item.id"
               :image="item.node.image"
               :imageAlt="item.node.imageAlt"
+              :link="{
+                path: item.node.path,
+                text: 'View',
+                class: 'button small'
+              }"
             >
               <h3>{{ item.node.title }}</h3>
               <p class="description">{{ item.node.description }}</p>
-              <g-link :to="item.node.path" class="button small">View</g-link>
+              <!-- <g-link :to="item.node.path" class="button small">View</g-link> -->
             </card>
           </div>
           <g-link to="/portfolio/web-application/" class="arrow"
@@ -62,10 +67,14 @@
               :key="item.id"
               :image="item.node.image"
               :imageAlt="item.node.imageAlt"
+              :link="{
+                path: item.node.path,
+                text: 'View',
+                class: 'button small'
+              }"
             >
               <h3>{{ item.node.title }}</h3>
               <p class="description">{{ item.node.description }}</p>
-              <g-link :to="item.node.path" class="button small">View</g-link>
             </card>
           </div>
           <g-link to="/portfolio/website/" class="arrow invert"

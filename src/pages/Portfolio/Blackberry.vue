@@ -45,10 +45,14 @@
           :key="item.id"
           :image="item.node.image"
           :imageAlt="item.node.imageAlt"
+          :link="{
+            path: item.node.path,
+            text: 'View',
+            class: 'button small'
+          }"
         >
           <h3>{{ item.node.title }}</h3>
           <p class="description">{{ item.node.description }}</p>
-          <g-link :to="item.node.path" class="button small">View</g-link>
         </card>
       </div>
     </div>

@@ -7,6 +7,8 @@ tags:
   - Static Websites
 image: /images/articles/html-development.jpg
 imageAlt: Static Website written in HTML
+author: Forbes Gray
+date: 11-09-2021
 ---
 
 ## The Initial State of the Web

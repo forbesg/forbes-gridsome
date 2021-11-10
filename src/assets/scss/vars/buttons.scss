@@ -1,5 +1,6 @@
 @import "./colors.scss";
 @import "./variables.scss";
+@import "./mixins.scss";
 button,
 input[type="submit"],
 a.button {
@@ -37,16 +38,18 @@ a.button {
     color: #fff;
     outline: none;
     &:after {
-      transform: translate(3px, 3px);
+      transform: translate(0px, 0px);
+      @include desktop {
+        transform: translate(3px, 3px);
+      }
     }
   }
   &:active {
-    // background-color: lighten($color-primary, 5%);
-    // background: linear-gradient(90deg, #1A8BB8, #1A8BB8);
-    // color: #fff;
-    // outline: none;
     &:after {
-      transform: translate(0px, 0px);
+      transform: translate(3px, 3px);
+      @include desktop {
+        transform: translate(0px, 0px);
+      }
     }
   }
   &.small {

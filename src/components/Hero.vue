@@ -31,6 +31,8 @@
     }
     .left,
     .right {
+      position: relative;
+      z-index: 1;
       img {
         max-width: 100%;
       }

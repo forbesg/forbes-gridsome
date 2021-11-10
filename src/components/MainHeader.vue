@@ -68,8 +68,9 @@ export default {
         position: fixed;
         top: 0;
         right: 0;
-        bottom: 0;
+        // bottom: 0;
         left: 0;
+        height: 100vh;
         background-color: rgba(#444, 0.5);
         text-align: right;
         visibility: hidden;
@@ -158,6 +159,7 @@ export default {
           position: static;
           visibility: visible;
           background-color: transparent;
+          height: auto;
           a {
             background-color: transparent;
             color: $color-primary;
