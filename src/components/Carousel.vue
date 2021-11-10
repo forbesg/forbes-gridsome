@@ -87,7 +87,6 @@ export default {
     scroll-behavior: smooth;
     padding-left: 33.3333%;
     padding-right: 33.3333%;
-
     @include tablet {
       grid-template-columns: repeat(3, 330px);
       padding-bottom: 2rem;
@@ -135,6 +134,7 @@ export default {
       &.highlight {
         cursor: initial;
         .dot--inner {
+          transition: all 200ms 200ms ease-in;
           background-color: white;
           border-radius: 0.15rem;
         }
