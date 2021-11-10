@@ -48,6 +48,18 @@ export default {
 
 <style lang="scss" scoped>
 .card {
+  position: relative;
+  z-index: 1;
+  &--content {
+    //color: initial;
+    padding: 0.75rem;
+    h2,
+    h3,
+    h4 {
+      // color: initial;
+      // margin-top: 0;
+    }
+  }
   .description {
     font-size: 0.95rem;
   }

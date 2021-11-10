@@ -105,7 +105,7 @@
 export default {
   data() {
     return {
-      title: "About Me - Freelance Web Developer Edinburgh",
+      title: "About Me | Freelance Web Developer Edinburgh",
       description:
         "Information about Edinburgh freelance Web Developer Forbes Gray and his journey into Website Development"
     };

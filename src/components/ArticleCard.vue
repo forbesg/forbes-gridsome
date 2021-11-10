@@ -46,7 +46,7 @@ export default {
     }
   }
   &--content {
-    padding: 2rem;
+    padding: 1.5rem;
     h1,
     h2,
     h3,
@@ -58,6 +58,9 @@ export default {
     }
     a.arrow {
       padding: 0;
+    }
+    @include tablet {
+      padding: 2rem;
     }
   }
 }

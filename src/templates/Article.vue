@@ -64,7 +64,7 @@ import Carousel from "@/components/Carousel";
 export default {
   name: "Article",
   metaInfo() {
-    const title = `${this.$page.article.title} - Forbes Gray`;
+    const title = `${this.$page.article.title} | Forbes Gray | Edinburgh`;
     return {
       title,
       meta: [
@@ -149,6 +149,7 @@ query ($id: ID!) {
 
 <style lang="scss">
 .article {
+  padding-bottom: 2rem;
   .banner {
     position: relative;
     height: 250px;

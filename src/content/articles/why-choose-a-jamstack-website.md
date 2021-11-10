@@ -1,7 +1,7 @@
 ---
 title: Why Choose A JAMStack Website?
 subhead: What are the benefits of a static website
-description: We look at how JAMStack websites differ from more traditional CMS based technologies like Drupal, Joomla and Wordpress Websites
+description: We look at how JAMStack websites differ from more traditional CMS based technologies like Drupal, Joomla and WordPress Websites
 tags:
   - JAMStack
   - Static Websites
@@ -33,7 +33,7 @@ Returning to a static site model of simply serving pre-built HTML pages not only
 
 Static Site Generators started gaining traction in the mid to late 2010s and have exploded in popularity since then. With the release of more API driven resources, the JAMStack was born allowing Static Sites to become a very real alternative to a traditional CMS.
 
-So a static site is fast and cheap, but what about creating and updating content?
+#### So a static site is fast and cheap, but what about creating and updating content?
 
 The headless CMS solved this particular problem by decoupling the content itself from the front-end display layer. A CMS needs to store data somewhere, but rather than have the database and the website running in the same environment, the site could simply make requests to a headless CMS at build time and generate the pages which could be served as static files when needed.
 

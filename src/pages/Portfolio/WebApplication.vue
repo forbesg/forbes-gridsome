@@ -124,7 +124,7 @@ export default {
   },
   data() {
     return {
-      title: "Web Applications - Portfolio - Forbes Gray",
+      title: "Web Applications | Portfolio | Forbes Gray",
       description:
         "A selection of Web Application projects, including headless e-commerce webites and online booking system applications.",
       hostname: process.env.GRIDSOME_HOSTNAME

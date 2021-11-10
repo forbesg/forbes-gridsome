@@ -24,10 +24,6 @@
         </ol>
       </div>
       <h1 class="highlight-overline">Blog</h1>
-      <p>
-        A small selection of recent projects, from simple static website,
-        web-based mobile applications and web applications.
-      </p>
       <div class="articles">
         <article-card
           v-for="article in $page.articles.edges"
@@ -107,7 +103,7 @@ export default {
   },
   data() {
     return {
-      title: "Blog - Forbes Gray - Freelance Web Developer Edinburgh",
+      title: "Blog | Forbes Gray | Freelance Web Developer",
       description:
         "Some of my experiences, thoughts and recommendations about all things web related.",
       hostname: process.env.GRIDSOME_HOSTNAME

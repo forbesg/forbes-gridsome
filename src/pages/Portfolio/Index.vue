@@ -199,7 +199,7 @@ export default {
   },
   data() {
     return {
-      title: "Web Developer Portfolio - Freelance Web Developer Edinburgh",
+      title: "Web Developer Portfolio | Freelance Web Developer Edinburgh",
       description:
         "A selection of recent website development projects, including, Websites, Web Applications and Apps",
       hostname: process.env.GRIDSOME_HOSTNAME

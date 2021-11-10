@@ -22,14 +22,14 @@ module.exports = {
     {
       use: "@gridsome/source-filesystem",
       options: {
-        path: "src/projects/**/*.md",
+        path: "src/content/projects/**/*.md",
         typeName: "Project"
       }
     },
     {
       use: "@gridsome/source-filesystem",
       options: {
-        path: "src/articles/*.md",
+        path: "src/content/articles/*.md",
         typeName: "Article"
       }
     },

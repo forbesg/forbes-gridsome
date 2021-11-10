@@ -124,7 +124,7 @@ export default {
   },
   data() {
     return {
-      title: "Website Projects - Portfolio - Forbes Gray",
+      title: "Website Projects | Portfolio | Forbes Gray",
       description:
         "A selection of fast, responsive website projects, including static sites, content management systems and PWA's",
       hostname: process.env.GRIDSOME_HOSTNAME

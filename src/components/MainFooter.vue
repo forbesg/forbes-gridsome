@@ -130,6 +130,7 @@ footer {
     // text-align: center;
     > * {
       flex: 1 1 300px;
+      margin-bottom: 2rem;
     }
   }
   ul {
@@ -139,9 +140,11 @@ footer {
       > a {
         color: #fff;
         display: flex;
-        // justify-content: center;
         margin: 0.3rem 0 1rem 0;
         &:hover {
+          color: $color-primary;
+        }
+        &.active--exact {
           color: $color-primary;
         }
         > svg {

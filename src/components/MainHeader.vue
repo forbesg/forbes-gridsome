@@ -10,7 +10,7 @@
         @click="toggleDisplayNav"
         class="main-nav"
       >
-        <g-link to="/" class="fixed">Home</g-link>
+        <g-link to="/" class="fixed homepage-link">Home</g-link>
         <g-link to="/about/" class="fixed">About</g-link>
         <g-link to="/portfolio/" class="fixed">Portfolio</g-link>
         <g-link to="/blog/" class="fixed">Blog</g-link>
@@ -77,30 +77,62 @@ export default {
         transition: backdrop-filter 2s 0s, visibility 0.3s 0.5s;
         a {
           background-color: $color-dark-primary;
-          border-radius: 50%;
+          background-image: linear-gradient(
+            0,
+            $color-dark-primary,
+            lighten($color-dark-primary, 5%)
+          );
+          border-radius: 50% 0 0 50%;
           color: #fff;
           font-size: 0.9rem;
           padding: 40px;
           position: fixed;
-          top: calc(100vh * 0.1);
+          top: calc(100vh * 0.05);
           right: -230px;
-          height: 120px;
-          width: 120px;
+          height: 100px;
+          width: 100px;
           display: flex;
           align-items: center;
           transition: color 0.2s 0s, right 0.3s 0s ease-in-out;
+          z-index: 4;
           &:nth-child(2) {
             background-color: lighten($color-dark-primary, 5%);
-            top: calc(100vh * 0.35);
-            transition-delay: 0.2s;
+            background-image: linear-gradient(
+              0,
+              lighten($color-dark-primary, 5%),
+              lighten($color-dark-primary, 10%)
+            );
+            top: calc(100vh * 0.25);
+            transition-delay: 0.1s;
+            z-index: 3;
           }
           &:nth-child(3) {
             background-color: lighten($color-dark-primary, 10%);
-            top: calc(100vh * 0.6);
-            transition-delay: 0.4s;
+            background-image: linear-gradient(
+              0,
+              lighten($color-dark-primary, 10%),
+              lighten($color-dark-primary, 15%)
+            );
+            top: calc(100vh * 0.45);
+            transition-delay: 0.2s;
+            z-index: 2;
           }
+          &:nth-child(4) {
+            background-color: lighten($color-dark-primary, 15%);
+            background-image: linear-gradient(
+              0,
+              lighten($color-dark-primary, 15%),
+              lighten($color-dark-primary, 25%)
+            );
+            top: calc(100vh * 0.65);
+            transition-delay: 0.3s;
+            z-index: 1;
+          }
+
           @include tablet {
             display: inline-block;
+            background: none !important;
+            border-radius: 0;
             &:hover {
               color: $color-dark-primary;
               transition: color 0.2s 0s;
@@ -112,11 +144,14 @@ export default {
           visibility: visible;
           transition: visibility 0s 0s;
           a {
-            right: -100px;
+            right: -70px;
             transform: right 0.3s 0.3s ease-in-out;
           }
           @include tablet {
             backdrop-filter: none;
+            a.active--exact {
+              box-shadow: none;
+            }
           }
         }
         @include tablet {
@@ -130,11 +165,18 @@ export default {
             height: auto;
             width: auto;
             padding: 10px 30px;
+            transition: color 200ms ease;
             &:nth-child(2) {
               background-color: transparent;
             }
             &:nth-child(3) {
               background-color: transparent;
+            }
+            &.active:not(.homepage-link) {
+              color: $color-dark-primary;
+            }
+            &.active--exact.homepage-link {
+              color: $color-dark-primary;
             }
           }
         }

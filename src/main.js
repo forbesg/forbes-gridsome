@@ -15,14 +15,14 @@ export default function(Vue, { router, head, isClient }) {
     key: "description",
     name: "description",
     content:
-      "Forbes Gray is a Freelance Web Developer in Edinburgh, specialising in fast, responsive, SEO friendly websites and web applications using modern web technologies."
+      "Forbes Gray is a Freelance Website Developer in Edinburgh, specialising in fast, responsive, SEO friendly websites and web applications using modern web technologies."
   });
 
   head.meta.push({
     key: "og:description",
     property: "og:description",
     content:
-      "Forbes Gray is a Freelance Web Developer in Edinburgh, specialising in fast, responsive, SEO friendly websites and web applications using modern web technologies."
+      "Forbes Gray is a Freelance Website Developer in Edinburgh, specialising in fast, responsive, SEO friendly websites and web applications using modern web technologies."
   });
 
   head.meta.push({
@@ -52,7 +52,7 @@ export default function(Vue, { router, head, isClient }) {
   head.meta.push({
     key: "og:title",
     property: "og:title",
-    content: "Freelance Web Developer Edinburgh | Websites and Web Applications"
+    content: "Freelance Web Developer Edinburgh | Forbes Gray"
   });
 
   head.meta.push({

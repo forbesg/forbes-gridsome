@@ -207,7 +207,7 @@ export default {
   },
   data() {
     return {
-      title: "Contact - Freelance Web Developer Edinburgh",
+      title: "Contact | Forbes Gray | Website Developer Edinburgh",
       description:
         "If you're looking for a freelance web developer in Scotland please do get in touch. You can find contact details here.",
       form: {

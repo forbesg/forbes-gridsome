@@ -57,6 +57,15 @@
                 {{ tag }}
               </div>
             </div>
+            <p>
+              {{ project.node.description }}
+              <g-link
+                :to="project.node.path"
+                class="arrow"
+                style="font-size: .9rem;margin: 0; padding:0;"
+                >More About {{ project.node.title }}</g-link
+              >
+            </p>
           </card>
         </div>
         <div>
@@ -92,9 +101,11 @@ query {
       node {
         id
         title
+        description
         image
         imageAlt
         features
+        path
       }
     }
   }

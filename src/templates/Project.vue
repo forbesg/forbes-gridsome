@@ -127,7 +127,7 @@ import Carousel from "@/components/Carousel";
 export default {
   name: "Project",
   metaInfo() {
-    const title = `${this.$page.project.title} - ${this.$page.project.category
+    const title = `${this.$page.project.title} | ${this.$page.project.category
       .split("-")
       .map(w =>
         w
@@ -135,7 +135,7 @@ export default {
           .toUpperCase()
           .concat(w.slice(1))
       )
-      .join(" ")} - Forbes Gray`;
+      .join(" ")} | Forbes Gray`;
     return {
       title,
       meta: [

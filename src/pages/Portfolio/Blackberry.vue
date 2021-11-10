@@ -124,7 +124,7 @@ export default {
   },
   data() {
     return {
-      title: "Blackberry Projects - Portfolio",
+      title: "Blackberry Projects | Portfolio | Forbes Gray",
       description:
         "A selection of my early Blackberry Applications, built using modern web technologies.",
       hostname: process.env.GRIDSOME_HOSTNAME

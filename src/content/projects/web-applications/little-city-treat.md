@@ -41,7 +41,7 @@ There are a lot of third party online booking systems available however all of t
 little too rigid for our requirements and tend to feel as though they have been
 shoehorned into a site.
 
-![Mobile Booking Application](/images/projects/web-application/booking-mobile.png)
+![Mobile Booking Application](/images/projects/web-application/booking-mobile.jpg)
 
 It was important that the booking process be easy to use, fast and secure. After
 much consultation the process was finalised allowing customers to select their desired

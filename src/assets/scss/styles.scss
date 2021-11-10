@@ -19,6 +19,18 @@ body {
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+
+    /*
+     Introduced in Internet Explorer 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+    -ms-user-select: none;
+    user-select: none;
     &:hover {
       color: $color-dark-primary;
     }
@@ -80,9 +92,12 @@ body {
   }
 
   .container {
-    max-width: 1080px;
+    max-width: 760px;
     margin: auto;
     padding: 20px;
+    @include laptop {
+      max-width: 1080px;
+    }
   }
 
   .flex {
@@ -147,16 +162,6 @@ body {
         overflow: hidden;
         img {
           border-radius: 0.25rem;
-        }
-        &--content {
-          //color: initial;
-          padding: 0.75rem;
-          h2,
-          h3,
-          h4 {
-            // color: initial;
-            // margin-top: 0;
-          }
         }
       }
     }

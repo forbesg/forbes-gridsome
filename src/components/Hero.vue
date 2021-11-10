@@ -27,12 +27,16 @@
       background-image: url(/hero-illustration.svg);
       background-position: center right;
       background-size: 600px 600px;
-      min-height: 600px;
+      // min-height: 600px;
     }
     .left,
     .right {
       img {
         max-width: 100%;
+      }
+      @include tablet {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
       }
     }
     h1 {

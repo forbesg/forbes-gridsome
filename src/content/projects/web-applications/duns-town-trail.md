@@ -41,7 +41,7 @@ town, the site required to be clear, easy to follow and fast to load.
 
 Using Gridsome, a JAMStack framework for VueJS, I was able to produce a performant
 static Progressive Web App which could be installed on the users mobile phone for
-quick and easy access, was secure, and free to host.
+quick and easy access, was secure, and **free to host**.
 
 To allow the client to update the app themselves, I used the DatoCMS, a headless
 content management system which is prefect for this type of project. From a user
