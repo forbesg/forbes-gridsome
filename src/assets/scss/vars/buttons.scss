@@ -66,4 +66,9 @@ a.button {
   font-size: 0.65rem;
   font-weight: bold;
   padding: 2px 7px;
+  text-align: center;
+}
+a.tag:hover {
+  background-color: lighten($color-dark-primary, 10%);
+  color: #fff;
 }

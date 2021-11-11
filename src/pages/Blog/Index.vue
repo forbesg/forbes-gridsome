@@ -47,6 +47,7 @@ query {
         image
         imageAlt
         content
+        tags
       }
     }
   }

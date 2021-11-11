@@ -10,6 +10,21 @@
       />
     </figure>
     <div class="article-card--content">
+      <div class="tag-container">
+        <g-link
+          v-for="(tag, index) in article.tags"
+          :key="index"
+          :to="
+            `/blog/tags/${tag
+              .split(' ')
+              .join('-')
+              .toLowerCase()}`
+          "
+          class="tag"
+        >
+          {{ tag }}
+        </g-link>
+      </div>
       <h2>
         <g-link :to="article.path">{{ article.title }}</g-link>
       </h2>

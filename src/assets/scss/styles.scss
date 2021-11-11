@@ -313,3 +313,12 @@ body {
     }
   }
 }
+
+.tag-container {
+  margin: 0;
+  margin-bottom: 1rem;
+  > * {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+}
