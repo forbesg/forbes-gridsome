@@ -5,12 +5,26 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
+module.exports = function(api) {
+  api.loadSource(action => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-  })
+    const tags = action.addCollection("Tag");
+    tags.addNode({
+      id: "1",
+      title: "JAMStack",
+      slug: "jam-stack"
+    });
+    tags.addNode({
+      id: "2",
+      title: "Static Sites",
+      slug: "static-sites"
+    });
+  });
 
-  api.createPages(async ({ createPage, graphql }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api/
-  })
-}
+  api.createPages(({ createPage }) => {
+    // createPage({
+    //   path: "/blog/tags/:tag",
+    //   component: "./src/templates/Tags.vue"
+    // });
+  });
+};

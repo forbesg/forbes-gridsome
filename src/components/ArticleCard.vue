@@ -14,15 +14,10 @@
         <g-link
           v-for="(tag, index) in article.tags"
           :key="index"
-          :to="
-            `/blog/tags/${tag
-              .split(' ')
-              .join('-')
-              .toLowerCase()}`
-          "
+          :to="tag.path"
           class="tag"
         >
-          {{ tag }}
+          {{ tag.title }}
         </g-link>
       </div>
       <h2>

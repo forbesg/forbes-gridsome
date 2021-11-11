@@ -30,7 +30,20 @@ module.exports = {
       use: "@gridsome/source-filesystem",
       options: {
         path: "src/content/articles/*.md",
-        typeName: "Article"
+        typeName: "Article",
+        refs: {
+          team: "Team",
+          tags: "Tag"
+        }
+      }
+    },
+    {
+      // Add Authors collection
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "src/content/team/*.md",
+        typeName: "Team",
+        route: "/team/:id"
       }
     },
     {
@@ -57,6 +70,16 @@ module.exports = {
     Article: [
       {
         path: "/blog/:title"
+      }
+    ],
+    Team: [
+      {
+        path: "/team/:name"
+      }
+    ],
+    Tag: [
+      {
+        path: "/blog/tags/:slug"
       }
     ]
   },

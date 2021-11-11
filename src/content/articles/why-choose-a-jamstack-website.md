@@ -3,12 +3,13 @@ title: Why Choose A JAMStack Website?
 subhead: What are the benefits of a static website
 description: We look at how JAMStack websites differ from more traditional CMS based technologies like Drupal, Joomla and WordPress Websites
 tags:
-  - JAMStack
-  - Static Websites
+  - "1"
+  - "2"
 image: /images/articles/html-development.jpg
 imageAlt: Static Website written in HTML
-author: Forbes Gray
-date: 11-09-2021
+team: forbes-gray
+# date: 11-09-2021
+date: 2021-11-09T12:00:00
 ---
 
 ## The Initial State of the Web

@@ -47,7 +47,10 @@ query {
         image
         imageAlt
         content
-        tags
+        tags {
+          title
+          path
+        }
       }
     }
   }

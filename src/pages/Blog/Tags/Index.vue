@@ -1,58 +1,47 @@
 <template>
   <Layout>
     <div class="container">
-      <h1>Filter Blog Posts By Tags</h1>
-      <pre>
-        {{ tags }}
-      </pre>
+      <h1 class="highlight-overline">Filter Blog Posts By Tags</h1>
       <div class="tags-container">
         <g-link
-          v-for="(tag, index) in tags"
+          v-for="(tag, index) in $static.tags.edges"
           :key="index"
-          :to="
-            `/blog/tags/${tag
-              .toLowerCase()
-              .split(' ')
-              .join(' ')}`
-          "
+          :to="tag.node.path"
           class="tag"
-          >{{ tag }}</g-link
+          >{{ tag.node.title }}</g-link
         >
       </div>
     </div>
   </Layout>
 </template>
 
-<page-query>
+<static-query>
   query {
-    articles: allArticle {
+    tags: allTag {
       edges {
         node {
-          title,
-          tags
+          id,
+          title
+          path
         }
       }
     }
   }
-</page-query>
+</static-query>
 
 <script>
-export default {
-  computed: {
-    tags() {
-      return this.$page.articles.edges.reduce((tags, edge) => {
-        console.log(tags, edge);
-        edge.node.tags.forEach(tag => {
-          !tags.includes(tag) ? tags.push(tag) : "";
-        });
-        return tags;
-      }, []);
-    }
-  },
-  mounted() {
-    console.log(this);
-  }
-};
+export default {};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.tags-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  grid-gap: 0.5rem;
+  /* Override tag styles */
+  .tag {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+}
+</style>

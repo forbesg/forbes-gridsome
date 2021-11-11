@@ -49,9 +49,20 @@
           <!-- <h1 class="highlight-overline">{{ $page.article.title }}</h1>
           <h2>{{ $page.article.subhead }}</h2> -->
           <div class="credits">
-            <div v-if="$page.article.author" class="">
-              {{ $page.article.author }} ·
-              {{ articleDate }}
+            <div v-if="$page.article.team" class="">
+              <g-link :to="$page.article.team.path">{{
+                $page.article.team.name
+              }}</g-link>
+              -
+              <a
+                :href="`https://www.twitter.com/${$page.article.team.twitter}`"
+                target="_blank"
+                rel="noopener"
+                >{{ $page.article.team.twitter }}</a
+              >
+              <span class="date">
+                {{ articleDate }}
+              </span>
             </div>
           </div>
           <div v-html="$page.article.content" class="markdown-content"></div>
@@ -137,14 +148,14 @@ export default {
   },
   computed: {
     articleDate() {
-      console.log(this.$page.article.date);
       const articleDate = new Date(Date.parse(this.$page.article.date));
-      console.log(articleDate);
       return articleDate.toLocaleDateString("en-GB", {
         month: "long",
         year: "numeric",
         day: "numeric",
-        weekday: "long"
+        weekday: "long",
+        hour: "2-digit",
+        minute: "2-digit"
       });
     }
   }
@@ -156,14 +167,20 @@ query ($id: ID!) {
   article(id: $id) {
     title
     description
-    tags
+    tags {
+      id
+    }
     subhead
     content
     image
     imageAlt
     path
-    author
-    date
+    team {
+      name
+      twitter
+      path
+    }
+    date (format: "D MMMM YYYY hh:mm")
   }
 }
 </page-query>
@@ -221,6 +238,10 @@ query ($id: ID!) {
     font-size: 0.8rem;
     font-weight: bold;
     color: $color-dark-primary;
+    .date {
+      display: block;
+      color: #8fa8b5;
+    }
   }
   .markdown-content {
     p + h2,
