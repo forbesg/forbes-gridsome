@@ -29,7 +29,7 @@
                 <g-link to="/portfolio/">Portfolio</g-link>
               </li>
               <li>
-                <g-link to="/team/">Meet The Team</g-link>
+                <g-link to="/meet-the-team/">Meet The Team</g-link>
               </li>
               <li>
                 <g-link to="/contact/">Contact</g-link>

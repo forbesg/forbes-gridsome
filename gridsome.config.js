@@ -74,7 +74,7 @@ module.exports = {
     ],
     Team: [
       {
-        path: "/team/:name"
+        path: "/meet-the-team/:name"
       }
     ],
     Tag: [

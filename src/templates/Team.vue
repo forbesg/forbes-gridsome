@@ -180,9 +180,15 @@ export default {
     width: 100%;
     aspect-ratio: 1 / 1;
     img {
+      display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      filter: grayscale(0.5);
+      transition: filter 200ms ease-in;
+      &:hover {
+        filter: grayscale(0);
+      }
     }
   }
   &-info-container {
