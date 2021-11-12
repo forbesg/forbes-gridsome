@@ -29,6 +29,9 @@
                 <g-link to="/portfolio/">Portfolio</g-link>
               </li>
               <li>
+                <g-link to="/team/">Meet The Team</g-link>
+              </li>
+              <li>
                 <g-link to="/contact/">Contact</g-link>
               </li>
             </ul>

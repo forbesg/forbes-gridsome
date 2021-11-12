@@ -13,6 +13,9 @@
           </div>
           <div class="team-members-card--content">
             <h2>{{ teamMember.node.name }}</h2>
+            <h3 class="team-members-card--content--role">
+              {{ teamMember.node.position }}
+            </h3>
             <g-link :to="teamMember.node.path" class="arrow"
               >View {{ teamMember.node.name }}</g-link
             >
@@ -25,13 +28,14 @@
 
 <static-query>
   query {
-    team: allTeam {
+    team: allTeam (order: ASC) {
       edges {
         node {
           id
           name
           image
           imageAlt
+          position
           path
         }
       }
@@ -40,7 +44,61 @@
 </static-query>
 
 <script>
-export default {};
+export default {
+  metaInfo() {
+    const title = `${this.title} | Web Developer Edinburgh`;
+    return {
+      title,
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content: this.description
+        },
+        {
+          key: "og:title",
+          property: "og:title",
+          content: title
+        },
+        {
+          key: "og:description",
+          property: "og:description",
+          content: this.description
+        },
+        {
+          key: "og:url",
+          property: "og:url",
+          content: `${this.hostname}${this.$route.path}`
+        },
+        {
+          key: "twitter:title",
+          name: "twitter:title",
+          content: title
+        },
+        {
+          key: "twitter:description",
+          name: "twitter:description",
+          content: this.description
+        }
+      ],
+      link: [
+        {
+          key: "canonical",
+          rel: "canonical",
+          href: `${this.hostname}${this.$route.path}`
+        }
+      ]
+    };
+  },
+  data() {
+    return {
+      title: "Meet The Team",
+      description:
+        "A small but freindly team delivering all things web related.",
+      hostname: process.env.GRIDSOME_HOSTNAME
+    };
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -56,7 +114,7 @@ export default {};
     }
     &-card {
       background: #ffff;
-      box-shadow: 0 5px 5px rgba(#444, 0.1);
+      box-shadow: $box-shadow;
       font-size: 16px;
       &--image {
         height: auto;
@@ -71,8 +129,13 @@ export default {};
       &--content {
         padding: 1.5rem;
         h2 {
-          font-size: 1.1rem;
-          margin: 0;
+          font-size: 1.2rem;
+          margin: 0 0 0.25rem 0;
+        }
+        &--role {
+          color: rgba($color-dark-primary, 0.75);
+          font-size: 0.75rem;
+          margin: 0 0 1rem 0;
         }
         a {
           padding: 0;

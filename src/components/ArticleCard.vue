@@ -43,6 +43,7 @@ export default {
 <style lang="scss">
 .article-card {
   border: 1px solid rgba(#000, 0.05);
+  box-shadow: $box-shadow;
   figure {
     display: block;
     margin: 0;
@@ -56,6 +57,7 @@ export default {
     }
   }
   &--content {
+    font-size: 0.95rem;
     padding: 1.5rem;
     h1,
     h2,

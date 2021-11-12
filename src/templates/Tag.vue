@@ -50,6 +50,10 @@ export default {
 <style lang="scss" scoped>
 .article-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  @include laptop {
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+  }
 }
 </style>

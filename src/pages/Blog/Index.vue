@@ -118,11 +118,10 @@ export default {
 <style lang="scss" scoped>
 .articles {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: 2rem;
-  @include tablet {
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
+  @include laptop {
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
   }
 }
 section {

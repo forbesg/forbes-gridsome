@@ -46,8 +46,6 @@
           </ol>
         </div>
         <main>
-          <!-- <h1 class="highlight-overline">{{ $page.article.title }}</h1>
-          <h2>{{ $page.article.subhead }}</h2> -->
           <div class="credits">
             <div v-if="$page.article.team" class="">
               <g-link :to="$page.article.team.path">{{
