@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="article">
+    <main class="article">
       <div class="banner">
         <img :src="$page.article.image" alt="" />
         <div class="banner-title">
@@ -45,7 +45,7 @@
             </li>
           </ol>
         </div>
-        <main>
+        <article>
           <div class="credits">
             <div v-if="$page.article.team" class="">
               <g-link :to="$page.article.team.path">{{
@@ -68,9 +68,9 @@
             v-if="$page.article.carousel && $page.article.carousel.length"
             :images="$page.article.carousel"
           ></Carousel>
-        </main>
+        </article>
       </div>
-    </div>
+    </main>
   </Layout>
 </template>
 
@@ -81,6 +81,26 @@ export default {
   components: { Carousel },
   metaInfo() {
     const title = `${this.$page.article.title} | Forbes Gray | Edinburgh`;
+    /**
+      Create Article Schema Structured data and include to page meta tags
+    **/
+    const articleStructuredData = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      image: [`${this.hostname}${this.$page.article.image}`],
+      datePublished: new Date(this.$page.article.date).toISOString(),
+      author: [
+        {
+          "@type": "Person",
+          name: this.$page.article.team.name,
+          url: `${this.hostname}${this.$page.article.team.path}`,
+          sameAs: this.$page.article.team.links
+        }
+      ],
+      headline: this.$page.article.title,
+      description: this.$page.article.description
+    };
+
     return {
       title,
       meta: [
@@ -136,6 +156,12 @@ export default {
           rel: "canonical",
           href: `${this.hostname}${this.$page.article.path}`
         }
+      ],
+      script: [
+        {
+          type: "application/ld+json",
+          innerHTML: JSON.stringify(articleStructuredData)
+        }
       ]
     };
   },
@@ -177,6 +203,7 @@ query ($id: ID!) {
       name
       twitter
       path
+      links
     }
     date (format: "D MMMM YYYY hh:mm")
   }

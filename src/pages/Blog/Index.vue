@@ -23,14 +23,16 @@
           </li>
         </ol>
       </div>
-      <h1 class="highlight-overline">Blog</h1>
-      <div class="articles">
-        <article-card
-          v-for="article in $page.articles.edges"
-          :key="article.id"
-          :article="article.node"
-        ></article-card>
-      </div>
+      <main>
+        <h1 class="highlight-overline">Blog</h1>
+        <div class="articles">
+          <article-card
+            v-for="article in $page.articles.edges"
+            :key="article.id"
+            :article="article.node"
+          ></article-card>
+        </div>
+      </main>
     </div>
   </Layout>
 </template>

@@ -5,6 +5,9 @@ name: Forbes Gray
 email: "fnbg75@gmail.com"
 twitter: "@4beez"
 position: Owner, Front & Back-end Developer, Customer Service, Accountant, Cleaner
+links:
+  - https://uk.linkedin.com/in/forbesgray
+  - https://twitter.com/4beez
 image: /images/forbes-up-arthurs-seat.jpg
 imageAlt: Forbes up Arthur's Seat
 favoriteFoods:
