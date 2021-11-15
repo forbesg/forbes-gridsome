@@ -56,7 +56,6 @@ export default {
   &.shadow {
     background-color: rgba(#fff, 0.9);
     box-shadow: 0 0 1px rgba($color-dark-primary, 0.5);
-    backdrop-filter: blur(3px);
     @include tablet {
       backdrop-filter: blur(3px);
     }
@@ -69,7 +68,7 @@ export default {
         position: fixed;
         top: 0;
         right: 0;
-        // bottom: 0;
+        bottom: 0;
         left: 0;
         height: 100vh;
         background-color: rgba(#444, 0.5);
@@ -141,6 +140,7 @@ export default {
             }
           }
         }
+
         &.open {
           backdrop-filter: blur(3px);
           visibility: visible;
@@ -156,6 +156,7 @@ export default {
             }
           }
         }
+
         @include tablet {
           position: static;
           visibility: visible;
