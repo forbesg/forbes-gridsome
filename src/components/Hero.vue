@@ -2,7 +2,7 @@
   <div class="hero">
     <div class="container flex">
       <div class="left">
-        <h1>Freelance Web <br />Developer | <span>Edinburgh</span></h1>
+        <h1>Freelance Website <br />Developer | <span>Edinburgh</span></h1>
         <h2>Bespoke, Fast, Responsive & SEO-Friendly Websites</h2>
         <h3 class="text-primary">JAMStack · CMS · E-Commerce</h3>
         <g-link to="/portfolio/" class="button">View My Work</g-link>
@@ -13,7 +13,6 @@
 
 <style lang="scss" scoped>
 .hero {
-  // background: $color-light-blue-gradient;
   background: white;
   .flex {
     background-image: url(/hero-illustration-opaque.svg);
