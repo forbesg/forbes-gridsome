@@ -4,7 +4,7 @@ description: A Progressive Web Application to help guide visitors around points 
 subhead: Guided of the Town of Duns
 image: /images/projects/web-application/duns-town-trail.jpg
 imageAlt: Duns Town Trail - Progressive Web App
-url: https://town-trail.netlify.app/
+url: https://town-trail.aheartforduns.org/
 features: [HTML, SCSS, Vue JS, Gridsome, DatoCMS, Progressive Web App]
 carousel:
   - src: /images/projects/web-application/town-trail/trail-view.png
