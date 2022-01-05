@@ -4,7 +4,6 @@ description: Star Wars DB BlacBerry Webworks Application built using JavaScript 
 subhead: BlackBerry 10 Database for Star Wars
 image: /images/projects/blackberry/star-wars-db.jpg
 imageAlt: Star Wars Database - BlackBerry Application
-url: https://appworld.blackberry.com/webstore/content/59972365/
 category: blackberry
 features: [html5, css3, javascript, swapi api, bbui.js, blackberry webworks]
 ---

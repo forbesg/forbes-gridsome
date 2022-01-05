@@ -136,6 +136,7 @@ export default {
   query ($id: ID!) {
     team(id: $id) {
       id
+      description
       name
       email
       twitter
@@ -151,7 +152,6 @@ export default {
 
 <style lang="scss" scoped>
 .team {
-  // background-color: rgba($color-dark-primary, 0.025);
   @include tablet {
     margin-top: 3rem;
   }

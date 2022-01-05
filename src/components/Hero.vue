@@ -22,11 +22,12 @@
     justify-content: space-between;
     align-items: center;
     min-height: 400px;
+    min-height: calc(100vh - 4.875rem);
     @include tablet {
       background-image: url(/hero-illustration.svg);
       background-position: center right;
       background-size: 600px 600px;
-      // min-height: 600px;
+      min-height: 600px;
     }
     .left,
     .right {

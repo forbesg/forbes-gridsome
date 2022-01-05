@@ -2,7 +2,7 @@
   <Layout>
     <main class="article">
       <div class="banner">
-        <img :src="$page.article.image" alt="" />
+        <img :src="$page.article.image" :alt="$page.article.imageAlt" />
         <div class="banner-title">
           <div class="container banner-title--inner-wrapper">
             <h1 class="">{{ $page.article.title }}</h1>

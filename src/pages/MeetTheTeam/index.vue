@@ -28,7 +28,7 @@
 
 <static-query>
   query {
-    team: allTeam (order: ASC) {
+    team: allTeam (sortBy: "name", order: ASC) {
       edges {
         node {
           id
@@ -94,7 +94,7 @@ export default {
     return {
       title: "Meet The Team",
       description:
-        "A small but freindly team delivering all things web related.",
+        "A small but freindly team delivering all things high-quality websites and web applications.",
       hostname: process.env.GRIDSOME_HOSTNAME
     };
   }

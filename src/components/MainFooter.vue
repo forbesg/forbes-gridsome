@@ -4,11 +4,11 @@
       <div class="container">
         <g-link
           v-if="$route.path === '/contact/' || $route.path.match('/blog/')"
-          to="/portfolio"
+          to="/portfolio/"
           class="arrow"
           >View some of my recent projects</g-link
         >
-        <g-link v-else to="/contact" class="arrow"
+        <g-link v-else to="/contact/" class="arrow"
           >Get In Touch To Discuss Your Project Today</g-link
         >
       </div>

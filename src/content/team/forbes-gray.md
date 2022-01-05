@@ -1,10 +1,14 @@
 ---
 id: forbes-gray
-description: Forbes Gray is a Website Developer from Edinburgh, Scotland, specialising in creating bespoke, fast & responsive modern websites & applications.
+description: >
+  Meet The Team - Forbes Gray is a Website Developer from Edinburgh, Scotland,
+  specialising in creating bespoke, fast & responsive modern websites &
+  applications.
 name: Forbes Gray
-email: "fnbg75@gmail.com"
+email: fnbg75@gmail.com
 twitter: "@4beez"
-position: Owner, Front & Back-end Developer, Customer Service, Accountant, Cleaner
+position: >
+  Owner, Front & Back-end Developer, Customer Service, Accountant, Cleaner
 links:
   - https://uk.linkedin.com/in/forbesgray
   - https://twitter.com/4beez
@@ -20,4 +24,4 @@ interests:
   - All Things Tech
 ---
 
-Forbes is a Website Developer from Edinburgh, Scotland
+Forbes is a Freelance Website Developer based in Edinburgh, Scotland.

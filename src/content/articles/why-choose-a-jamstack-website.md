@@ -74,4 +74,4 @@ The decoupled nature of the JAMStack also means that you have total freedom of t
 
 The choice is up to you. Whether you are considering updating an existing website or starting from scratch with a new project, certainly give a Static JAMStack website a closer look.
 
-If you would like to discuss any projects that may be able to take advantage of a static site please do [get in touch](/contact).
+If you would like to discuss any projects that may be able to take advantage of a static site please do [get in touch](/contact/).

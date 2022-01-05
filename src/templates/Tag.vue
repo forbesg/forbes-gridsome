@@ -43,7 +43,60 @@
 <script>
 import ArticleCard from "@/components/ArticleCard";
 export default {
-  components: { ArticleCard }
+  components: { ArticleCard },
+  metaInfo() {
+    const title = `${this.$page.tag.title} | Blog | Forbes Gray`;
+    const description = `A selection of web design and development blog articles tagged ${
+      this.$page.tag.title
+    }`;
+    return {
+      title,
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content: description
+        },
+        {
+          key: "og:title",
+          property: "og:title",
+          content: title
+        },
+        {
+          key: "og:description",
+          property: "og:description",
+          content: description
+        },
+        {
+          key: "og:url",
+          property: "og:url",
+          content: `${this.hostname}${this.$route.path}`
+        },
+        {
+          key: "twitter:title",
+          name: "twitter:title",
+          content: title
+        },
+        {
+          key: "twitter:description",
+          name: "twitter:description",
+          content: description
+        }
+      ],
+      link: [
+        {
+          key: "canonical",
+          rel: "canonical",
+          href: `${this.hostname}${this.$route.path}`
+        }
+      ]
+    };
+  },
+  data() {
+    return {
+      hostname: process.env.GRIDSOME_HOSTNAME
+    };
+  }
 };
 </script>
 
