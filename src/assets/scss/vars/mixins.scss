@@ -2,21 +2,28 @@ $mobile-width: 450px;
 $tablet-width: 768px;
 $laptop-width: 1080px;
 $desktop-width: 1360px;
+$widescreen-width: 1440px;
 
 @mixin tablet() {
   @media (min-width: $tablet-width) {
-    @content
+    @content;
   }
 }
 
 @mixin laptop() {
   @media (min-width: $laptop-width) {
-    @content
+    @content;
   }
 }
 
 @mixin desktop() {
   @media (min-width: $desktop-width) {
-    @content
+    @content;
+  }
+}
+
+@mixin widescreen() {
+  @media (min-width: $widescreen-width) {
+    @content;
   }
 }

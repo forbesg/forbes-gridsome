@@ -3,13 +3,71 @@
     <div class="container flex">
       <div class="left">
         <h1>Freelance Website <br />Developer | <span>Edinburgh</span></h1>
-        <h2>Bespoke, Fast, Responsive & SEO-Friendly Websites</h2>
+        <h2>
+          <span
+            ref="animate-title"
+            data-titles="Bespoke,Lightning-Fast,Responsive,SEO-Friendly"
+            class=""
+            >{{ animatedTextOutput }}</span
+          ><br />
+          Websites & Web Applications
+        </h2>
         <h3 class="text-primary">JAMStack · CMS · E-Commerce</h3>
-        <g-link to="/portfolio/" class="button">View My Work</g-link>
+        <div class="hero-cta-buttons">
+          <g-link to="/portfolio/" class="button">View My Work</g-link>
+          <g-link to="/services/" class="arrow">View My Services</g-link>
+        </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      animatedTextOutput: "Bespoke, Fast, Responsive, SEO-Friendly",
+      wordArray: null
+    };
+  },
+  mounted() {
+    const animateText = this.$refs["animate-title"];
+    this.animatedTextOutput = "";
+    animateText.classList.add("loaded");
+    this.wordArray = animateText.dataset.titles.split(",");
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        this.beginAnimation();
+        setInterval(this.beginAnimation, 20000);
+      }, 1000);
+    });
+  },
+  methods: {
+    animateText(string) {
+      let outputString = "";
+      for (let index in string) {
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            outputString += string.charAt(index);
+            this.animatedTextOutput = outputString;
+          }, 100 * (index * 1));
+        });
+      }
+    },
+    beginAnimation() {
+      for (let wordIndex in this.wordArray) {
+        const timing = 4000 * wordIndex;
+        setTimeout(() => {
+          this.animateText(this.wordArray[wordIndex]);
+        }, timing);
+      }
+    }
+  },
+  beforeDestroy() {
+    clearInterval(this.beginAnimation);
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 .hero {
@@ -57,31 +115,81 @@
     }
     h2,
     h3 {
-      margin-top: 0;
-      margin-bottom: 0.75rem;
+      margin: 0;
     }
     h2 {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      margin-top: 1.25em;
+      margin-bottom: 0.5em;
+      height: 4em;
+      > span {
+        display: inline-block;
+        font-family: "Catamaran", sans-serif;
+        font-size: 1.4em;
+        color: $color-primary;
+        height: 1.1em;
+        opacity: 0;
+        text-transform: uppercase;
+        &.loaded {
+          opacity: 1;
+          position: relative;
+          &:after {
+            visibility: visible;
+          }
+        }
+        &:after {
+          content: "|";
+          position: absolute;
+          top: 0rem;
+          bottom: 0;
+          right: -0.35em;
+          display: inline-block;
+          font-weight: 300;
+          animation: cursorBlink 1000ms steps(2) forwards infinite;
+          visibility: hidden;
+        }
+      }
+
       @include tablet {
         font-size: 1.4rem;
       }
-      @include laptop {
-        font-size: 1.8rem;
-      }
     }
     h3 {
+      display: flex;
+      justify-content: space-between;
       font-size: 1rem;
       font-family: "Catamaran", sans-serif;
-      // font-weight: normal;
       margin-bottom: 3rem;
+      text-transform: uppercase;
       word-spacing: 0.5rem;
       @include tablet {
-        font-size: 1.2rem;
-      }
-      @include laptop {
-        font-size: 1.6rem;
+        font-size: 1.1em;
       }
     }
+  }
+  &-cta-buttons {
+    > a {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      text-align: center;
+
+      @media (min-width: 468px) {
+        display: inline-block;
+        &:first-child {
+          margin-right: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@keyframes cursorBlink {
+  from {
+    color: transparent;
+  }
+  to {
+    color: $color-dark-primary;
   }
 }
 </style>

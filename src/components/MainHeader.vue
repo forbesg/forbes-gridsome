@@ -1,17 +1,18 @@
 <template lang="html">
   <div :class="{ shadow: scrolled }" class="main-header">
     <div class="container">
-      <div class="logo">
+      <!-- <div class="logo">
         <img src="/logo.svg" alt="Forbes Gray" />
         <g-link to="/">forbes <span class="text-primary">Gray</span></g-link>
-      </div>
+      </div> -->
+      <Logo />
       <nav
         :class="{ open: navOpen }"
         @click="toggleDisplayNav"
         class="main-nav"
       >
         <g-link to="/" class="fixed homepage-link">Home</g-link>
-        <g-link to="/about/" class="fixed">About</g-link>
+        <g-link to="/services/" class="fixed">Services</g-link>
         <g-link to="/portfolio/" class="fixed">Portfolio</g-link>
         <g-link to="/blog/" class="fixed">Blog</g-link>
       </nav>
@@ -28,7 +29,9 @@
 </template>
 
 <script>
+import Logo from "@/components/Logo";
 export default {
+  components: { Logo },
   data() {
     return {
       navOpen: false
@@ -190,19 +193,18 @@ export default {
         font-size: 0.9rem;
         padding: 7px 20px;
       }
-      &.logo {
-        flex: 1 1 10rem;
-        img {
-          height: 20px;
-          width: 20px;
-          margin-right: 10px;
-        }
-        a {
-          color: $color-dark-primary;
-          font-size: 1em;
-          // font-weight: bold;
-        }
-      }
+      // &.logo {
+      //   flex: 1 1 10rem;
+      //   img {
+      //     height: 20px;
+      //     width: 20px;
+      //     margin-right: 10px;
+      //   }
+      //   a {
+      //     color: $color-dark-primary;
+      //     font-size: 1em;
+      //   }
+      // }
       &.action {
         display: flex;
         align-items: center;

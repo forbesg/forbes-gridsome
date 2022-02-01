@@ -68,6 +68,15 @@
             v-if="$page.article.carousel && $page.article.carousel.length"
             :images="$page.article.carousel"
           ></Carousel>
+          <div class="article-tags tag-container">
+            <g-link
+              v-for="tag in $page.article.tags"
+              :key="tag.id"
+              :to="`${tag.path}`"
+              class="tag"
+              >{{ tag.title }}</g-link
+            >
+          </div>
         </article>
       </div>
     </main>
@@ -193,6 +202,8 @@ query ($id: ID!) {
     description
     tags {
       id
+      title
+      path
     }
     subhead
     content
@@ -213,49 +224,6 @@ query ($id: ID!) {
 <style lang="scss">
 .article {
   padding-bottom: 2rem;
-  .banner {
-    position: relative;
-    height: 250px;
-    @include tablet {
-      height: 450px;
-    }
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-    .banner-title {
-      position: absolute;
-      inset: 0;
-      background-color: rgba(#000, 0.75);
-      display: flex;
-      align-items: center;
-      width: 100%;
-      &--inner-wrapper {
-        flex: 1;
-        h1,
-        h2 {
-          color: #fff;
-          margin-bottom: 0;
-        }
-        h1 {
-          font-size: 1.6rem;
-        }
-        h2 {
-          font-size: 1.2rem;
-        }
-        @include tablet {
-          h1 {
-            font-size: 2.6rem;
-          }
-          h2 {
-            font-size: 1.6rem;
-          }
-        }
-      }
-    }
-  }
   .breadcrumbs {
     margin-top: 0;
   }

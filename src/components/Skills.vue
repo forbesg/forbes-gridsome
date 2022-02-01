@@ -95,7 +95,7 @@
     flex-wrap: wrap;
     padding: 20px 0;
     margin: 0 auto 2rem auto;
-    max-width: 1080px;
+    max-width: 1280px;
     @include tablet {
       padding: 50px 0;
     }

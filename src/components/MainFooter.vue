@@ -23,6 +23,9 @@
                 <g-link to="/">Home</g-link>
               </li>
               <li>
+                <g-link to="/services/">Services</g-link>
+              </li>
+              <li>
                 <g-link to="/about/">About</g-link>
               </li>
               <li>
@@ -100,7 +103,7 @@
           </ul>
         </div>
         <div class="right">
-          <h2>Address</h2>
+          <h2>Contact</h2>
           <address>
             5 Park Place,<br />
             Edinburgh.<br />
@@ -116,7 +119,9 @@
 </template>
 
 <script>
+import Logo from "@/components/Logo";
 export default {
+  components: { Logo },
   computed: {
     year() {
       const today = new Date();

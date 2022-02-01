@@ -19,6 +19,11 @@ module.exports = function(api) {
       title: "Static Sites",
       slug: "static-sites"
     });
+    tags.addNode({
+      id: "3",
+      title: "Ecommerce Websites",
+      slug: "ecommerce-sites"
+    });
   });
 
   api.createPages(({ createPage }) => {
