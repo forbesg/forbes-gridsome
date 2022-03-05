@@ -9,7 +9,7 @@
             data-titles="Bespoke,Lightning-Fast,Responsive,SEO-Friendly"
             class=""
             >{{ animatedTextOutput }}</span
-          ><br />
+          >
           Websites & Web Applications
         </h2>
         <h3 class="text-primary">JAMStack · CMS · E-Commerce</h3>
@@ -86,6 +86,7 @@ export default {
       background-position: center right;
       background-size: 600px 600px;
       min-height: 600px;
+      height: min-content;
     }
     .left,
     .right {
@@ -119,17 +120,20 @@ export default {
     }
     h2 {
       font-size: 1rem;
-      margin-top: 1.25em;
-      margin-bottom: 0.5em;
-      height: 4em;
+      display: block;
+      // margin-top: 1.25em;
+      margin-bottom: 0.75em;
+      // height: 4em;
       > span {
-        display: inline-block;
+        display: block;
         font-family: "Catamaran", sans-serif;
         font-size: 1.4em;
         color: $color-primary;
-        height: 1.1em;
+        height: 1.4em;
+        margin-bottom: 0;
         opacity: 0;
         text-transform: uppercase;
+        width: max-content;
         &.loaded {
           opacity: 1;
           position: relative;

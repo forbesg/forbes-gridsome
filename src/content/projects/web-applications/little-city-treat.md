@@ -21,7 +21,7 @@ features:
   ]
 category: web-application
 slug: little-city-treat
-order: 2
+order: 1
 featured: true
 ---
 

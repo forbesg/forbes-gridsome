@@ -22,7 +22,7 @@ carousel:
 
 category: web-application
 slug: duns-town-trail
-order: 1
+order: 3
 featured: true
 ---
 
