@@ -31,11 +31,11 @@ export default {
     };
   },
   mounted() {
-    const animateText = this.$refs["animate-title"];
-    this.animatedTextOutput = "";
-    animateText.classList.add("loaded");
-    this.wordArray = animateText.dataset.titles.split(",");
     requestAnimationFrame(() => {
+      const animateText = this.$refs["animate-title"];
+      this.animatedTextOutput = "";
+      animateText.classList.add("loaded");
+      this.wordArray = animateText.dataset.titles.split(",");
       setTimeout(() => {
         this.beginAnimation();
         setInterval(this.beginAnimation, 20000);

@@ -129,6 +129,18 @@ export default function(Vue, { router, head, isClient }) {
   });
 
   head.link.push({
+    rel: "preconnect",
+    href: "https://fonts.gstatic.com"
+  });
+
+  head.link.push({
+    rel: "preload",
+    as: "style",
+    href:
+      "https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Montserrat:wght@700&display=swap"
+  });
+
+  head.link.push({
     rel: "apple-touch-icon",
     sizes: "108x180",
     href: "/apple-touch-icon.png"
