@@ -72,12 +72,12 @@
           I always found myself striving for faster, performant websites and
           applications.
         </p>
-        <h2>JAM Stack Website Development</h2>
+        <h2>JAMStack Website Development</h2>
         <p>
           My main focus has become building fast, SEO friendly server-side
           rendered and static websites, using many of the modern JavaScript
           frameworks, such as React, Vue, Gatsby, Gridsome (this website) and
-          Nuxt JS. Using a JAM Stack architecture (JavaScript, API's &amp;
+          Nuxt JS. Using a JAMStack architecture (JavaScript, API's &amp;
           Markup), headless Databases, CMS's, and ecommerce services, I am able
           to quickly create performant and secure websites and web applications
           that search engines love.
@@ -86,7 +86,7 @@
           I have become increasingly focused on website speed and since the
           introduction of Google's
           <a href="https://web.dev/vitals/">Core Web Vitals</a> as a metric used
-          in their organic search results rankings, the JAM Stack architecture
+          in their organic search results rankings, the JAMStack architecture
           has found its place at the forefront of modern Web Development.
         </p>
         <p>

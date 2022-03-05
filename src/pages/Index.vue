@@ -23,7 +23,7 @@
           </p>
           <p>
             With a focus on website performance, my preferred approach to
-            Website Development is the JAM Stack architecture (JavaScript, API
+            Website Development is the JAMStack architecture (JavaScript, API
             &amp; Markup) which decouples technologies to offer superior website
             speed, security &amp; flexibility than more traditional approaches
             to Website Development.
