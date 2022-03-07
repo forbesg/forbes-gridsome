@@ -2,7 +2,7 @@
   <div class="hero">
     <div class="container flex">
       <!-- <transition name="fade-in" appear> -->
-      <div v-if="loaded" :class="[{ loaded }]" class="left" data-delay="1000">
+      <div class="left">
         <h1>Freelance Website <br />Developer | <span>Edinburgh</span></h1>
         <h2>
           <span
@@ -29,12 +29,10 @@ export default {
   data() {
     return {
       animatedTextOutput: "Bespoke, Fast, Responsive, SEO-Friendly",
-      wordArray: null,
-      loaded: false
+      wordArray: null
     };
   },
   mounted() {
-    this.loaded = true;
     requestAnimationFrame(() => {
       const animateText = this.$refs["animate-title"];
       this.animatedTextOutput = "";
@@ -74,17 +72,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .fade-in-enter-active {
-//   opacity: 1;
-//   transform: translateY(0rem);
-//   transition: all 200ms 200ms ease-in;
-// }
-// .fade-in-enter {
-//   opacity: 0;
-//   transform: translateY(0.25rem);
-// }
 .hero {
   background: white;
+  height: min-content;
   .flex {
     background-image: url(/hero-illustration-opaque.svg);
     background-repeat: no-repeat;
@@ -96,7 +86,6 @@ export default {
       background-position: center right;
       background-size: 600px 600px;
       min-height: 600px;
-      height: min-content;
     }
     .left {
       position: relative;
