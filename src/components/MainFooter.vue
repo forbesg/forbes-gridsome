@@ -133,13 +133,13 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-  background-color: $color-dark-primary;
+  background-color: darken($color-dark-primary, 5%);
   color: #fff;
   font-size: 0.8rem;
-  /* Add a top margin to all pages excluding the homepage */
-  &.footer-margin {
-    margin-top: 3rem;
-  }
+  // /* Add a top margin to all pages excluding the homepage */
+  // &.footer-margin {
+  //   margin-top: 3rem;
+  // }
   .get-in-touch-callout {
     background-color: $color-primary;
     text-align: center;
@@ -202,7 +202,7 @@ footer {
     }
   }
   .copy {
-    background-color: darken($color-dark-primary, 2%);
+    background-color: darken($color-dark-primary, 7%);
     color: #fff;
     font-size: 0.7rem;
     padding: 1px;

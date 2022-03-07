@@ -137,7 +137,7 @@ export default function(Vue, { router, head, isClient }) {
     rel: "preload",
     as: "style",
     href:
-      "https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Montserrat:wght@700&display=swap"
+      "https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Montserrat:wght@700&display=block"
   });
 
   head.link.push({

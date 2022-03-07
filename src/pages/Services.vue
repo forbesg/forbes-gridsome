@@ -14,7 +14,20 @@
         </div>
       </header>
       <article>
-        <section class="feature">
+        <div class="intro container">
+          <h2>Website Design &amp; Development</h2>
+          <p>
+            As a website developer I love to solve problems. Talking in plain
+            English I help my clients to find the right online solution for them
+            and their customers. By focusing on my clients successes I can
+            ensure that their customers come back again and again.
+          </p>
+          <p>
+            Below you will find some of the services that I provide but I am
+            always happy to discuss any new ideas or ventures.
+          </p>
+        </div>
+        <section class="feature dark">
           <div class="container">
             <h2 class="highlight-overline">Brochure Website</h2>
             <h3>Are you looking for a small low cost website?</h3>
@@ -27,7 +40,7 @@
             </p>
           </div>
         </section>
-        <section class="feature dark">
+        <section class="feature">
           <div class="container">
             <h2 class="highlight-overline">
               Content Management System Website
@@ -48,7 +61,7 @@
             </p>
           </div>
         </section>
-        <section class="feature">
+        <section class="feature dark">
           <div class="container">
             <h2 class="highlight-overline">
               Ecommerce Website
@@ -71,7 +84,7 @@
             </p>
           </div>
         </section>
-        <section class="feature dark">
+        <section class="feature">
           <div class="container">
             <h2 class="highlight-overline">
               Website Maintenance
@@ -102,7 +115,7 @@
             </p>
           </div>
         </section>
-        <section class="feature">
+        <section class="feature dark">
           <div class="container">
             <h2 class="highlight-overline">
               Website Development Services for Designers

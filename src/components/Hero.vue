@@ -1,7 +1,8 @@
 <template lang="html">
   <div class="hero">
     <div class="container flex">
-      <div class="left">
+      <!-- <transition name="fade-in" appear> -->
+      <div v-if="loaded" :class="[{ loaded }]" class="left" data-delay="1000">
         <h1>Freelance Website <br />Developer | <span>Edinburgh</span></h1>
         <h2>
           <span
@@ -18,6 +19,7 @@
           <g-link to="/services/" class="arrow">View My Services</g-link>
         </div>
       </div>
+      <!-- </transition> -->
     </div>
   </div>
 </template>
@@ -27,10 +29,12 @@ export default {
   data() {
     return {
       animatedTextOutput: "Bespoke, Fast, Responsive, SEO-Friendly",
-      wordArray: null
+      wordArray: null,
+      loaded: false
     };
   },
   mounted() {
+    this.loaded = true;
     requestAnimationFrame(() => {
       const animateText = this.$refs["animate-title"];
       this.animatedTextOutput = "";
@@ -70,6 +74,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// .fade-in-enter-active {
+//   opacity: 1;
+//   transform: translateY(0rem);
+//   transition: all 200ms 200ms ease-in;
+// }
+// .fade-in-enter {
+//   opacity: 0;
+//   transform: translateY(0.25rem);
+// }
 .hero {
   background: white;
   .flex {
@@ -77,10 +90,7 @@ export default {
     background-repeat: no-repeat;
     background-position: top 50px right -20px;
     background-size: 80%;
-    justify-content: space-between;
     align-items: center;
-    min-height: 400px;
-    min-height: calc(100vh - 4.875rem);
     @include tablet {
       background-image: url(/hero-illustration.svg);
       background-position: center right;
@@ -88,10 +98,12 @@ export default {
       min-height: 600px;
       height: min-content;
     }
-    .left,
-    .right {
+    .left {
       position: relative;
       z-index: 1;
+      max-width: 100%;
+      padding-top: 3rem;
+      padding-bottom: 1rem;
       img {
         max-width: 100%;
       }
@@ -99,75 +111,73 @@ export default {
         padding-top: 5rem;
         padding-bottom: 5rem;
       }
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin: 0 0 2rem 0;
-      @include tablet {
-        font-size: 2.6rem;
+      h1 {
+        font-size: 2.2rem;
+        margin: 0 0 2rem 0;
+        @include tablet {
+          font-size: 2.6rem;
+        }
+        @include laptop {
+          font-size: 3.6rem;
+        }
+        > span {
+          color: rgba($color-primary, 0.4);
+          font-size: 0.75em;
+        }
       }
-      @include laptop {
-        font-size: 3.6rem;
+      h2,
+      h3 {
+        margin: 0;
       }
-      > span {
-        color: rgba($color-primary, 0.4);
-        font-size: 0.75em;
-      }
-    }
-    h2,
-    h3 {
-      margin: 0;
-    }
-    h2 {
-      font-size: 1rem;
-      display: block;
-      // margin-top: 1.25em;
-      margin-bottom: 0.75em;
-      // height: 4em;
-      > span {
+      h2 {
+        font-size: 1rem;
         display: block;
-        font-family: "Catamaran", sans-serif;
-        font-size: 1.4em;
-        color: $color-primary;
-        height: 1.4em;
-        margin-bottom: 0;
-        opacity: 0;
-        text-transform: uppercase;
-        width: max-content;
-        &.loaded {
-          opacity: 1;
-          position: relative;
+        margin-bottom: 2.25em;
+        > span {
+          display: block;
+          font-family: "Catamaran", sans-serif;
+          font-size: 1.6em;
+          color: $color-primary;
+          height: 1.6em;
+          margin-bottom: 0;
+          opacity: 0;
+          text-transform: uppercase;
+          width: max-content;
+          &.loaded {
+            opacity: 1;
+            position: relative;
+            &:after {
+              visibility: visible;
+            }
+          }
           &:after {
-            visibility: visible;
+            content: "|";
+            position: absolute;
+            top: 0rem;
+            bottom: 0;
+            right: -0.35em;
+            display: inline-block;
+            font-weight: 300;
+            animation: cursorBlink 1000ms steps(2) forwards infinite;
+            visibility: hidden;
           }
         }
-        &:after {
-          content: "|";
-          position: absolute;
-          top: 0rem;
-          bottom: 0;
-          right: -0.35em;
-          display: inline-block;
-          font-weight: 300;
-          animation: cursorBlink 1000ms steps(2) forwards infinite;
-          visibility: hidden;
+
+        @include tablet {
+          font-size: 1.4rem;
         }
       }
-
-      @include tablet {
-        font-size: 1.4rem;
-      }
-    }
-    h3 {
-      display: flex;
-      justify-content: space-between;
-      font-size: 1rem;
-      font-family: "Catamaran", sans-serif;
-      margin-bottom: 3rem;
-      text-transform: uppercase;
-      word-spacing: 0.5rem;
-      @include tablet {
+      h3 {
+        display: flex;
+        justify-content: space-between;
         font-size: 1.1em;
+        font-family: "Catamaran", sans-serif;
+        margin-bottom: 2.25rem;
+        text-transform: uppercase;
+        word-spacing: 0.5rem;
+        @include tablet {
+          font-size: 1.1em;
+        }
       }
     }
   }
