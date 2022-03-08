@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="hero">
-    <div class="container flex">
+    <div class="container">
       <!-- <transition name="fade-in" appear> -->
       <div class="left">
         <h1>Freelance Website <br />Developer | <span>Edinburgh</span></h1>
@@ -75,7 +75,7 @@ export default {
 .hero {
   background: white;
   height: min-content;
-  .flex {
+  > .container {
     background-image: url(/hero-illustration-opaque.svg);
     background-repeat: no-repeat;
     background-position: top 50px right -20px;
