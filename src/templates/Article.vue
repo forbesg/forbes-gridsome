@@ -103,11 +103,11 @@ export default {
           "@type": "Person",
           name: this.$page.article.team.name,
           url: `${this.hostname}${this.$page.article.team.path}`,
-          sameAs: this.$page.article.team.links
-        }
+          sameAs: this.$page.article.team.links,
+        },
       ],
       headline: this.$page.article.title,
-      description: this.$page.article.description
+      description: this.$page.article.description,
     };
 
     return {
@@ -116,67 +116,67 @@ export default {
         {
           key: "description",
           name: "description",
-          content: this.$page.article.description
+          content: this.$page.article.description,
         },
         {
           key: "og:title",
           property: "og:title",
-          content: title
+          content: title,
         },
         {
           key: "og:description",
           property: "og:description",
-          content: this.$page.article.description
+          content: this.$page.article.description,
         },
         {
           key: "og:url",
           property: "og:url",
-          content: `${this.hostname}${this.$page.article.path}`
+          content: `${this.hostname}${this.$page.article.path}`,
         },
         {
           key: "og:image",
           property: "og:image",
-          content: `${this.hostname}${this.$page.article.image}`
+          content: `${this.hostname}${this.$page.article.image}`,
         },
         {
           key: "og:image:alt",
           property: "og:image:alt",
-          content: `${this.$page.article.imageAlt}`
+          content: `${this.$page.article.imageAlt}`,
         },
         {
           key: "twitter:title",
           name: "twitter:title",
-          content: title
+          content: title,
         },
         {
           key: "twitter:description",
           name: "twitter:description",
-          content: this.$page.article.description
+          content: this.$page.article.description,
         },
         {
           key: "twitter:image",
           name: "twitter:image",
-          content: `${this.hostname}${this.$page.article.image}`
-        }
+          content: `${this.hostname}${this.$page.article.image}`,
+        },
       ],
       link: [
         {
           key: "canonical",
           rel: "canonical",
-          href: `${this.hostname}${this.$page.article.path}`
-        }
+          href: `${this.hostname}${this.$page.article.path}`,
+        },
       ],
       script: [
         {
           type: "application/ld+json",
-          innerHTML: JSON.stringify(articleStructuredData)
-        }
-      ]
+          innerHTML: JSON.stringify(articleStructuredData),
+        },
+      ],
     };
   },
   data() {
     return {
-      hostname: process.env.GRIDSOME_HOSTNAME
+      hostname: process.env.GRIDSOME_HOSTNAME,
     };
   },
   computed: {
@@ -188,10 +188,10 @@ export default {
         day: "numeric",
         weekday: "long",
         hour: "2-digit",
-        minute: "2-digit"
+        minute: "2-digit",
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -223,7 +223,7 @@ query ($id: ID!) {
 
 <style lang="scss">
 .article {
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
   .breadcrumbs {
     margin-top: 0;
   }

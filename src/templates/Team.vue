@@ -62,73 +62,73 @@ export default {
         {
           key: "description",
           name: "description",
-          content: this.$page.team.description
+          content: this.$page.team.description,
         },
         {
           key: "og:title",
           property: "og:title",
-          content: title
+          content: title,
         },
         {
           key: "og:description",
           property: "og:description",
-          content: this.$page.team.description
+          content: this.$page.team.description,
         },
         {
           key: "og:url",
           property: "og:url",
-          content: `${this.hostname}${this.$page.team.path}`
+          content: `${this.hostname}${this.$page.team.path}`,
         },
         {
           key: "og:image",
           property: "og:image",
-          content: `${this.hostname}${this.$page.team.image}`
+          content: `${this.hostname}${this.$page.team.image}`,
         },
         {
           key: "og:image:alt",
           property: "og:image:alt",
-          content: `${this.$page.team.imageAlt}`
+          content: `${this.$page.team.imageAlt}`,
         },
         {
           key: "og:image:width",
           property: "og:image:width",
-          content: `600`
+          content: `600`,
         },
         {
           key: "og:image:height",
           property: "og:image:height",
-          content: `600`
+          content: `600`,
         },
         {
           key: "twitter:title",
           name: "twitter:title",
-          content: title
+          content: title,
         },
         {
           key: "twitter:description",
           name: "twitter:description",
-          content: this.$page.team.description
+          content: this.$page.team.description,
         },
         {
           key: "twitter:image",
           name: "twitter:image",
-          content: `${this.hostname}${this.$page.team.image}`
-        }
+          content: `${this.hostname}${this.$page.team.image}`,
+        },
       ],
       link: [
         {
           key: "canonical",
           rel: "canonical",
-          href: `${this.hostname}${this.$page.team.path}`
-        }
-      ]
+          href: `${this.hostname}${this.$page.team.path}`,
+        },
+      ],
     };
   },
   data() {
     return {
-      hostname: process.env.GRIDSOME_HOSTNAME
+      hostname: process.env.GRIDSOME_HOSTNAME,
     };
-  }
+  },
 };
 </script>
 
@@ -168,6 +168,7 @@ export default {
     "content content"
     "content content";
   overflow: hidden;
+  margin-bottom: 4rem;
   @include tablet {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-template-areas:

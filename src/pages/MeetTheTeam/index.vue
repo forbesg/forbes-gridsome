@@ -53,41 +53,41 @@ export default {
         {
           key: "description",
           name: "description",
-          content: this.description
+          content: this.description,
         },
         {
           key: "og:title",
           property: "og:title",
-          content: title
+          content: title,
         },
         {
           key: "og:description",
           property: "og:description",
-          content: this.description
+          content: this.description,
         },
         {
           key: "og:url",
           property: "og:url",
-          content: `${this.hostname}${this.$route.path}`
+          content: `${this.hostname}${this.$route.path}`,
         },
         {
           key: "twitter:title",
           name: "twitter:title",
-          content: title
+          content: title,
         },
         {
           key: "twitter:description",
           name: "twitter:description",
-          content: this.description
-        }
+          content: this.description,
+        },
       ],
       link: [
         {
           key: "canonical",
           rel: "canonical",
-          href: `${this.hostname}${this.$route.path}`
-        }
-      ]
+          href: `${this.hostname}${this.$route.path}`,
+        },
+      ],
     };
   },
   data() {
@@ -95,9 +95,9 @@ export default {
       title: "Meet The Team",
       description:
         "A small but freindly team delivering all things high-quality websites and web applications.",
-      hostname: process.env.GRIDSOME_HOSTNAME
+      hostname: process.env.GRIDSOME_HOSTNAME,
     };
-  }
+  },
 };
 </script>
 
@@ -106,6 +106,7 @@ export default {
   &-members {
     display: grid;
     gap: 2rem;
+    padding-bottom: 4rem;
     @include tablet {
       grid-template-columns: repeat(2, 1fr);
     }

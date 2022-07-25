@@ -70,41 +70,41 @@ export default {
         {
           key: "description",
           name: "description",
-          content: this.description
+          content: this.description,
         },
         {
           key: "og:title",
           property: "og:title",
-          content: this.title
+          content: this.title,
         },
         {
           key: "og:description",
           property: "og:description",
-          content: this.description
+          content: this.description,
         },
         {
           key: "og:url",
           property: "og:url",
-          content: `${process.env.GRIDSOME_HOSTNAME}/blog/`
+          content: `${process.env.GRIDSOME_HOSTNAME}/blog/`,
         },
         {
           key: "twitter:title",
           name: "twitter:title",
-          content: this.title
+          content: this.title,
         },
         {
           key: "twitter:description",
           name: "twitter:description",
-          content: this.description
-        }
+          content: this.description,
+        },
       ],
       link: [
         {
           key: "canonical",
           rel: "canonical",
-          href: `${process.env.GRIDSOME_HOSTNAME}/blog/`
-        }
-      ]
+          href: `${process.env.GRIDSOME_HOSTNAME}/blog/`,
+        },
+      ],
     };
   },
   data() {
@@ -112,9 +112,9 @@ export default {
       title: "Blog | Forbes Gray | Freelance Web Developer",
       description:
         "Some of my experiences, thoughts and recommendations about all things web related.",
-      hostname: process.env.GRIDSOME_HOSTNAME
+      hostname: process.env.GRIDSOME_HOSTNAME,
     };
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -122,6 +122,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: 2rem;
+  padding-bottom: 4rem;
   @include laptop {
     grid-template-columns: repeat(3, minmax(280px, 1fr));
   }

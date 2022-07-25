@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="container">
+    <div class="container contact">
       <h1 class="highlight-overline">Get in touch</h1>
       <div class="flex-container">
         <div class="left">
@@ -161,48 +161,48 @@ export default {
         {
           key: "description",
           name: "description",
-          content: this.description
+          content: this.description,
         },
         {
           key: "og:title",
           property: "og:title",
-          content: this.title
+          content: this.title,
         },
         {
           key: "og:description",
           property: "og:description",
-          content: this.description
+          content: this.description,
         },
         {
           key: "og:url",
           property: "og:url",
-          content: `${process.env.GRIDSOME_HOSTNAME}/contact/`
+          content: `${process.env.GRIDSOME_HOSTNAME}/contact/`,
         },
         {
           key: "twitter:title",
           name: "twitter:title",
-          content: this.title
+          content: this.title,
         },
         {
           key: "twitter:description",
           name: "twitter:description",
-          content: this.description
-        }
+          content: this.description,
+        },
       ],
       link: [
         {
           key: "canonical",
           rel: "canonical",
-          href: `${process.env.GRIDSOME_HOSTNAME}/contact/`
-        }
+          href: `${process.env.GRIDSOME_HOSTNAME}/contact/`,
+        },
       ],
       script: [
         {
           src:
             "https://www.google.com/recaptcha/api.js?render=6LfAtbQZAAAAALIFif4qLLmJc-Khmg4iKxMm6F6G",
-          body: true
-        }
-      ]
+          body: true,
+        },
+      ],
     };
   },
   data() {
@@ -216,10 +216,10 @@ export default {
         phone_number: "",
         message: "",
         error: "",
-        loading: false
+        loading: false,
       },
       formSuccess: false,
-      path: this.$route.fullPath
+      path: this.$route.fullPath,
     };
   },
   methods: {
@@ -228,7 +228,7 @@ export default {
       this.form.error = "";
       const { name, email, phone_number, message } = this.form;
       const requiredFields = ["name", "email", "message"];
-      requiredFields.forEach(field => {
+      requiredFields.forEach((field) => {
         if (!this.form[field]) {
           document.querySelector(`#${field}`).classList.add("highlight");
         }
@@ -244,7 +244,7 @@ export default {
        */
       grecaptcha
         .execute("6LfAtbQZAAAAALIFif4qLLmJc-Khmg4iKxMm6F6G", {
-          action: "submit"
+          action: "submit",
         })
         .then(function(token) {
           document.getElementById("captchaResponse").value = token;
@@ -255,30 +255,33 @@ export default {
               body: JSON.stringify({ name, email, phone_number, message }),
               headers: {
                 "Content-Type": "application/json",
-                Accept: "application/json"
-              }
+                Accept: "application/json",
+              },
             }
           );
         })
-        .then(response => {
+        .then((response) => {
           if (response.status === 200) {
             return response.json();
           }
           throw "New Error";
         })
-        .then(json => {
+        .then((json) => {
           this.form.loading = false;
           this.formSuccess = json.success ? true : false;
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(err);
         });
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+.contact {
+  padding-bottom: 4rem;
+}
 .flex-container {
   display: flex;
   flex-wrap: wrap;
