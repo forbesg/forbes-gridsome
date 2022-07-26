@@ -44,7 +44,7 @@
                   >{{
                     this.$route.params.category
                       .split("-")
-                      .map(s => {
+                      .map((s) => {
                         return s.charAt(0).toUpperCase() + s.slice(1);
                       })
                       .join(" ")
@@ -129,7 +129,7 @@ export default {
   metaInfo() {
     const title = `${this.$page.project.title} | ${this.$page.project.category
       .split("-")
-      .map(w =>
+      .map((w) =>
         w
           .charAt(0)
           .toUpperCase()
@@ -142,64 +142,64 @@ export default {
         {
           key: "description",
           name: "description",
-          content: this.$page.project.description
+          content: this.$page.project.description,
         },
         {
           key: "og:title",
           property: "og:title",
-          content: title
+          content: title,
         },
         {
           key: "og:description",
           property: "og:description",
-          content: this.$page.project.description
+          content: this.$page.project.description,
         },
         {
           key: "og:url",
           property: "og:url",
-          content: `${this.hostname}${this.$page.project.path}`
+          content: `${this.hostname}${this.$page.project.path}`,
         },
         {
           key: "og:image",
           property: "og:image",
-          content: `${this.hostname}${this.$page.project.image}`
+          content: `${this.hostname}${this.$page.project.image}`,
         },
         {
           key: "og:image:alt",
           property: "og:image:alt",
-          content: `${this.$page.project.imageAlt}`
+          content: `${this.$page.project.imageAlt}`,
         },
         {
           key: "twitter:title",
           name: "twitter:title",
-          content: title
+          content: title,
         },
         {
           key: "twitter:description",
           name: "twitter:description",
-          content: this.$page.project.description
+          content: this.$page.project.description,
         },
         {
           key: "twitter:image",
           name: "twitter:image",
-          content: `${this.hostname}${this.$page.project.image}`
-        }
+          content: `${this.hostname}${this.$page.project.image}`,
+        },
       ],
       link: [
         {
           key: "canonical",
           rel: "canonical",
-          href: `${this.hostname}${this.$page.project.path}`
-        }
-      ]
+          href: `${this.hostname}${this.$page.project.path}`,
+        },
+      ],
     };
   },
   data() {
     return {
-      hostname: process.env.GRIDSOME_HOSTNAME
+      hostname: process.env.GRIDSOME_HOSTNAME,
     };
   },
-  components: { Carousel }
+  components: { Carousel },
 };
 </script>
 
@@ -241,7 +241,7 @@ query ($id: ID!) {
   > div {
     flex: 1 1 400px;
     max-width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 4rem;
     @include laptop {
       grid-area: main;
     }
@@ -279,6 +279,7 @@ query ($id: ID!) {
   aside {
     flex: 1 1 300px;
     text-align: right;
+    margin-bottom: 4rem;
     @include tablet {
       flex: 0 0 300px;
       margin-left: 20px;

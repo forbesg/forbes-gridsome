@@ -5,7 +5,7 @@ description: Getting an e-commerce website up and running traditionally required
 tags:
   - "2"
   - "3"
-image: https://images.pexels.com/photos/50987/money-card-business-credit-card-50987.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
+image: /images/articles/ecommerce-payment.jpg
 imageAlt: Static Website Online Shop
 team: forbes-gray
 date: 2022-02-01T14:30:00

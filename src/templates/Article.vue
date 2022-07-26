@@ -241,8 +241,38 @@ query ($id: ID!) {
     p + h3,
     p + h4,
     p + h5,
-    p + h6 {
+    p + h6,
+    pre + h2,
+    pre + h3,
+    pre + h4,
+    pre + h5,
+    pre + h6 {
       margin-top: 2rem;
+    }
+    p > img {
+      display: block;
+      max-width: 100%;
+      margin: auto;
+      @include tablet {
+        width: 650px;
+        margin: 4rem auto;
+      }
+    }
+    pre {
+      background-color: darken($color-dark-primary, 5%);
+      border-radius: 0.5rem;
+      box-shadow: inset 0 0 1em darken($color-dark-primary, 10%);
+      color: white;
+      padding: 2rem;
+      max-width: 100%;
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      code {
+        color: white;
+        font-size: 1rem;
+      }
     }
   }
 }

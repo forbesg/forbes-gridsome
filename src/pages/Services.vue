@@ -15,7 +15,7 @@
       </header>
       <article>
         <div class="intro container">
-          <h2>Website Design &amp; Development</h2>
+          <h2 class="highlight-overline">Website Design &amp; Development</h2>
           <p>
             As a website developer I love to solve problems. Talking in plain
             English I help my clients to find the right online solution for them
@@ -143,7 +143,7 @@ export default {
     return {
       title: "Web Development Services | Freelance Web Developer Edinburgh",
       description:
-        "Website Development Services including Brochure Website, Content Managment Systems, Ecommerce Website Development and Website Maintenance"
+        "Website Development Services including Brochure Website, Content Managment Systems, Ecommerce Website Development and Website Maintenance",
     };
   },
   metaInfo() {
@@ -153,43 +153,43 @@ export default {
         {
           key: "description",
           name: "description",
-          content: this.description
+          content: this.description,
         },
         {
           key: "og:title",
           property: "og:title",
-          content: this.title
+          content: this.title,
         },
         {
           key: "og:description",
           property: "og:description",
-          content: this.description
+          content: this.description,
         },
         {
           key: "og:url",
           property: "og:url",
-          content: `${process.env.GRIDSOME_HOSTNAME}/services/`
+          content: `${process.env.GRIDSOME_HOSTNAME}/services/`,
         },
         {
           key: "twitter:title",
           name: "twitter:title",
-          content: this.title
+          content: this.title,
         },
         {
           key: "twitter:description",
           name: "twitter:description",
-          content: this.description
-        }
+          content: this.description,
+        },
       ],
       link: [
         {
           key: "canonical",
           rel: "canonical",
-          href: `${process.env.GRIDSOME_HOSTNAME}/services/`
-        }
-      ]
+          href: `${process.env.GRIDSOME_HOSTNAME}/services/`,
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>

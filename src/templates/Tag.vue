@@ -55,48 +55,48 @@ export default {
         {
           key: "description",
           name: "description",
-          content: description
+          content: description,
         },
         {
           key: "og:title",
           property: "og:title",
-          content: title
+          content: title,
         },
         {
           key: "og:description",
           property: "og:description",
-          content: description
+          content: description,
         },
         {
           key: "og:url",
           property: "og:url",
-          content: `${this.hostname}${this.$route.path}`
+          content: `${this.hostname}${this.$route.path}`,
         },
         {
           key: "twitter:title",
           name: "twitter:title",
-          content: title
+          content: title,
         },
         {
           key: "twitter:description",
           name: "twitter:description",
-          content: description
-        }
+          content: description,
+        },
       ],
       link: [
         {
           key: "canonical",
           rel: "canonical",
-          href: `${this.hostname}${this.$route.path}`
-        }
-      ]
+          href: `${this.hostname}${this.$route.path}`,
+        },
+      ],
     };
   },
   data() {
     return {
-      hostname: process.env.GRIDSOME_HOSTNAME
+      hostname: process.env.GRIDSOME_HOSTNAME,
     };
-  }
+  },
 };
 </script>
 
@@ -105,6 +105,7 @@ export default {
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  margin-bottom: 4rem;
   @include laptop {
     grid-template-columns: repeat(3, minmax(280px, 1fr));
   }

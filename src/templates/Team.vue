@@ -35,13 +35,17 @@
           <section>
             <h2>Favourite Foods</h2>
             <ul>
-              <li v-for="food in $page.team.favoriteFoods">{{ food }}</li>
+              <li v-for="food in $page.team.favoriteFoods" :key="food">
+                {{ food }}
+              </li>
             </ul>
           </section>
           <section>
             <h2>Interests</h2>
             <ul>
-              <li v-for="interest in $page.team.interests">{{ interest }}</li>
+              <li v-for="interest in $page.team.interests" :key="interest">
+                {{ interest }}
+              </li>
             </ul>
           </section>
         </div>
