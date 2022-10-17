@@ -5,8 +5,8 @@
         <img :src="$page.article.image" :alt="$page.article.imageAlt" />
         <div class="banner-title">
           <div class="container banner-title--inner-wrapper">
-            <h1 class="">{{ $page.article.title }}</h1>
-            <h2 v-if="$page.article.subhead" class="highlight-overline">
+            <h1 class="highlight-overline">{{ $page.article.title }}</h1>
+            <h2 v-if="$page.article.subhead">
               {{ $page.article.subhead }}
             </h2>
           </div>

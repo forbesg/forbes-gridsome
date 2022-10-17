@@ -2,7 +2,7 @@
   <Layout>
     <main>
       <hero />
-      <skills />
+      <!-- <skills /> -->
       <article class="feature dark">
         <div class="container">
           <h2 class="highlight-overline">An Introduction</h2>
@@ -42,6 +42,30 @@
           >
         </div>
       </article>
+      <!-- <section class="feature">
+        <div class="container">
+          <h2 class="highlight-overline">Website Development Services</h2>
+          <div class="cards" style="margin-top: 3rem;">
+            <card
+              v-for="service in $page.services.edges"
+              :key="service.node.id"
+              :image="service.node.bannerImage.src"
+              :imageAlt="service.node.bannerImage.alt"
+              :link="{
+                path: service.node.path,
+                text: service.node.title,
+                class: 'arrow',
+              }"
+            >
+              <h3>{{ service.node.title }}</h3>
+              <h4>{{ service.node.subtitle }}</h4>
+              <p>
+                {{ service.node.description }}
+              </p>
+            </card>
+          </div>
+        </div>
+      </section> -->
       <section class="feature">
         <div class="container">
           <h2 class="highlight-overline">
@@ -53,6 +77,11 @@
               :key="project.node.id"
               :image="project.node.image"
               :imageAlt="project.node.imageAlt"
+              :link="{
+                path: project.node.path,
+                text: `More About ${project.node.title}`,
+                class: 'arrow',
+              }"
             >
               <h3>{{ project.node.title }}</h3>
               <div class="tags">
@@ -66,12 +95,9 @@
               </div>
               <p>
                 {{ project.node.description }}
-                <g-link
-                  :to="project.node.path"
-                  class="arrow"
-                  style="font-size: .9rem;margin: 0; padding:0;"
+                <!-- <g-link :to="project.node.path" class="arrow"
                   >More About {{ project.node.title }}</g-link
-                >
+                > -->
               </p>
             </card>
           </div>
@@ -80,8 +106,31 @@
           </div>
         </div>
       </section>
+      <section class="feature dark">
+        <div class="container">
+          <h2 class="highlight-overline">Website Development Services</h2>
+          <div class="cards" style="margin-top: 3rem;">
+            <card
+              v-for="service in $page.services.edges"
+              :key="service.node.id"
+              :image="service.node.bannerImage.src"
+              :imageAlt="service.node.bannerImage.alt"
+              :link="{
+                path: service.node.path,
+                text: service.node.title,
+                class: 'arrow',
+              }"
+            >
+              <h3>{{ service.node.title }}</h3>
+              <h4>{{ service.node.subtitle }}</h4>
+              <p>
+                {{ service.node.description }}
+              </p>
+            </card>
+          </div>
+        </div>
+      </section>
     </main>
-    <get-in-touch></get-in-touch>
     <section class="feature">
       <div class="container">
         <h2 class="highlight-overline">
@@ -99,6 +148,7 @@
         <g-link to="/contact/" class="arrow">Send me a message</g-link>
       </div>
     </section>
+    <get-in-touch></get-in-touch>
   </Layout>
 </template>
 
@@ -117,6 +167,21 @@ query {
       }
     }
   }
+  services: allService {
+    edges {
+      node {
+        id
+        title
+        subtitle
+        description
+        path
+        bannerImage {
+          src
+          alt
+        }
+      }
+    }
+  }
 }
 </page-query>
 
@@ -127,9 +192,9 @@ import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 export default {
   metaInfo: {
-    title: "Freelance Web Developer Edinburgh | Websites and Web Applications"
+    title: "Freelance Web Developer Edinburgh | Websites and Web Applications",
   },
-  components: { Card, GetInTouch, Hero, Skills }
+  components: { Card, GetInTouch, Hero, Skills },
 };
 </script>
 

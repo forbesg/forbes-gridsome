@@ -11,7 +11,7 @@ function addStyleResource(rule) {
     .use("style-resource")
     .loader("style-resources-loader")
     .options({
-      patterns: [path.resolve(__dirname, "./src/assets/scss/vars/*.scss")]
+      patterns: [path.resolve(__dirname, "./src/assets/scss/vars/*.scss")],
     });
 }
 
@@ -23,8 +23,8 @@ module.exports = {
       use: "@gridsome/source-filesystem",
       options: {
         path: "src/content/projects/**/*.md",
-        typeName: "Project"
-      }
+        typeName: "Project",
+      },
     },
     {
       use: "@gridsome/source-filesystem",
@@ -33,9 +33,21 @@ module.exports = {
         typeName: "Article",
         refs: {
           team: "Team",
-          tags: "Tag"
-        }
-      }
+          tags: "Tag",
+        },
+      },
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "src/content/services/*.md",
+        typeName: "Service",
+        route: "/services/:slug",
+        // refs: {
+        //   team: "Team",
+        //   tags: "Tag"
+        // }
+      },
     },
     {
       // Add Authors collection
@@ -43,57 +55,65 @@ module.exports = {
       options: {
         path: "src/content/team/*.md",
         typeName: "Team",
-        route: "/team/:id"
-      }
+        route: "/team/:id",
+      },
     },
     {
-      use: "@gridsome/plugin-sitemap"
+      use: "@gridsome/plugin-sitemap",
     },
     {
       use: "@gridsome/plugin-google-analytics",
       options: {
-        id: "UA-106869268-1"
-      }
-    }
+        id: "UA-106869268-1",
+      },
+    },
   ],
   transformers: {
     remark: {
-      // global remark options
-    }
+      plugins: [
+        // require plugin manually
+        require("remark-attr"),
+      ],
+    },
   },
   templates: {
     Project: [
       {
-        path: "/portfolio/:category/:title"
-      }
+        path: "/portfolio/:category/:title",
+      },
     ],
     Article: [
       {
-        path: "/blog/:title"
-      }
+        path: "/blog/:title",
+      },
     ],
     Team: [
       {
-        path: "/meet-the-team/:name"
-      }
+        path: "/meet-the-team/:name",
+      },
     ],
     Tag: [
       {
-        path: "/blog/tags/:slug"
-      }
-    ]
+        path: "/blog/tags/:slug",
+      },
+    ],
+    Service: [
+      {
+        path: "/services/:slug",
+      },
+    ],
   },
   chainWebpack(config) {
     // Load variables for all vue-files
     const types = ["vue-modules", "vue", "normal-modules", "normal"];
 
-    types.forEach(type => {
+    types.forEach((type) => {
       addStyleResource(config.module.rule("sass").oneOf(type));
     });
 
     // or if you use scss
-    types.forEach(type => {
+    types.forEach((type) => {
       addStyleResource(config.module.rule("scss").oneOf(type));
     });
-  }
+  },
 };

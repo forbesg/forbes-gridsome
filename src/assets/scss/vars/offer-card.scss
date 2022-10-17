@@ -1,0 +1,56 @@
+.offer-card {
+  background-color: rgba($color-primary, 0.5);
+  background: linear-gradient(
+    180deg,
+    darken($color-primary, 5%),
+    lighten($color-primary, 5%)
+  );
+  backdrop-filter: blur(0.25rem);
+  border-radius: 0.5rem;
+  padding: 2.5rem;
+  &--subtitle {
+    font-weight: 600;
+  }
+  &-header {
+    text-align: center;
+  }
+  .price-tag {
+    position: static;
+    right: 0;
+    background-color: white;
+    background-color: lighten($color-primary, 5%);
+    color: white;
+    border-radius: 0.25rem;
+    display: block;
+    font-size: 0.8rem;
+    font-weight: normal;
+    padding: 0.25rem 1.5rem;
+
+    // max-width: max-content;
+    &--lead {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    @include tablet {
+      font-size: 1rem;
+      padding: 0.35rem 1.75rem;
+    }
+  }
+  ul {
+    list-style: none;
+    padding-left: 0rem;
+    li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      line-height: 2;
+      font-size: 0.9rem;
+      &::before {
+        content: url(~@/assets/icons/tick.svg);
+        height: 1.75rem;
+        width: 1.75rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

@@ -2,9 +2,9 @@
   <Layout>
     <main>
       <header class="banner">
-        <img
-          src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-          alt=""
+        <g-image
+          src="/images/website-development-services-in-edinburgh.jpg"
+          alt="Website Development Services in Edinburgh"
         />
         <div class="banner-title">
           <div class="container banner-title--inner-wrapper">
@@ -13,20 +13,46 @@
           </div>
         </div>
       </header>
-      <article>
-        <div class="intro container">
-          <h2 class="highlight-overline">Website Design &amp; Development</h2>
-          <p>
-            As a website developer I love to solve problems. Talking in plain
-            English I help my clients to find the right online solution for them
-            and their customers. By focusing on my clients successes I can
-            ensure that their customers come back again and again.
-          </p>
-          <p>
-            Below you will find some of the services that I provide but I am
-            always happy to discuss any new ideas or ventures.
-          </p>
+      <div class="container">
+        <div class="breadcrumbs">
+          <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <g-link to="/" itemprop="item" :itemid="`${hostname}`">
+                <span itemprop="name">Home</span>
+                <meta itemprop="position" content="1" />
+              </g-link>
+            </li>
+            <li
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <span itemprop="name">Services</span>
+              <meta itemprop="position" content="2" />
+            </li>
+          </ol>
         </div>
+      </div>
+      <article>
+        <section class="feature">
+          <div class="container">
+            <h2 class="highlight-overline">Website Design &amp; Development</h2>
+            <p>
+              As a website developer I love to solve problems. Talking in plain
+              English I help my clients to find the right online solution for
+              them and their customers. By focusing on my clients successes I
+              can ensure that their customers come back again and again.
+            </p>
+            <p>
+              Below you will find some of the services that I provide but I am
+              always happy to discuss any new ideas or ventures.
+            </p>
+          </div>
+        </section>
         <section class="feature dark">
           <div class="container">
             <h2 class="highlight-overline">Brochure Website</h2>
@@ -38,6 +64,9 @@
               website this is a perfect option and as with all static websites,
               <strong>hosting is free</strong>.
             </p>
+            <g-link to="/services/brochure-websites/" class="arrow"
+              >Simple Brochure Websites</g-link
+            >
           </div>
         </section>
         <section class="feature">
@@ -57,8 +86,11 @@
               content management systems such as Wordpress and Drupal, however I
               prefer to use an more modern approach using <b>headless CMS's</b>
               giving you the speed and security of a static site, with the
-              dynamic nature of a tradional CMS.
+              dynamic nature of a tradtional CMS.
             </p>
+            <g-link to="/services/cms-websites/" class="arrow"
+              >Content Management System Websites</g-link
+            >
           </div>
         </section>
         <section class="feature dark">
@@ -82,6 +114,9 @@
               There are multiple ways to get your online shop up and running and
               I can always find a suitable solution for any budget.
             </p>
+            <g-link to="/services/ecommerce-website-design/" class="arrow"
+              >Headless Ecommerce Websites</g-link
+            >
           </div>
         </section>
         <section class="feature">
@@ -143,7 +178,8 @@ export default {
     return {
       title: "Web Development Services | Freelance Web Developer Edinburgh",
       description:
-        "Website Development Services including Brochure Website, Content Managment Systems, Ecommerce Website Development and Website Maintenance",
+        "Website Development Services in Edinburgh. Brochure Websites, Content Managment Systems, Ecommerce Website Development, SEO and Website Maintenance",
+      hostname: process.env.GRIDSOME_HOSTNAME,
     };
   },
   metaInfo() {

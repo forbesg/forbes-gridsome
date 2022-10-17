@@ -25,25 +25,25 @@ export default {
   props: {
     image: {
       type: String,
-      required: false
+      required: false,
     },
     imageAlt: {
       type: String,
-      required: false
+      required: false,
     },
     link: {
       type: Object,
-      required: false
-    }
+      required: false,
+    },
   },
   mounted() {
     const targetImage = this.$refs["lazy-image"];
     const card = document.querySelector(".card");
     const options = {
-      rootMargin: "-500px 0 200px 0"
+      rootMargin: "-500px 0 200px 0",
     };
     const observer = new IntersectionObserver((entries, options) => {
-      entries.forEach(ent => {
+      entries.forEach((ent) => {
         if (ent.isIntersecting) {
           ent.target.src = this.image;
           observer.unobserve(ent.target);
@@ -51,11 +51,11 @@ export default {
       });
     });
     observer.observe(targetImage);
-  }
+  },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .card {
   position: relative;
   z-index: 1;
@@ -67,17 +67,21 @@ export default {
     flex-direction: column;
     height: min-content;
     padding: 0.75rem;
-    h2,
-    h3,
-    h4 {
-      // color: initial;
-      // margin-top: 0;
-    }
+    // h2,
+    // h3,
+    // h4 {
+    //   // color: initial;
+    //   margin-top: 2rem;
+    // }
     &--body {
       flex: 1;
+      margin-top: 1rem;
     }
     &--footer {
       flex: 0;
+      a {
+        font-size: 0.95rem;
+      }
     }
   }
   .description {
@@ -87,6 +91,8 @@ export default {
     position: relative;
     margin: 0;
     transition: background-color 0.5s;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
     img {
       position: relative;
       display: block;

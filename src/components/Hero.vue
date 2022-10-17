@@ -3,7 +3,9 @@
     <div class="container">
       <!-- <transition name="fade-in" appear> -->
       <div class="left">
-        <h1>Freelance Website <br />Developer | <span>Edinburgh</span></h1>
+        <h1 class="highlight-overline">
+          Freelance Website <br />Developer | <span>Edinburgh</span>
+        </h1>
         <h2>
           <span
             ref="animate-title"
@@ -13,7 +15,7 @@
           >
           Websites & Web Applications
         </h2>
-        <h3 class="text-primary">JAMStack · CMS · E-Commerce</h3>
+        <h3 class="text-primary">JAMStack | CMS | E-Commerce</h3>
         <div class="hero-cta-buttons">
           <g-link to="/portfolio/" class="button">View My Work</g-link>
           <g-link to="/services/" class="arrow">View My Services</g-link>
@@ -29,7 +31,7 @@ export default {
   data() {
     return {
       animatedTextOutput: "Bespoke, Fast, Responsive, SEO-Friendly",
-      wordArray: null
+      wordArray: null,
     };
   },
   mounted() {
@@ -63,11 +65,11 @@ export default {
           this.animateText(this.wordArray[wordIndex]);
         }, timing);
       }
-    }
+    },
   },
   beforeDestroy() {
     clearInterval(this.beginAnimation);
-  }
+  },
 };
 </script>
 
@@ -121,7 +123,7 @@ export default {
       h2 {
         font-size: 1rem;
         display: block;
-        margin-bottom: 2.25em;
+        margin-bottom: 1.25em;
         > span {
           display: block;
           font-family: "Catamaran", sans-serif;
@@ -158,11 +160,14 @@ export default {
       }
       h3 {
         display: flex;
+        color: $color-dark-primary;
         justify-content: space-between;
         font-size: 1.1em;
         font-family: "Catamaran", sans-serif;
+        font-weight: 300;
         margin-bottom: 2.25rem;
         text-transform: uppercase;
+        width: 100%;
         word-spacing: 0.5rem;
         @include tablet {
           font-size: 1.1em;

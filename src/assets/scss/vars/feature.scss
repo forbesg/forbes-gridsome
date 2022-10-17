@@ -1,0 +1,243 @@
+.feature {
+  position: relative;
+  background-color: #fff;
+  padding: 100px 0;
+  overflow: hidden;
+  &:first-child {
+    padding-top: 0;
+  }
+  .container {
+    opacity: 0;
+    transform: translateY(0.15rem);
+    transition: all 100ms 200ms ease-in;
+  }
+  &.in-viewport {
+    .container {
+      opacity: 1;
+      transform: translateX(0rem);
+    }
+  }
+  &.no-top-padding {
+    padding-top: 0;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &.dark {
+    background-color: $color-dark-primary;
+    color: #fff;
+    z-index: 1;
+    .container {
+      position: relative;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: #fff;
+      &.highlight-overline {
+        &:before {
+          background-color: $color-primary;
+        }
+      }
+    }
+    .tag {
+      background-color: #fff;
+      color: $color-primary;
+      font-weight: bold;
+    }
+    a:not(.button) {
+      color: lighten($color-primary, 25%);
+      font-weight: 600;
+      &:hover {
+        color: lighten($color-primary, 35%);
+      }
+    }
+    &:before {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(lighten($color-dark-primary, 25%), 0.3);
+      border-radius: 50%;
+      content: "";
+      height: 60vh;
+      width: 60vh;
+      opacity: 0.5;
+      transform: translate(-100px, 200px);
+    }
+    &:after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(lighten($color-dark-primary, 25%), 0.1);
+      border-radius: 50%;
+      content: "";
+      height: 60vh;
+      width: 60vh;
+      opacity: 0.5;
+      transform: translate(100px, 100px);
+      z-index: -1;
+    }
+
+    .card {
+      background-color: rgba(#fff, 0.15);
+      backdrop-filter: blur(15px);
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+      overflow: hidden;
+      img {
+        border-radius: 0.25rem;
+      }
+    }
+  }
+
+  &.grid {
+    // padding: 0;
+
+    .container {
+      display: grid;
+      // grid-template-columns: 2fr 1fr;
+      column-gap: 4rem;
+      align-items: center;
+      .video-container {
+        position: relative;
+        aspect-ratio: 4 / 3;
+        height: 100%;
+        width: 100%;
+        video {
+          position: relative;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+        }
+      }
+    }
+    &-x2 {
+      @include laptop {
+        // padding-top: 0;
+        // padding-bottom: 0;
+        .container {
+          grid-template-columns: 1fr 1fr;
+          align-items: flex-start;
+        }
+      }
+      @include desktop {
+        .container {
+          grid-template-columns: 3fr 2fr;
+        }
+      }
+    }
+    &-x3 {
+      .container {
+        gap: 2rem;
+        align-items: stretch;
+      }
+      @include laptop {
+        .container {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+      @include desktop {
+        .container {
+          // grid-template-columns: 3fr 2fr 2fr;
+        }
+      }
+    }
+  }
+
+  &.columns {
+    background: lighten($color-primary, 60%);
+    padding: 4rem 0;
+    .container {
+      display: grid;
+      gap: 6rem;
+      // grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      align-items: flex-start;
+      @include tablet {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 1rem;
+        h2 {
+          font-size: 1.5rem;
+          margin-bottom: 0;
+        }
+        p {
+          line-height: 1.25;
+        }
+        img {
+          width: 150px;
+        }
+      }
+    }
+  }
+  &-wide {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 1280px;
+    margin: auto;
+    padding: 6rem 2rem;
+    &-image-container {
+      aspect-ratio: 4 / 3;
+      height: 100%;
+      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+    &-text-container {
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+      padding: 2rem 0;
+      .button {
+        text-align: center;
+        display: block;
+      }
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      &-image-container {
+        aspect-ratio: 1 / 1;
+      }
+      &-text-container {
+        padding: 2rem;
+      }
+    }
+    @include laptop {
+      &-image-container {
+        aspect-ratio: 4 / 3;
+      }
+      &-text-container {
+        padding: 4rem;
+      }
+    }
+    @include widescreen {
+      &-image-container {
+        // aspect-ratio: 16 / 10;
+      }
+      &-text-container {
+        padding: 6rem;
+      }
+    }
+  }
+}
