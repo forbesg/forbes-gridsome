@@ -3,48 +3,12 @@
     <main>
       <hero />
       <!-- <skills /> -->
-      <article class="feature dark">
+
+      <section class="feature dark">
         <div class="container">
-          <h2 class="highlight-overline">An Introduction</h2>
-          <h3>Freelance Web Developer | Eye Fof detail | Sense of humour</h3>
-          <p>
-            I am a freelance Website Developer in Edinburgh with over
-            {{ new Date().getFullYear() - 2014 }} years of experience developing
-            websites and web applications.
-          </p>
-          <p>
-            I build bespoke, fast, responsive, maintainable and SEO friendly
-            business websites for the good folk of Scotland and beyond, as well
-            as developing more complex web and mobile applications using
-            <strong
-              >HTML, CSS &amp; Modern JavaScript Frameworks such as Vue JS and
-              React</strong
-            >.
-          </p>
-          <p>
-            With a focus on website performance, my preferred approach to
-            Website Development is the JAMStack architecture (JavaScript, API
-            &amp; Markup) which decouples technologies to offer superior website
-            speed, security &amp; flexibility than more traditional approaches
-            to Website Development.
-          </p>
-          <p>
-            You can view some of my previous web development projects and web
-            based playthings on the Portfolio page.
-          </p>
-          <p>
-            Whether you have a new idea that needs to be realised on the web,
-            would like to update your existing website using modern web
-            technologies, or you just have an enquiry, please do get in touch.
-          </p>
-          <g-link to="/about/" class="invert arrow"
-            >A Little More About Me</g-link
-          >
-        </div>
-      </article>
-      <!-- <section class="feature">
-        <div class="container">
-          <h2 class="highlight-overline">Website Development Services</h2>
+          <h2 class="highlight-overline">
+            Website Development Services in Edinburgh
+          </h2>
           <div class="cards" style="margin-top: 3rem;">
             <card
               v-for="service in $page.services.edges"
@@ -65,7 +29,7 @@
             </card>
           </div>
         </div>
-      </section> -->
+      </section>
       <section class="feature">
         <div class="container">
           <h2 class="highlight-overline">
@@ -106,31 +70,50 @@
           </div>
         </div>
       </section>
-      <section class="feature dark">
-        <div class="container">
-          <h2 class="highlight-overline">Website Development Services</h2>
-          <div class="cards" style="margin-top: 3rem;">
-            <card
-              v-for="service in $page.services.edges"
-              :key="service.node.id"
-              :image="service.node.bannerImage.src"
-              :imageAlt="service.node.bannerImage.alt"
-              :link="{
-                path: service.node.path,
-                text: service.node.title,
-                class: 'arrow',
-              }"
-            >
-              <h3>{{ service.node.title }}</h3>
-              <h4>{{ service.node.subtitle }}</h4>
-              <p>
-                {{ service.node.description }}
-              </p>
-            </card>
-          </div>
-        </div>
-      </section>
     </main>
+    <article class="feature dark">
+      <div class="container">
+        <h2 class="highlight-overline">Forbes Gray | An Introduction</h2>
+        <h3>Freelance Web Developer | Eye Fof detail | Sense of humour</h3>
+        <p>
+          I am a freelance Website Developer in Edinburgh with over
+          {{ new Date().getFullYear() - 2014 }} years of experience developing
+          websites and web applications.
+        </p>
+        <p>
+          I build bespoke, fast, responsive, maintainable and SEO friendly
+          business websites for the good folk of Scotland and beyond, as well as
+          developing more complex web and mobile applications using
+          <strong
+            >HTML, CSS &amp; Modern JavaScript Frameworks such as Vue JS and
+            React</strong
+          >.
+        </p>
+        <p>
+          With a focus on website performance, my preferred approach to Website
+          Development is the
+          <a href="https://jamstack.org/" target="_blank" rel="noopener"
+            >JAMStack</a
+          >
+          architecture (JavaScript, API &amp; Markup) which decouples
+          technologies to offer superior website speed, security &amp;
+          flexibility than more traditional approaches to Website Development.
+        </p>
+        <p>
+          You can view some of my previous web development projects and web
+          based playthings on the Portfolio page.
+        </p>
+        <p>
+          Whether you have a new idea that needs to be realised on the web,
+          would like to update your existing website using modern web
+          technologies, or you just have an enquiry, please do get in touch.
+        </p>
+        <g-link to="/about/" class="invert arrow"
+          >A Little More About Me</g-link
+        >
+      </div>
+    </article>
+
     <section class="feature">
       <div class="container">
         <h2 class="highlight-overline">

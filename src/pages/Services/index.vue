@@ -40,12 +40,16 @@
       <article>
         <section class="feature">
           <div class="container">
-            <h2 class="highlight-overline">Website Design &amp; Development</h2>
+            <h2 class="highlight-overline">
+              Edinburgh Based Website Design &amp; Development
+            </h2>
             <p>
               As a website developer I love to solve problems. Talking in plain
               English I help my clients to find the right online solution for
               them and their customers. By focusing on my clients successes I
               can ensure that their customers come back again and again.
+              Although based in Edinburgh, I regularly undertake website
+              development projects remotely.
             </p>
             <p>
               Below you will find some of the services that I provide but I am
@@ -96,9 +100,9 @@
         <section class="feature dark">
           <div class="container">
             <h2 class="highlight-overline">
-              Ecommerce Website
+              Ecommerce Websites
             </h2>
-            <h3>Do you want to sell your products online?</h3>
+            <h3>Showcase and sell your products online?</h3>
             <p>
               I can help you get your product to market and get you selling in
               no time. Showcase your product and sell to the world and manage

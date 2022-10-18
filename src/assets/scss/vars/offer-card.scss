@@ -2,8 +2,8 @@
   background-color: rgba($color-primary, 0.5);
   background: linear-gradient(
     180deg,
-    darken($color-primary, 5%),
-    lighten($color-primary, 5%)
+    rgba(darken($color-primary, 5%), 0.1),
+    rgba(lighten($color-primary, 5%), 0.45)
   );
   backdrop-filter: blur(0.25rem);
   border-radius: 0.5rem;

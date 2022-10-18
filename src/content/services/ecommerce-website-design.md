@@ -79,7 +79,7 @@ featureWide:
       text: Contact Me
 ---
 
-## Ecommerce Website Development {class="highlight-overline"}
+## Ecommerce Website Development in Edinburgh {class="highlight-overline"}
 
 ### Fast online shopping websites without constraints
 

@@ -16,7 +16,7 @@ intro:
   image:
 pricing:
   title: Brochure Website Prices
-  introText: I try to offer pricing that suits every budget
+  introText: Every website project is different, so I try to offer competitive pricing that suits every budget. I am always happy to discuss more bespoke packages dependent upon your needs.
 featureColumns:
   - image:
       src: "/icons/Speed.svg"
@@ -83,3 +83,5 @@ featureWide:
 A brochure website is the face of your business' brand, and is a fantastic way to showcase your business and its services to the world. A brochure site can be a great cost effective way to find new customers or gain business leads and contacts.
 
 Unlike an [e-commerce website](/services/ecommerce-website-design/), a brochure site does not directly sell products to the customer, but introduces your products or services, and draws contact and engagment from the customer.
+
+Although I am an Edinburgh based Website Developer, I am happy to work remotely with customers further afield.

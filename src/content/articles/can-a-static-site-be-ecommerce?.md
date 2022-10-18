@@ -78,7 +78,7 @@ the site.
 There are many e-commerce solutions available and the ideal solution will depend on a business' requirements
 and budget.
 
-We continue to promote a headless approach to developing e-commerce websites and
+We continue to promote a headless approach to [developing e-commerce websites](/services/ecommerce-website-design/) and
 would welcome a no-obligation chat about what solution would be the best fit.
 
 If you would like to discuss your e-commerce project please do [get in touch](/contact/).

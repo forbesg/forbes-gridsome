@@ -2,7 +2,7 @@
 id: cms-websites
 slug: cms-websites
 title: CMS Websites
-description: Fast, responsive and SEO friendly static websites. A low cost option to get your business website online quickly.
+description: Fast, responsive and SEO friendly static CMS websites. Create, manage and grow your business website content.
 subtitle: Content Management Websites Without The Bloat
 icon:
   src: /icons/line/Development.svg
@@ -36,7 +36,7 @@ pricing:
 packages:
   - name: Starter Headless CMS Website
     features:
-      - Fast Static Website
+      - Fast Static CMS Website
       - Up to 5 page layouts
       - Headless CMS Integration
       - Free Domain Name
