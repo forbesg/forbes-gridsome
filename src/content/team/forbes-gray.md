@@ -1,7 +1,7 @@
 ---
 id: forbes-gray
 description: >
-  Meet The Team - Forbes Gray is a Website Developer from Edinburgh, Scotland,
+  Forbes Gray is a Website Developer from Edinburgh, Scotland,
   specialising in creating bespoke, fast & responsive modern websites &
   applications.
 name: Forbes Gray

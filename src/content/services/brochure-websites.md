@@ -72,7 +72,7 @@ featureWide:
     title: Let's Chat About Your Website
     body: Get in touch to give me a brief outline of your project and we can schedule in a chat to discuss what the best, most cost effective option is for you.
     button:
-      link: /contact
+      link: /contact/
       text: Contact Me
 ---
 
