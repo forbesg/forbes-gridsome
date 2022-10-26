@@ -165,7 +165,6 @@ body {
         grid-gap: 4rem;
         @include tablet {
           grid-template-columns: 1fr 1fr;
-          grid-gap: 4rem;
         }
         @include laptop {
           // grid-template-columns: repeat(auto-fill, minmax(351px, 1fr));
@@ -176,7 +175,6 @@ body {
         grid-gap: 4rem;
         @include tablet {
           grid-template-columns: 1fr 1fr 1fr 1fr;
-          grid-gap: 4rem;
         }
         @include laptop {
           // grid-template-columns: repeat(auto-fill, minmax(351px, 1fr));

@@ -77,6 +77,7 @@ export default {
 .hero {
   background: white;
   height: min-content;
+  min-height: 550px;
   > .container {
     background-image: url(/hero-illustration-opaque.svg);
     background-repeat: no-repeat;
