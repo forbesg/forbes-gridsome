@@ -7,7 +7,7 @@
       <section class="feature dark">
         <div class="container">
           <h2 class="highlight-overline">
-            Website Development Services in Edinburgh
+            Website Design &amp; Development Services in Edinburgh
           </h2>
           <div class="cards" style="margin-top: 3rem;">
             <card

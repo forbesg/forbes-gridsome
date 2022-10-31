@@ -8,7 +8,9 @@
         />
         <div class="banner-title">
           <div class="container banner-title--inner-wrapper">
-            <h1 class="highlight-overline">Website Development Services</h1>
+            <h1 class="highlight-overline">
+              Website Design &amp; Development Services
+            </h1>
             <h2>Design | Development | SEO</h2>
           </div>
         </div>
@@ -59,7 +61,7 @@
         </section>
         <section class="feature dark">
           <div class="container">
-            <h2 class="highlight-overline">Brochure Website</h2>
+            <h2 class="highlight-overline">Brochure Website Design</h2>
             <h3>Are you looking for a small low cost website?</h3>
             <p>
               If you require and simple brochure website to broadcast you
@@ -76,7 +78,7 @@
         <section class="feature">
           <div class="container">
             <h2 class="highlight-overline">
-              Content Management System Website
+              Content Management System Website Development
             </h2>
             <h3>Need to create and update your website?</h3>
             <p>
@@ -100,7 +102,7 @@
         <section class="feature dark">
           <div class="container">
             <h2 class="highlight-overline">
-              Ecommerce Websites
+              Ecommerce Website Development
             </h2>
             <h3>Showcase and sell your products online?</h3>
             <p>
@@ -180,9 +182,9 @@
 export default {
   data() {
     return {
-      title: "Web Development Services | Freelance Web Developer Edinburgh",
+      title: "Web Design & Development Services | Edinburgh",
       description:
-        "Website Development Services in Edinburgh. Brochure Websites, Content Managment Systems, Ecommerce Website Development, SEO and Website Maintenance",
+        "Website Design & Development Services in Edinburgh. Brochure Websites, Content Managment Systems, Ecommerce Website Development, SEO and Website Maintenance",
       hostname: process.env.GRIDSOME_HOSTNAME,
     };
   },
