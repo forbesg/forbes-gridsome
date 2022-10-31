@@ -45,7 +45,7 @@
           <ul>
             <li>
               <a
-                href="https://www.github.com/forbesg"
+                href="https://github.com/forbesg"
                 rel="noopener"
                 target="_blank"
               >
@@ -126,8 +126,8 @@ export default {
     year() {
       const today = new Date();
       return today.getFullYear();
-    }
-  }
+    },
+  },
 };
 </script>
 

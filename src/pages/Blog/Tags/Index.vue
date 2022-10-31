@@ -30,7 +30,58 @@
 </static-query>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      title: "Blog Article Tags | Blog | Forbes Gray",
+      description: "Blog article tag cloud",
+    };
+  },
+  metaInfo() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content: this.description,
+        },
+        {
+          key: "og:title",
+          property: "og:title",
+          content: this.title,
+        },
+        {
+          key: "og:description",
+          property: "og:description",
+          content: this.description,
+        },
+        {
+          key: "og:url",
+          property: "og:url",
+          content: `${process.env.GRIDSOME_HOSTNAME}/blog/tags/`,
+        },
+        {
+          key: "twitter:title",
+          name: "twitter:title",
+          content: this.title,
+        },
+        {
+          key: "twitter:description",
+          name: "twitter:description",
+          content: this.description,
+        },
+      ],
+      link: [
+        {
+          key: "canonical",
+          rel: "canonical",
+          href: `${process.env.GRIDSOME_HOSTNAME}/blog/tegs/`,
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
