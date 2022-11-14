@@ -76,7 +76,7 @@ export default {
         {
           key: "canonical",
           rel: "canonical",
-          href: `${process.env.GRIDSOME_HOSTNAME}/blog/tegs/`,
+          href: `${process.env.GRIDSOME_HOSTNAME}/blog/tags/`,
         },
       ],
     };
