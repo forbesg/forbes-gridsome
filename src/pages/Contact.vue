@@ -85,6 +85,11 @@
                 id="captchaResponse"
                 name="g-recaptcha-response"
               />
+              <input
+                type="hidden"
+                name="_gotcha"
+                style="display:none !important"
+              />
               <div class="form-group">
                 <label for="name">Name: </label>
                 <input
@@ -143,7 +148,7 @@
             <p class="title">Thank you</p>
             <p class="sub-title">Your message has been sent</p>
             <p>
-              I will be intouch shortly regarding your enquiry.
+              I will be in touch shortly regarding your enquiry.
             </p>
           </div>
         </div>
@@ -228,6 +233,7 @@ export default {
       this.form.error = "";
       const { name, email, phone_number, message } = this.form;
       const requiredFields = ["name", "email", "message"];
+      const formData = new FormData();
       requiredFields.forEach((field) => {
         if (!this.form[field]) {
           document.querySelector(`#${field}`).classList.add("highlight");
@@ -250,36 +256,38 @@ export default {
       /**
        * Form validated (enough)
        */
+
+      formData.append("name", this.form.name);
+      formData.append("email", this.form.email);
+      formData.append("phone_number", this.form.phone_number);
+      formData.append("message", this.form.message);
+
       grecaptcha
         .execute("6LfAtbQZAAAAALIFif4qLLmJc-Khmg4iKxMm6F6G", {
-          action: "submit",
+          action: "contactPageLoad",
         })
         .then(function(token) {
-          document.getElementById("captchaResponse").value = token;
+          formData.append("g-recaptcha-response", token);
+          console.log(formData.getAll("name"));
           return fetch(
             "https://getform.io/f/ce537464-4e11-4163-b480-35d3fd2b7305",
             {
               method: "POST",
-              body: JSON.stringify({ name, email, phone_number, message }),
-              headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-              },
+              body: formData,
             }
           );
         })
         .then((response) => {
           if (response.status === 200) {
-            return response.json();
+            this.form.loading = false;
+            this.formSuccess = true;
+            return;
           }
-          throw "New Error";
-        })
-        .then((json) => {
-          this.form.loading = false;
-          this.formSuccess = json.success ? true : false;
+          throw "There was a problem sending the message";
         })
         .catch((err) => {
-          console.log(err);
+          this.form.loading = false;
+          this.form.error = "There was a problem sending the message";
         });
     },
   },
