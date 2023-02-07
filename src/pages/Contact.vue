@@ -126,7 +126,7 @@
                 ></textarea>
               </div>
               <div v-if="form.error" class="error">
-                <p>Please complete all required fields</p>
+                <p>{{ form.error }}</p>
               </div>
               <div class="form-group">
                 <label for="submit"></label>
@@ -235,6 +235,14 @@ export default {
       });
       if (!name || !email || !message) {
         this.form.error = "Please complete all the required fields above";
+        this.form.loading = false;
+        return;
+      }
+
+      // Check input for spammy links
+      const spam = this.form.message.match(/<a href=/);
+      if (spam && spam.length) {
+        this.form.error = "Message must not contain any HTML anchor tags";
         this.form.loading = false;
         return;
       }
