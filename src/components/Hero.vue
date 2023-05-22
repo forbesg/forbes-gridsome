@@ -6,16 +6,29 @@
         <h1 class="highlight-overline">
           Freelance Website <br />Developer | <span>Edinburgh</span>
         </h1>
-        <h2>
-          <span
+        <!-- <span
+          ><span
             ref="animate-title"
             data-titles="Bespoke,Lightning-Fast,Responsive,SEO-Friendly"
             class=""
             >{{ animatedTextOutput }}</span
-          >
-          Websites & Web Applications
+          ></span
+        > -->
+
+        <h2>
+          Website & Web Application, Design & Development
         </h2>
+
         <h3 class="text-primary">JAMStack | CMS | E-Commerce</h3>
+        <div class="cube-wrapper">
+          <div class="text-cube">
+            <span>Bespoke</span>
+            <span>Fast</span>
+            <span>Responsive</span>
+            <span>Secure</span>
+            <span>SEO-Friendly</span>
+          </div>
+        </div>
         <div class="hero-cta-buttons">
           <g-link to="/portfolio/" class="button">View My Work</g-link>
           <g-link to="/services/" class="arrow">View My Services</g-link>
@@ -27,50 +40,14 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      animatedTextOutput: "Bespoke, Fast, Responsive, SEO-Friendly",
-      wordArray: null,
-    };
-  },
-  mounted() {
-    requestAnimationFrame(() => {
-      const animateText = this.$refs["animate-title"];
-      this.animatedTextOutput = "";
-      animateText.classList.add("loaded");
-      this.wordArray = animateText.dataset.titles.split(",");
-      setTimeout(() => {
-        this.beginAnimation();
-        setInterval(this.beginAnimation, 20000);
-      }, 1000);
-    });
-  },
-  methods: {
-    animateText(string) {
-      let outputString = "";
-      for (let index in string) {
-        requestAnimationFrame(() => {
-          setTimeout(() => {
-            outputString += string.charAt(index);
-            this.animatedTextOutput = outputString;
-          }, 100 * (index * 1));
-        });
-      }
-    },
-    beginAnimation() {
-      for (let wordIndex in this.wordArray) {
-        const timing = 4000 * wordIndex;
-        setTimeout(() => {
-          this.animateText(this.wordArray[wordIndex]);
-        }, timing);
-      }
-    },
-  },
-  beforeDestroy() {
-    clearInterval(this.beginAnimation);
-  },
-};
+// export default {
+//   data() {
+//     return {
+//       animatedTextOutput: "Bespoke, Fast, Responsive, SEO-Friendly",
+//       wordArray: null,
+//     };
+//   },
+// };
 </script>
 
 <style lang="scss" scoped>
@@ -96,6 +73,42 @@ export default {
       max-width: 100%;
       padding-top: 3rem;
       padding-bottom: 1rem;
+
+      .cube-wrapper {
+        display: relative;
+        // max-width: max-content;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-bottom: 3.5rem;
+        width: 100%;
+        @include tablet {
+          max-width: max-content;
+        }
+        .text-cube {
+          // transform: rotateZ(5deg);
+          position: relative;
+          width: 100%;
+          transform-style: preserve-3d;
+          display: flex;
+          justify-content: stretch;
+          gap: 0.5em;
+          > span {
+            background-color: $color-dark-primary;
+            color: #fff;
+            padding: 0.25em 0.5em;
+            display: block;
+            transform: translateX(25deg);
+            text-align: center;
+            flex: 1;
+            white-space: nowrap;
+            &:nth-child(even) {
+              background-color: lighten($color-dark-primary, 55%);
+              color: $color-dark-primary;
+            }
+          }
+        }
+      }
+
       img {
         max-width: 100%;
       }
@@ -110,7 +123,7 @@ export default {
           font-size: 2.6rem;
         }
         @include laptop {
-          font-size: 3.6rem;
+          font-size: clamp(2rem, 3vw, 3rem);
         }
         > span {
           color: rgba($color-primary, 0.4);
@@ -122,7 +135,7 @@ export default {
         margin: 0;
       }
       h2 {
-        font-size: 1rem;
+        font-size: 1.25rem;
         display: block;
         margin-bottom: 1.25em;
         > span {
@@ -166,7 +179,8 @@ export default {
         font-size: 1.1em;
         font-family: "Catamaran", sans-serif;
         font-weight: 300;
-        margin-bottom: 2.25rem;
+        margin-top: 2.5rem;
+        margin-bottom: 0.5rem;
         text-transform: uppercase;
         width: 100%;
         word-spacing: 0.5rem;
@@ -180,7 +194,7 @@ export default {
     > a {
       display: block;
       font-size: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       text-align: center;
 
       @media (min-width: 468px) {

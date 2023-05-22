@@ -76,6 +76,11 @@ export default {
     &--body {
       flex: 1;
       margin-top: 1rem;
+      line-height: 1.5;
+      h3 {
+        font-size: 1.5rem;
+        line-height: 1;
+      }
     }
     &--footer {
       flex: 0;

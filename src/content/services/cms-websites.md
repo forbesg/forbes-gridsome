@@ -1,8 +1,8 @@
 ---
 id: cms-websites
 slug: cms-websites
-title: CMS Websites
-description: Fast, responsive and SEO friendly static CMS websites. Create, manage and grow your business website content.
+title: Content Management Systems
+description: Fast, responsive and SEO friendly headless content management system websites. Create, manage and grow your business website content.
 subtitle: Content Management Websites Without The Bloat
 icon:
   src: /icons/line/Development.svg

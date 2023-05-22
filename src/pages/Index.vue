@@ -7,7 +7,7 @@
       <section class="feature dark">
         <div class="container">
           <h2 class="highlight-overline">
-            Website Design &amp; Development Services in Edinburgh
+            Website Design &amp; Development in Edinburgh
           </h2>
           <div class="cards" style="margin-top: 3rem;">
             <card
@@ -175,7 +175,7 @@ import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 export default {
   metaInfo: {
-    title: "Freelance Web Developer Edinburgh | Websites and Web Applications",
+    title: "Freelance Web Developer Edinburgh | Forbes Gray",
   },
   components: { Card, GetInTouch, Hero, Skills },
 };

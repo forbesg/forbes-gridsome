@@ -1,6 +1,6 @@
 ---
 title: Granite Setts Direct
-description: An E-Commerce website application designed and developed for Granite Setts Direct Ltd using a headless E-Commerce API
+description: A headless ecommerce website application designed and developed for Granite Setts Direct Ltd using a headless E-Commerce API
 subhead: E-Commerce Website
 image: /images/projects/web-application/granite-setts-direct.jpg
 imageAlt: Granite Setts Direct - Headless Ecommerce Website

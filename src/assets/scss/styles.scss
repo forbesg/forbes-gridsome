@@ -18,9 +18,9 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  @include tablet {
-    font-size: 18px;
-  }
+  // @include tablet {
+  //   font-size: 18px;
+  // }
   a {
     color: $color-primary;
     font-weight: bold;
